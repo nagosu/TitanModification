@@ -71,7 +71,7 @@ function showLessons(subject, publisher, element) {
       `;
     });
 
-    $(".choice-list-grp").html(lessonHtmlContent);
+    $(".choice-list-grp.lesson").html(lessonHtmlContent);
     showTexts(subject, publisher, firstLesson);
   });
 }
