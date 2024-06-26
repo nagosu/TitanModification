@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT TUTOR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="gpt-tutor/assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="gpt-tutor/assets/css/style.css">
+    <link rel="stylesheet" href="gpt-tutor/assets/css/print-style.css">
+    <script src="gpt-tutor/assets/js/vendor/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="header-top">
+          <div class="header-inner">
+            <h1 class="logo">
+              <a href="support.html">
+                <img src="gpt-tutor/assets/images/logo.svg" alt="TITAN">
+              </a>
+            </h1>
+            <div class="header-gnb-grp">
+              <a href="tab01-textbook.html" class="gnb ">수업준비</a>
+              <a href="page02-01.html" class="gnb active">수업</a>
+              <a href="page03-01.html" class="gnb ">관리</a>
+            </div>
+            <div class="header-right">
+              <div class="alarm-btn-set">
+                <button id="hd-alarm-btn" type="button" class="alarm-btn active">
+                  <i class="ico ico-bell"></i>
+                  <span class="txt-hidden">알람 버튼</span>
+                </button>
+                <div class="alarm-btn-modal-wrapper">
+                  <div class="alarm-btn-modal-container">
+
+                    <!-- 알람 첫장 -->
+                    <div class="alarm-btn-modal type-01">
+                      <div class="amodal-top">
+                        <h5 class="top-ttl">알림</h5>
+                      </div>
+                      <div class="amodal-content">
+
+                        <!-- TODO: 알림 있을 때 -->
+                        <div class="alarm-list-grp">
+                          <div class="alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <p class="txt">(자동 채점) 변형문제(문제),시험지명:·····</p>
+                          </div>
+                          <div class="alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <p class="txt">(자동 채점) 변형문제(문제),시험지명:·····</p>
+                          </div>
+                          <div class="alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <p class="txt">(자동 채점) 변형문제(문제),시험지명:·····</p>
+                          </div>
+                        </div>
+
+                        <!-- TODO: 알림 없을 때 -->
+                        <div class="nothing-alarm" style="display: none;">
+                          <p class="txt">아직 일정이 없어요.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- END 알람 첫장 -->
+
+                    <!-- 알람 둘째장 -->
+                    <div class="alarm-btn-modal type-02">
+                      <div class="amodal-top">
+                        <button type="button" class="ico-btn back-btn">
+                          <i class="ico ico-back"></i>
+                          <span class="txt-hidden">뒤로가기</span>
+                        </button>
+                        <h5 class="top-ttl">김민우</h5>
+                      </div>
+                      <div class="amodal-content">
+                        <div class="detail-alarm-list-grp">
+                          <div class="detail-alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <div class="txt-wrap">
+                              <p class="txt">(자동 채점) 변형문제(문제)</p>
+                              <p class="txt">시험지명:김포고 1학년 중간고사 테스트</p>
+                              <p class="txt">제출 점수:57점(8/14)</p>
+                            </div>
+                          </div>
+                          <div class="detail-alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <div class="txt-wrap">
+                              <p class="txt">(시험 응시) 변형문제(문제)</p>
+                              <p class="txt">시험지명:김포고 1학년 중간고사 테스트</p>
+                            </div>
+                          </div>
+                          <div class="detail-alarm-date">
+                            <p class="txt">2024년 2월 28일</p>
+                          </div>
+                          <div class="detail-alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <div class="txt-wrap">
+                              <p class="txt">(시험 응시) 변형문제(문제)</p>
+                              <p class="txt">시험지명:김포고 1학년 중간고사 테스트</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- END 알람 둘째장 -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- 로그인 전 -->
+              <a href="login.html" class="user-info-badge ">
+                <img src="gpt-tutor/assets/images/ico-user.svg" alt="" class="ico">
+                <span class="txt">로그인을 해주세요.</span>
+              </a>
+
+              <!-- END 로그인 전 -->
+
+              <!-- 로그인 후 -->
+              <div class="user-info-badge-wrap">
+                <div class="user-info-badge active">
+                  <img src="gpt-tutor/assets/images/ico-user.svg" alt="" class="ico">
+                  <span class="txt">username</span>
+                </div>
+                <div class="user-info-badge-list-wrap">
+                  <div class="user-info-badge-list-grp">
+                    <a href="company.html" class="list-btn">회사소개</a>
+                    <a href="support.html" class="list-btn">고객센터</a>
+                    <a href="account.html" class="list-btn">계정정보</a>
+                    <a href="login.html" class="list-btn">로그아웃</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END 로그인 후 -->
+            </div>
+          </div>
+        </div>
+        <div class="header-middle">
+          <div class="header-gnb-to-snb type-01 ">
+            <div class="header-snb-grp">
+              <a href="tab01-textbook.html" class="snb ">강의자료</a>
+              <a href="tab02-textbook.html" class="snb ">변형문제</a>
+              <a href="page01-01.html" class="snb ">외부문제 보내기</a>
+            </div>
+          </div>
+          <div class="header-gnb-to-snb type-02">
+            <div class="header-snb-grp">
+              <a href="page02-01.html" class="snb active">반별 출제현황</a>
+              <a href="page02-02.html" class="snb ">학생별 오답관리</a>
+            </div>
+          </div>
+          <div class="header-gnb-to-snb type-03">
+            <div class="header-snb-grp">
+              <a href="page03-01.html" class="snb ">학생관리</a>
+              <a href="page03-02.html" class="snb ">반 관리</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="header-notice">
+        <p class="notice-txt">공지사항 배너: 해당 공간은 공지사항을 위한 공간입니다.</p>
+      </div>
+      <script>
+        $('.header-gnb-grp .gnb.active').each(function(index) {
+          $('.header-gnb-to-snb').eq($(this).index()).addClass('active');
+        })
+        $('.header-gnb-grp .gnb').on('mouseover', function() {
+          $('.header-gnb-to-snb').removeClass('active');
+          $('.header-gnb-to-snb').eq($(this).index()).addClass('active');
+        })
+        $('.header-gnb-to-snb').each(function(index) {
+          $(this).css('left', $('.header-gnb-grp .gnb').eq(index).offset().left);
+        })
+        $('.header').on('mouseleave', function() {
+          $('.header-gnb-to-snb').removeClass('active');
+          $('.header-gnb-to-snb').eq($('.header-gnb-grp .gnb.active').index()).addClass('active');
+        })
+        // 알람 버튼 눌렀을 때
+        $('#hd-alarm-btn').on('click', function() {
+          $('.alarm-btn-modal-wrapper').addClass('active');
+        })
+        $('.alarm-btn-modal.type-01 .alarm-list').on('click', function() {
+          $('.alarm-btn-modal.type-02').addClass('active');
+        })
+        $('.alarm-btn-modal.type-02 .back-btn').on('click', function() {
+          $('.alarm-btn-modal.type-02').removeClass('active');
+        })
+        // 알람창 외 눌렀을 때
+        $(document).mouseup(function(e) {
+          var layerPopup = $(".alarm-btn-modal-wrapper");
+          if (layerPopup.has(e.target).length === 0) {
+            $('.alarm-btn-modal-wrapper').removeClass('active');
+            $('.alarm-btn-modal.type-02').removeClass('active');
+          }
+        });
+      </script>
+      <div class="page-container cls-exam-page">
+
+        <!-- 왼쪽 사이드바 -->
+        <div class="major-sidebar">
+          <div class="major-sidebar-top">
+            <h1 class="major-sidebar-ttl">
+              <i class="ico ico-students"></i>
+              도안고 1-A반
+            </h1>
+          </div>
+          <div class="tabs">
+            <button type="button" class="tab active">반</button>
+            <button type="button" class="tab" onclick="location.href='page02-02.html';">학생</button>
+          </div>
+          <div class="major-sidebar-bottom">
+            <div class="checkbox-item-wrap">
+              <div class="checkbox-item">
+                <input type="checkbox" name="class" id="all" class="custom-checkbox-inp none">
+                <label for="all" class="custom-checkbox"></label>
+                <label for="all" class="custom-checkbox-txt">전체열기</label>
+              </div>
+            </div>
+
+            <!-- TODO: 해당 리스트가 활성화되면 active 클래스가 붙습니다. -->
+            <div class="categ-grp active">
+
+              <!-- 대분류 -->
+              <button type="button" class="categ-btn">
+                <span class="categ-arrow"></span>
+                <h3 class="txt">도안고 1-A반</h3>
+                <p class="gray-txt">(3명)</p>
+              </button>
+
+              <!-- END 대분류 -->
+
+              <!-- 중분류 -->
+              <div class="sub-categ-grp">
+
+                <!-- 중분류 내 리스트 -->
+                <button type="button" class="sub-categ-btn">
+                  <span class="txt">김민지</span>
+                </button>
+
+                <!-- END 중분류 내 리스트 -->
+
+                <!-- 중분류 내 리스트 -->
+                <button type="button" class="sub-categ-btn">
+                  <span class="txt">김민우</span>
+                </button>
+
+                <!-- END 중분류 내 리스트 -->
+
+                <!-- 중분류 내 리스트 -->
+                <button type="button" class="sub-categ-btn">
+                  <span class="txxt">김기범</span>
+                </button>
+
+                <!-- END 중분류 내 리스트 -->
+              </div>
+
+              <!-- END 중분류 -->
+            </div>
+            <div class="categ-grp">
+
+              <!-- 대분류 -->
+              <button type="button" class="categ-btn">
+                <span class="categ-arrow"></span>
+                <h3 class="txt">한솔고 1-A반</h3>
+                <p class="gray-txt">(3명)</p>
+              </button>
+
+              <!-- END 대분류 -->
+
+              <!-- 중분류 -->
+              <div class="sub-categ-grp">
+
+                <!-- 중분류 내 리스트 -->
+                <button type="button" class="sub-categ-btn">
+                  <span class="txt">김민지</span>
+                </button>
+
+                <!-- END 중분류 내 리스트 -->
+
+                <!-- 중분류 내 리스트 -->
+                <button type="button" class="sub-categ-btn">
+                  <span class="txt">김민우</span>
+                </button>
+
+                <!-- END 중분류 내 리스트 -->
+
+                <!-- 중분류 내 리스트 -->
+                <button type="button" class="sub-categ-btn">
+                  <span class="txxt">김기범</span>
+                </button>
+
+                <!-- END 중분류 내 리스트 -->
+              </div>
+
+              <!-- END 중분류 -->
+            </div>
+            <div class="categ-grp">
+
+              <!-- 대분류 -->
+              <button type="button" class="categ-btn">
+                <span class="categ-arrow"></span>
+                <h3 class="txt">도곡고 2-B반</h3>
+                <p class="gray-txt">(3명)</p>
+              </button>
+
+              <!-- END 대분류 -->
+
+              <!-- 중분류 -->
+              <div class="sub-categ-grp">
+
+                <!-- 중분류 내 리스트 -->
+                <button type="button" class="sub-categ-btn">
+                  <span class="txt">김민지</span>
+                </button>
+
+                <!-- END 중분류 내 리스트 -->
+
+                <!-- 중분류 내 리스트 -->
+                <button type="button" class="sub-categ-btn">
+                  <span class="txt">김민우</span>
+                </button>
+
+                <!-- END 중분류 내 리스트 -->
+
+                <!-- 중분류 내 리스트 -->
+                <button type="button" class="sub-categ-btn">
+                  <span class="txxt">김기범</span>
+                </button>
+
+                <!-- END 중분류 내 리스트 -->
+              </div>
+
+              <!-- END 중분류 -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 오른쪽 컨텐츠 -->
+        <div class="wrapper">
+          <div class="container">
+
+            <!-- 상단 옵션 -->
+            <div class="tbl-top-opt-container">
+              <div class="opt-wrap">
+                <select class="form-inp type-h35">
+                  <option value="시험중">시험중</option>
+                  <option value="시험완료">시험완료</option>
+                </select>
+              </div>
+              <div class="opt-wrap type-mgleft">
+                <div class="inp-btn-grp type-search">
+                  <input type="text" placeholder="시험지 검색" class="form-inp type-h35">
+                  <button type="button" class="ylw-bd-btn inp-btn">검색</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- END 상단 옵션 -->
+
+            <!-- 테이블 -->
+            <div class="default-tbl">
+              <div class="tbl-wrapper">
+                <div class="tbl type-01">
+                  <div class="tbl-head">
+                    <div class="tbl-cell"></div>
+                    <div class="tbl-cell">현황</div>
+                    <div class="tbl-cell">출제일</div>
+                    <div class="tbl-cell">마감일</div>
+                    <div class="tbl-cell">시험지</div>
+                    <div class="tbl-cell">출제범위</div>
+                    <div class="tbl-cell">미리보기</div>
+                    <div class="tbl-cell">응시현황</div>
+                    <div class="tbl-cell">커트라인</div>
+                    <div class="tbl-cell">더보기</div>
+                  </div>
+                  <div class="tbl-body">
+                    <div class="tbl-row">
+                      <div class="tbl-cell">
+                        <div class="checkbox-item">
+                          <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
+                          <label for="class01" class="custom-checkbox"></label>
+                        </div>
+                      </div>
+                      <div class="tbl-cell">
+                        시험중
+                      </div>
+                      <div class="tbl-cell">
+                        24.01.01
+                      </div>
+                      <div class="tbl-cell">
+                        24.03.01
+                      </div>
+                      <div class="tbl-cell">
+                        <span class="pink-txt">[변형]</span>
+                        <span>도안고 1 중간고사</span>
+                      </div>
+                      <div class="tbl-cell">
+                        교과서 4, 5과
+                      </div>
+                      <div class="tbl-cell">
+                        <button type="button" class="ico-btn" onclick="openModal('preview-class-note');">
+                          <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
+                        </button>
+                      </div>
+                      <div class="tbl-cell">
+                        <b class="bold-cnt" onclick="openModal('exam-status-popup');">6/8</b>
+                      </div>
+                      <div class="tbl-cell">
+                        80%
+                      </div>
+                      <div class="tbl-cell">
+                        <div class="hover-set">
+                          <button type="button" class="hover-set-btn">
+                            <i class="ico ico-verti-dots"></i>
+                            <span class="txt-hidden">더보기</span>
+                          </button>
+                          <div class="hover-set-lists-wrap">
+                            <div class="hover-set-lists">
+                              <button type="button" class="list-btn" onclick="openModal('kakao-modal01')">동일 시험지
+                                보내기</button>
+                              <button type="button" class="list-btn" onclick="openModal('confirm-end-modal')">시험
+                                종료</button>
+                              <button type="button" class="list-btn">다운로드</button>
+                              <button type="button" class="list-btn" onclick="openModal('confirm-cancel-modal')">시험
+                                취소</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tbl-row">
+                      <div class="tbl-cell">
+                        <div class="checkbox-item">
+                          <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
+                          <label for="class01" class="custom-checkbox"></label>
+                        </div>
+                      </div>
+                      <div class="tbl-cell">
+                        시험중
+                      </div>
+                      <div class="tbl-cell">
+                        24.01.01
+                      </div>
+                      <div class="tbl-cell">
+                        24.03.01
+                      </div>
+                      <div class="tbl-cell">
+                        <span class="mint-txt">[단어]</span>
+                        <span>도안고 1 중간고사</span>
+                      </div>
+                      <div class="tbl-cell">
+                        교과서 4, 5과
+                      </div>
+                      <div class="tbl-cell">
+                        <button type="button" class="ico-btn" onclick="openModal('preview-class-note');">
+                          <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
+                        </button>
+                      </div>
+                      <div class="tbl-cell">
+                        <b class="bold-cnt" onclick="openModal('exam-status-popup');">6/8</b>
+                      </div>
+                      <div class="tbl-cell">
+                        80%
+                      </div>
+                      <div class="tbl-cell">
+                        <div class="hover-set">
+                          <button type="button" class="hover-set-btn">
+                            <i class="ico ico-verti-dots"></i>
+                            <span class="txt-hidden">더보기</span>
+                          </button>
+                          <div class="hover-set-lists-wrap">
+                            <div class="hover-set-lists">
+                              <button type="button" class="list-btn" onclick="openModal('kakao-modal01')">동일 시험지
+                                보내기</button>
+                              <button type="button" class="list-btn" onclick="openModal('confirm-end-modal')">시험
+                                종료</button>
+                              <button type="button" class="list-btn">다운로드</button>
+                              <button type="button" class="list-btn" onclick="openModal('confirm-cancel-modal')">시험
+                                취소</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tbl-row">
+                      <div class="tbl-cell">
+                        <div class="checkbox-item">
+                          <input type="checkbox" name="class" id="class01" class="custom-checkbox-inp none">
+                          <label for="class01" class="custom-checkbox"></label>
+                        </div>
+                      </div>
+                      <div class="tbl-cell">
+                        시험중
+                      </div>
+                      <div class="tbl-cell">
+                        24.01.01
+                      </div>
+                      <div class="tbl-cell">
+                        24.03.01
+                      </div>
+                      <div class="tbl-cell">
+                        <span class="blue-txt">[외부]</span>
+                        <span>도안고 1 중간고사</span>
+                      </div>
+                      <div class="tbl-cell">
+                        교과서 4, 5과
+                      </div>
+                      <div class="tbl-cell">
+                        <button type="button" class="ico-btn" onclick="openModal('preview-class-note');">
+                          <img src="gpt-tutor/assets/images/ico-preview.svg" alt="">
+                        </button>
+                      </div>
+                      <div class="tbl-cell">
+                        <b class="bold-cnt" onclick="openModal('exam-status-popup');">6/8</b>
+                      </div>
+                      <div class="tbl-cell">
+                        80%
+                      </div>
+                      <div class="tbl-cell">
+                        <div class="hover-set">
+                          <button type="button" class="hover-set-btn">
+                            <i class="ico ico-verti-dots"></i>
+                            <span class="txt-hidden">더보기</span>
+                          </button>
+                          <div class="hover-set-lists-wrap">
+                            <div class="hover-set-lists">
+                              <button type="button" class="list-btn" onclick="openModal('kakao-modal01')">동일 시험지
+                                보내기</button>
+                              <button type="button" class="list-btn" onclick="openModal('confirm-end-modal')">시험
+                                종료</button>
+                              <button type="button" class="list-btn">다운로드</button>
+                              <button type="button" class="list-btn" onclick="openModal('confirm-cancel-modal')">시험
+                                취소</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tbl-choices-bar">
+                <h3 class="bar-ttl">시험지 1개 선택됨</h3>
+                <div class="bar-btns">
+                  <button type="button" class="bar-btn" onclick="openModal('kakao-modal01')">동일 시험지 보내기</button>
+                  <button type="button" class="bar-btn" onclick="openModal('confirm-end-modal')">시험 종료</button>
+                  <button type="button" class="bar-btn">다운로드</button>
+                  <button type="button" class="bar-btn" onclick="openModal('confirm-cancel-modal')">시험 취소</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- END 테이블 -->
+          </div>
+        </div>
+
+        <!-- END 오른쪽 컨텐츠 -->
+
+        <!-- 팝업 1. 미리보기 -->
+        <div id="preview-class-note" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('preview-class-note')"></div>
+          <div class="custom-modal preview-modal">
+            <div class="preview-modal-ttl">
+              <h4 class="ttl">도안고1 프린트물 - 1과 미리보기</h4>
+              <button type="button" class="ylw-solid-btn square-btn btn-md" onclick="closeModal('preview-class-note')">확인</button>
+            </div>
+            <div class="preview-modal-content">
+              <div class="modal-sidebar-wrapper">
+                <div class="modal-sidebar-container">
+                  <div class="mdsidebar-ttl-wrap">
+                    <h5 class="ttl">2022학년도 고2 원서읽기</h5>
+                    <b class="bold-ttl">The Giver written by Lois Lowry</b>
+                    <p class="txt">Chapter 3</p>
+                  </div>
+                  <div class="description-content">
+                    <p class="txt">“Oh, look!” Lily squealed in delight. “Isn’t he cute? Look, how tiny he is! And he has funny
+                      eyes like yours, Jonas! Maybe he had the same Birthmother as you.” Jonas glared at her. He didn’t like it
+                      that she had mentioned his eyes. Almost every citizen in the community had dark eyes. His parents did, and
+                      Lily did, and so did all of his group members and friends. But there were a few exceptions: Jonas himself,
+                      and female Five who he had noticed had the different, lighter eyes. No one mentioned such things; it was
+                      not a rule, but was considered rude to call attention to things that were unsettling or different about
+                      individuals. Lily, he decided, would have to learn that soon, or she would be called in for chastisement
+                      because of her insensitive chatter. “I think newchildren are so cute,” Lily sighed, “I hope I get assigned
+                      to be a Birthmother.” “Lily!” Mother spoke very sharper. “Don’t say that. There’s very little honor in
+                      that Assignment.”
+                    </p>
+                    <p class="txt">“But I heard the Birthmothers get wonderful food, and they have very gentle exercise periods,
+                      and most of the time they just play games and amuse themselves while they’re waiting. I think I’d like
+                      that,” Lily said. “Three years, three births and that’s all. And the birth mothers never even get to see
+                      newchildren. After that, they are Laborers for the rest of their adult lives, until the day that they
+                      enter the House of the Old. Is that what you want, Lily? Three lazy years, and then hard physical labor
+                      until you are old? ”Well, no, I guess not,“ Lily acknowledged reluctantly.
+                      Jonas thought about an incident that had happened during the recreation period, when he had been playing
+                      with Asher. Jonas had casually picked up an apple from the basket where the snacks were kept, and had
+                      thrown it to his friend. Asher had thrown it back, and they had begun a simple game of catch. There had
+                      been nothing special about it.l But suddenly Jonas had noticed, following the path of the apple through
+                      the air with his eyes, that the piece of fruit had – well, this was the part that he couldn’t adequately
+                      understand –the apple had changed. Just for an instant. It had changed in mid-air, he remembered. It had
+                      happened four times.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 1. 미리보기 -->
+
+        <!-- 응시현황 팝업 -->
+        <div id="exam-status-popup" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('exam-status-popup');"></div>
+          <div class="custom-modal exam-status-modal">
+
+            <!-- 모달 제목 -->
+            <div class="nmodal-ttl-wrap">
+              <h6 class="nmodal-ttl">응시현황</h6>
+              <button type="button" class="ico-btn close-btn" onclick="closeModal('exam-status-popup');">
+                <i class="ico ico-x"></i>
+                <span class="txt-hidden">닫기</span>
+              </button>
+            </div>
+
+            <!-- END 모달 제목 -->
+
+            <!-- 모달 내용 -->
+            <div class="nmodal-content">
+              <div class="gray-box">
+                <div class="box-content">
+                  <div class="info-dl-grp">
+                    <dl class="info-dl">
+                      <dt class="dt">문제수</dt>
+                      <dd class="dd">30문제</dd>
+                    </dl>
+                    <dl class="info-dl">
+                      <dt class="dt">커트라인</dt>
+                      <dd class="dd">90%</dd>
+                    </dl>
+                  </div>
+                  <div class="info-dl-grp">
+                    <dl class="info-dl">
+                      <dt class="dt">합격</dt>
+                      <dd class="dd">4/8</dd>
+                    </dl>
+                    <dl class="info-dl">
+                      <dt class="dt">불합격</dt>
+                      <dd class="dd">2/8</dd>
+                    </dl>
+                    <dl class="info-dl">
+                      <dt class="dt">미응시</dt>
+                      <dd class="dd">2/8</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div class="status-box type-success">
+                <h6 class="box-ttl">합격</h6>
+                <div class="box-content">
+                  <div class="name-circle-list">
+                    <span class="name">이재건</span>
+                    <div class="in-circle type-success">
+                      <b class="in-txt">98%</b>
+                    </div>
+                  </div>
+                  <div class="name-circle-list">
+                    <span class="name">이재건</span>
+                    <div class="in-circle type-success">
+                      <b class="in-txt">98%</b>
+                    </div>
+                  </div>
+                  <div class="name-circle-list">
+                    <span class="name">이재건</span>
+                    <div class="in-circle type-success">
+                      <b class="in-txt">98%</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="status-box type-fail">
+                <h6 class="box-ttl">불합격</h6>
+                <div class="box-content">
+                  <div class="name-circle-list">
+                    <span class="name">김민우</span>
+                    <div class="in-circle type-fail">
+                      <b class="in-txt">64%</b>
+                    </div>
+                  </div>
+                  <div class="name-circle-list">
+                    <span class="name">배성재</span>
+                    <div class="in-circle type-fail">
+                      <b class="in-txt">72%</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="status-box type-incomplete">
+                <h6 class="box-ttl">미응시</h6>
+                <div class="box-content">
+                  <div class="name-circle-list">
+                    <span class="name">이우현</span>
+                    <div class="in-circle type-incomplete">
+                      <b class="in-txt">0%</b>
+                    </div>
+                  </div>
+                  <div class="name-circle-list">
+                    <span class="name">김나라</span>
+                    <div class="in-circle type-incomplete">
+                      <b class="in-txt">0%</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- END 모달 내용 -->
+
+            <!-- 모달 끝쪽 버튼 -->
+            <div class="nmodal-btn-wrap">
+              <button type="button" class="ylw-bd-btn02 square-btn btn-smd">
+                <span class="txt">확인</span>
+              </button>
+            </div>
+
+            <!-- END 모달 끝쪽 버튼 -->
+          </div>
+        </div>
+
+        <!-- END 응시현황 팝업 -->
+
+        <!-- 카카오톡 전송하기 팝업 -->
+        <div id="kakao-modal01" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('kakao-modal01');"></div>
+          <div class="custom-modal kakao-send-modal">
+
+            <!-- 모달 제목 -->
+            <div class="nmodal-ttl-wrap">
+              <h6 class="nmodal-ttl">카카오톡 전송하기</h6>
+              <button type="button" class="ico-btn close-btn" onclick="closeModal('kakao-modal01');">
+                <i class="ico ico-x"></i>
+                <span class="txt-hidden">닫기</span>
+              </button>
+            </div>
+
+            <!-- END 모달 제목 -->
+
+            <!-- 모달 내용 -->
+            <div class="nmodal-content">
+              <div class="inp-btn-grp type-search">
+                <input type="text" class="form-inp type-h35" placeholder="학생 이름 검색">
+                <button type="button" class="ylw-bd-btn inp-btn">검색</button>
+              </div>
+              <div class="stud-list-layout">
+
+                <!-- 왼쪽 -->
+                <div class="stud-list-left">
+                  <div class="tabs">
+                    <button type="button" class="tab active">학년</button>
+                    <button type="button" class="tab">반</button>
+                  </div>
+
+                  <!-- 탭에 따른 내용 -->
+
+                  <!-- TODO: 학년/반 선택함에 따라 내용이 달라집니다. -->
+                  <div class="stud-list-left-content">
+                    <div class="categ-grp">
+
+                      <!-- 대분류 -->
+                      <div class="categ-btn type-02">
+
+                        <!-- TODO: btn-left 영역을 누르면 부모의 categ-grp에 active 활성화가 되면서 서브그룹이 펼쳐집니다. -->
+                        <button type="button" class="btn-left">
+                          <span class="categ-arrow"></span>
+                          <h3 class="txt">중 3</h3>
+                          <p class="gray-txt">(6명)</p>
+                        </button>
+
+                        <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                        <button type="button" class="btn-right">
+                          <i class="ico ico-plus"></i>
+                          <span class="txt-hidden">추가하기</span>
+                        </button>
+                      </div>
+
+                      <!-- END 대분류 -->
+
+                      <!-- 중분류 -->
+                      <div class="sub-categ-grp">
+
+                        <!-- 중분류 내 리스트 -->
+                        <div class="sub-categ-btn">
+                          <span class="txt">김민지</span>
+
+                          <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                          <button type="button" class="btn-right">
+                            <i class="ico ico-plus"></i>
+                            <span class="txt-hidden">추가하기</span>
+                          </button>
+                        </div>
+
+                        <!-- END 중분류 내 리스트 -->
+                      </div>
+
+                      <!-- END 중분류 -->
+                    </div>
+                    <div class="categ-grp active">
+
+                      <!-- 대분류 -->
+                      <div class="categ-btn type-02">
+
+                        <!-- TODO: btn-left 영역을 누르면 부모의 categ-grp에 active 활성화가 되면서 서브그룹이 펼쳐집니다. -->
+                        <button type="button" class="btn-left">
+                          <span class="categ-arrow"></span>
+                          <h3 class="txt">고 1</h3>
+                          <p class="gray-txt">(1명)</p>
+                        </button>
+
+                        <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                        <button type="button" class="btn-right">
+                          <i class="ico ico-plus"></i>
+                          <span class="txt-hidden">추가하기</span>
+                        </button>
+                      </div>
+
+                      <!-- END 대분류 -->
+
+                      <!-- 중분류 -->
+                      <div class="sub-categ-grp">
+
+                        <!-- 중분류 내 리스트 -->
+                        <div class="sub-categ-btn">
+                          <span class="txt">김민지</span>
+
+                          <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                          <button type="button" class="btn-right">
+                            <i class="ico ico-plus"></i>
+                            <span class="txt-hidden">추가하기</span>
+                          </button>
+                        </div>
+
+                        <!-- END 중분류 내 리스트 -->
+                      </div>
+
+                      <!-- END 중분류 -->
+                    </div>
+                    <div class="categ-grp">
+
+                      <!-- 대분류 -->
+                      <div class="categ-btn type-02">
+
+                        <!-- TODO: btn-left 영역을 누르면 부모의 categ-grp에 active 활성화가 되면서 서브그룹이 펼쳐집니다. -->
+                        <button type="button" class="btn-left">
+                          <span class="categ-arrow"></span>
+                          <h3 class="txt">고 2</h3>
+                          <p class="gray-txt">(6명)</p>
+                        </button>
+
+                        <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                        <button type="button" class="btn-right">
+                          <i class="ico ico-plus"></i>
+                          <span class="txt-hidden">추가하기</span>
+                        </button>
+                      </div>
+
+                      <!-- END 대분류 -->
+
+                      <!-- 중분류 -->
+                      <div class="sub-categ-grp">
+
+                        <!-- 중분류 내 리스트 -->
+                        <div class="sub-categ-btn">
+                          <span class="txt">김민지</span>
+
+                          <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                          <button type="button" class="btn-right">
+                            <i class="ico ico-plus"></i>
+                            <span class="txt-hidden">추가하기</span>
+                          </button>
+                        </div>
+
+                        <!-- END 중분류 내 리스트 -->
+                      </div>
+
+                      <!-- END 중분류 -->
+                    </div>
+                  </div>
+
+                  <!-- END 탭에 따른 내용 -->
+                </div>
+
+                <!-- END 왼쪽 -->
+
+                <!-- 오른쪽 -->
+                <div class="stud-list-right">
+                  <div class="stud-list-right-top">
+                    <span class="ttl">선택된 학생</span>
+                  </div>
+                  <div class="stud-list-right-content">
+                    <div class="categ-grp">
+
+                      <!-- 대분류 -->
+                      <div class="categ-btn type-02">
+                        <button type="button" class="btn-left">
+                          <span class="categ-arrow"></span>
+                          <h3 class="txt">중 3</h3>
+                          <p class="gray-txt">(6명)</p>
+                        </button>
+                        <button type="button" class="btn-right type-minus">
+                          <i class="ico ico-minus"></i>
+                          <span class="txt-hidden">빼기</span>
+                        </button>
+                      </div>
+
+                      <!-- END 대분류 -->
+
+                      <!-- 중분류 -->
+                      <div class="sub-categ-grp">
+
+                        <!-- 중분류 내 리스트 -->
+                        <div class="sub-categ-btn">
+                          <span class="txt">김민지</span>
+                          <button type="button" class="btn-right type-minus">
+                            <i class="ico ico-minus"></i>
+                            <span class="txt-hidden">빼기</span>
+                          </button>
+                        </div>
+
+                        <!-- END 중분류 내 리스트 -->
+                      </div>
+
+                      <!-- END 중분류 -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- END 오른쪽 -->
+              </div>
+            </div>
+
+            <!-- END 모달 내용 -->
+
+            <!-- 모달 끝쪽 버튼 -->
+            <div class="nmodal-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-smd">
+                <i class="ico ico-kakao"></i>
+                <span class="txt">카카오톡으로 전송하기</span>
+              </button>
+            </div>
+
+            <!-- END 모달 끝쪽 버튼 -->
+          </div>
+        </div>
+
+        <!-- END 카카오톡 전송하기 팝업 -->
+
+        <!-- 1. 종료 확인 모달 -->
+        <div id="confirm-end-modal" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('confirm-end-modal');"></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">정말 종료하시겠습니까?</p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-md">확인</button>
+              <button type="button" class="gray-bd-btn square-btn btn-md" onclick="closeModal('confirm-end-modal');">취소</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 1. 종료 확인 모달 -->
+
+        <!-- 2. 취소 확인 모달 -->
+        <div id="confirm-cancel-modal" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('confirm-cancel-modal');"></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">정말 취소하시겠습니까?</p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-md">확인</button>
+              <button type="button" class="gray-bd-btn square-btn btn-md" onclick="closeModal('confirm-cancel-modal');">취소</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 2. 취소 확인 모달 -->
+
+        <!-- 3. 시험 종료 모달 -->
+        <div id="test-end-modal" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('test-end-modal');"></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">해당 시험은 종료되었습니다.</p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-md" onclick="closeModal('test-end-modal');">확인</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 3. 시험 종료 모달-->
+      </div>
+    </div>
+    <script src="gpt-tutor/assets/js/ui.js"></script>
+    <script>
+      $('.major-sidebar .categ-btn').on('click', function() {
+        $(this).parent('.categ-grp').toggleClass('active');
+      })
+      // 응시현황 클릭시 bold 해제하려면 active 클래스 추가
+      $('.bold-cnt').on('click', function() {
+        $(this).addClass('active');
+      })
+    </script>
+  </body>
+</html>

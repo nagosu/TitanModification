@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT TUTOR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="gpt-tutor/assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="gpt-tutor/assets/css/style.css">
+    <link rel="stylesheet" href="gpt-tutor/assets/css/print-style.css">
+    <script src="gpt-tutor/assets/js/vendor/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="page-container exam-test-page">
+        <div class="exam-test-wrapper">
+
+          <!-- TODO: 시험에 합격했을 때 보여주는 컨테이너 -->
+          <div class="exam-test-container">
+            <h1 class="cont-ttl">시험에 합격하셨습니다.</h1>
+            <div class="border-box">
+              <dl class="cont-dl">
+                <dt class="dt">1. 제목</dt>
+                <dd class="dd">고 1 모의고사</dd>
+              </dl>
+              <dl class="cont-dl">
+                <dt class="dt">2. 커트라인</dt>
+                <dd class="dd">80%</dd>
+              </dl>
+              <dl class="cont-dl">
+                <dt class="dt">3. 나의점수</dt>
+                <dd class="dd">84%</dd>
+              </dl>
+              <div class="inner-cont-dl">
+                <dl class="cont-dl">
+                  <dt class="dt">* 총 문제수</dt>
+                  <dd class="dd">50문제</dd>
+                </dl>
+                <dl class="cont-dl">
+                  <dt class="dt">* 정답</dt>
+                  <dd class="dd">42문제</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="cont-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-md">정답 및 해설지 보기</button>
+              <button type="button" class="ylw-bd-btn02 square-btn btn-md">나가기</button>
+            </div>
+          </div>
+
+          <!-- TODO: 시험에 불합격했을 때 보여주는 컨테이너 -->
+          <div class="exam-test-container">
+            <h1 class="cont-ttl">시험에 불합격하셨습니다.</h1>
+            <div class="border-box">
+              <p class="txt">오답문제 유형의 재시험이 발송됩니다.</p>
+            </div>
+            <div class="cont-btn-wrap">
+              <button type="button" class="ylw-bd-btn02 square-btn btn-md">나가기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="gpt-tutor/assets/js/ui.js"></script>
+  </body>
+</html>

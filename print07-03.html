@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT TUTOR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="gpt-tutor/assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="gpt-tutor/assets/css/style.css">
+    <link rel="stylesheet" href="gpt-tutor/assets/css/print-style.css">
+    <script src="gpt-tutor/assets/js/vendor/jquery-3.6.1.min.js"></script>
+  </head>
+  <style>
+    ::-webkit-scrollbar {
+      background-color: transparent;
+      width: 15px;
+    }
+  </style>
+  <body class="print-body print07-body">
+    <div id="app">
+
+      <!-- 변형문제 -->
+      <div class="print-wrapper type-print07">
+        <div class="print-container">
+          <div class="print07-ttl-wrap">
+            <h1 class="print07-ttl">영어 영역</h1>
+            <span class="print07-from">엔디학원 김민정</span>
+          </div>
+          <div class="print07-qst-container">
+
+            <!-- 1. 서술형: 주제 유형 -->
+            <div class="print07-qst">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0703-01" class="custom-checkbox-inp none">
+                <label for="print0703-01" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">1. 다음 지문 중, (A) 문장의 한글 해석을 보고 들어갈 말을 <보기>에 있는 단어들을 사용하여 <조건>에 맞게 작성하시오.</h2>
+              <div class="qst-content">
+                <p class="qst-txt"><b>(A) 공개의 중요한 장점은 보다 공격적인 규제 형태에 비해 유연성을 가지며 자유 시장의 운영을 존중한다는 것입니다.</b> Regulatory
+                  mandates
+                  are blunt swords; they tend to neglect diversity and may have serious unintended adverse effects. For
+                  example, energy efficiency requirements for appliances may produce goods that work less well or that
+                  have characteristics that consumers do not want. Information provision, by contrast, respects freedom of
+                  choice. If automobile manufacturers are required to measure and publicize the safety characteristics of
+                  cars, potential car purchasers can trade safety concerns against other attributes, such as price and
+                  styling. If restaurant customers are informed of the calories in their meals, those who want to lose
+                  weight can make use of the information, leaving those who are unconcerned about calories unaffected.
+                  Disclosure does not interfere with, and should even promote, the autonomy (and quality) of individual
+                  decision-making.
+                </p>
+                <p class="qst-txt type-align-center">↓</p>
+                <div class="qst-txt-box">
+                  <p class="box-ttl type-center">
+                    <조건>
+                  </p>
+                  <p class="qst-txt">
+                    a.<보기>의 단어를 모두 한 번씩만 사용 <br>b.어법에 맞게 단어들을 사용하여 완성할 것
+                  </p>
+                </div>
+                <div class="qst-txt-box type-box-center">
+                  <p class="box-ttl">
+                    <보기>
+                  </p>
+                  <p class="qst-txt">
+                    markets / operation / aggressive / and / for / is / more / of / important / free / as / advantage /
+                    flexibility / opposed / forms / disclosure / of / to / the / regulation / An / of / its / respect
+                  </p>
+                </div>
+              </div>
+              <div class="qst-answer-write-grp">
+                <div class="qst-answer-write">
+                  <span class="in-label">답안지:</span>
+                  <div class="in-write-grp type-full">
+                    <b>(A)</b>
+                    <input type="text" class="blank-inp">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- END 1. 서술형: 주제 유형 -->
+
+            <!-- 2. 서술형: 주제 유형 (빈칸제공) -->
+            <div class="print07-qst">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0703-02" class="custom-checkbox-inp none">
+                <label for="print0703-02" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">2. 다음 지문 중, (A) 빈칸을 보고 들어갈 말을 <보기>에 있는 단어들을 사용하여 <조건>에 맞게 작성하시오.</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  <b>(A)</b> <span class="txt-bd"></span>. Regulatory mandates
+                  are blunt swords; they tend to neglect diversity and may have serious unintended adverse effects. For
+                  example, energy efficiency requirements for appliances may produce goods that work less well or that
+                  have characteristics that consumers do not want. Information provision, by contrast, respects freedom of
+                  choice. If automobile manufacturers are required to measure and publicize the safety characteristics of
+                  cars, potential car purchasers can trade safety concerns against other attributes, such as price and
+                  styling. If restaurant customers are informed of the calories in their meals, those who want to lose
+                  weight can make use of the information, leaving those who are unconcerned about calories unaffected.
+                  Disclosure does not interfere with, and should even promote, the autonomy (and quality) of individual
+                  decision-making.
+                </p>
+                <p class="qst-txt type-align-center">↓</p>
+                <div class="qst-txt-box">
+                  <p class="box-ttl type-center">
+                    <조건>
+                  </p>
+                  <p class="qst-txt">
+                    a.<보기>의 단어를 모두 한 번씩만 사용 <br>b.어법에 맞게 단어들을 사용하여 완성할 것
+                  </p>
+                </div>
+                <div class="qst-txt-box type-box-center">
+                  <p class="box-ttl">
+                    <보기>
+                  </p>
+                  <p class="qst-txt">
+                    markets / operation / aggressive / and / for / is / more / of / important / free / as / advantage /
+                    flexibility / opposed / forms / disclosure / of / to / the / regulation / An / of / its / respect
+                  </p>
+                </div>
+              </div>
+              <div class="qst-answer-write-grp">
+                <div class="qst-answer-write">
+                  <span class="in-label">답안지:</span>
+                  <div class="in-write-grp type-full">
+                    <b>(A)</b>
+                    <input type="text" class="blank-inp">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- END 2. 서술형: 주제 유형 (빈칸제공) -->
+
+            <!-- 3. 서술형: 문법 유형 -->
+            <div class="print07-qst">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0703-03" class="custom-checkbox-inp none">
+                <label for="print0703-03" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">3.다음 지문 중, (A) 문장의 한글 해석을 보고 들어갈 말을 <보기>에 있는 단어들을 사용하여 <조건>에 맞게 작성하시오.</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  <b>(A) 공개의 중요한 장점은 보다 공격적인 규제 형태에 비해 유연성을 가지며 자유 시장의 운영을 존중한다는 것입니다.</b> Regulatory mandates are blunt
+                  swords;
+                  they tend to neglect diversity and may have serious unintended adverse effects. For example, energy
+                  efficiency requirements for appliances may produce goods that work less well or that have
+                  characteristics that consumers do not want. Information provision, by contrast, respects freedom of
+                  choice. If automobile manufacturers are required to measure and publicize the safety characteristics of
+                  cars, potential car purchasers can trade safety concerns against other attributes, such as price and
+                  styling. If restaurant customers are informed of the calories in their meals, those who want to lose
+                  weight can make use of the information, leaving those who are unconcerned about calories unaffected.
+                  Disclosure does not interfere with, and should even promote, the autonomy (and quality) of individual
+                  decision-making.
+                </p>
+                <p class="qst-txt type-align-center">↓</p>
+                <div class="qst-txt-box">
+                  <p class="box-ttl type-center">
+                    <조건>
+                  </p>
+                  <p class="qst-txt">
+                    a.<보기>의 단어를 모두 한 번씩만 사용 <br>b.어법에 맞게 단어들을 사용하여 완성할 것
+                  </p>
+                </div>
+                <div class="qst-txt-box type-box-center">
+                  <p class="box-ttl">
+                    <보기>
+                  </p>
+                  <p class="qst-txt">
+                    markets / operation / aggressive / and / for / is / more / of / important / free / as / advantage /
+                    flexibility / opposed / forms / disclosure / of / to / the / regulation / An / of / its / respect
+                  </p>
+                </div>
+              </div>
+              <div class="qst-answer-write-grp">
+                <div class="qst-answer-write">
+                  <span class="in-label">답안지:</span>
+                  <div class="in-write-grp type-full">
+                    <b>(A)</b>
+                    <input type="text" class="blank-inp">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- END 3. 서술형: 문법 유형-->
+
+            <!-- 4. 서술형: 문법 유형 (빈칸제공) -->
+            <div class="print07-qst">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0703-04" class="custom-checkbox-inp none">
+                <label for="print0703-04" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">4. 다음 지문 중, (A) 빈칸을 보고 들어갈 말을 <보기>에 있는 단어들을 사용하여 <조건>에 맞게 작성하시오.</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  <b>(A)</b> <span class="txt-bd"></span>. Regulatory mandates
+                  are blunt swords; they tend to neglect diversity and may have serious unintended adverse effects. For
+                  example, energy efficiency requirements for appliances may produce goods that work less well or that
+                  have characteristics that consumers do not want. Information provision, by contrast, respects freedom of
+                  choice. If automobile manufacturers are required to measure and publicize the safety characteristics of
+                  cars, potential car purchasers can trade safety concerns against other attributes, such as price and
+                  styling. If restaurant customers are informed of the calories in their meals, those who want to lose
+                  weight can make use of the information, leaving those who are unconcerned about calories unaffected.
+                  Disclosure does not interfere with, and should even promote, the autonomy (and quality) of individual
+                  decision-making.
+                </p>
+                <p class="qst-txt type-align-center">↓</p>
+                <div class="qst-txt-box">
+                  <p class="box-ttl type-center">
+                    <조건>
+                  </p>
+                  <p class="qst-txt">
+                    a.<보기>의 단어를 모두 한 번씩만 사용 <br>b.어법에 맞게 단어들을 사용하여 완성할 것
+                  </p>
+                </div>
+                <div class="qst-txt-box type-box-center">
+                  <p class="box-ttl">
+                    <보기>
+                  </p>
+                  <p class="qst-txt">
+                    markets / operation / aggressive / and / for / is / more / of / important / free / as / advantage /
+                    flexibility / opposed / forms / disclosure / of / to / the / regulation / An / of / its / respect
+                  </p>
+                </div>
+              </div>
+              <div class="qst-answer-write-grp">
+                <div class="qst-answer-write">
+                  <span class="in-label">답안지:</span>
+                  <div class="in-write-grp type-full">
+                    <b>(A)</b>
+                    <input type="text" class="blank-inp">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- END 4. 서술형: 문법 유형 (빈칸제공) -->
+
+            <!-- 5. 서술형: 어법 유형 [문장] -->
+            <div class="print07-qst">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0703-05" class="custom-checkbox-inp none">
+                <label for="print0703-05" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">5. 다음 글의 보기 (A)~(E) 문장 중에 어법상 틀린 1곳을 찾아 문장 기호를 쓰고 바르게 고치시오.</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  <b>
+                    (A) An important advantage of disclosure, as opposed to more aggressive forms of regulation, is its
+                    flexibility and respect for the operation of free markets.
+                  </b> <b>
+                  </b> <b>(B) Regulatory mandates are blunt swords;
+                    they tend to neglect diversity and may have serious unintended adverse effects.</b>
+                  </b> </b> For example, energy
+                  efficiency requirements for appliances may produce goods that work less well or that have
+                  characteristics that consumers do not want. <b>(C) Information provision, by contrast, respect freedom
+                    of
+                    choice.</b> <b>(D) If automobile manufacturers are required to measure and publicize the safety
+                    characteristics
+                    of cars, potential car purchasers can trade safety concerns against other attributes, such as price
+                    and
+                    styling.</b> <b>(E) If restaurant customers are informed of the calories in their meals, those who
+                    want to lose
+                    weight can make use of the information, leaving those who are unconcerned about calories
+                    unaffected.</b>
+                  Disclosure does not interfere with, and should even promote, the autonomy (and quality) of individual
+                  decision-making.
+                </p>
+              </div>
+              <div class="qst-answer-write-grp">
+                <div class="tbl-arw-tbl">
+                  <div class="qst-word-tbl">
+                    <div class="tbl-row">
+                      <span class="txt">문장 기호</span>
+                    </div>
+                    <div class="tbl-row">
+                      <span class="txt">(틀린 기호)</span>
+                      <textarea class="inp"></textarea>
+                    </div>
+                  </div>
+                  <i class="ico ico-left-to-right"></i>
+                  <div class="qst-word-tbl">
+                    <div class="tbl-row">
+                      <span class="txt">고친 부분</span>
+                    </div>
+                    <div class="tbl-row">
+                      <textarea class="inp"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- END 4. 단답형: 낱말+어법 혼합유형 [양자택일] -->
+          </div>
+        </div>
+      </div>
+
+      <!-- END 변형문제 -->
+    </div>
+    <script src="gpt-tutor/assets/js/ui.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT TUTOR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="gpt-tutor/assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="gpt-tutor/assets/css/style.css">
+    <link rel="stylesheet" href="gpt-tutor/assets/css/print-style.css">
+    <script src="gpt-tutor/assets/js/vendor/jquery-3.6.1.min.js"></script>
+  </head>
+  <style>
+    ::-webkit-scrollbar {
+      background-color: transparent;
+      width: 15px;
+    }
+  </style>
+  <body class="print-body print07-body">
+    <div id="app">
+
+      <!-- 변형문제 -->
+      <div class="print-wrapper type-print07">
+        <div class="print-container">
+          <div class="print07-ttl-wrap">
+            <h1 class="print07-ttl">영어 영역</h1>
+            <span class="print07-from">엔디학원 김민정</span>
+          </div>
+          <div class="print07-qst-container">
+
+            <!-- 1. 객관식: 주제 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-01" class="custom-checkbox-inp none">
+                <label for="print0701-01" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">1. 다음 글의 주제로 가장 적절한 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">Empathy is frequently listed as one of the most desired skills in an employer or
+                  employee, although
+                  without specifying exactly what is meant by empathy. Some businesses stress cognitive empathy,
+                  emphasizing
+                  the need for leaders to understand the perspective of employees and customers when negotiating deals and
+                  making decisions. Others stress affective empathy and empathic concern, emphasizing the ability of
+                  leaders
+                  to gain trust from employees and customers by treating them with real concern and compassion. When some
+                  consultants argue that successful companies foster empathy, what that translates to is that companies
+                  should conduct good market research. In other words, an “empathic” company understands the needs and
+                  wants
+                  of its customers and seeks to fulfill those needs and wants. When some people speak of design with
+                  empathy, what that translates to is that companies should take into account the specific needs of
+                  different populations — the blind, the deaf, the elderly, non­English speakers, the color­blind, and so
+                  on
+                  — when designing products.</p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① diverse benefits of good market research
+                </li>
+                <li class="qst-answer-list">
+                  ② negative factors in making business decisions
+                </li>
+                <li class="qst-answer-list">
+                  ③ difficulties in designing products with empathic concern
+                </li>
+                <li class="qst-answer-list">
+                  ④ efforts to build cognitive empathy among employees
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ different interpretations of empathy in business
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 1. 객관식: 주제 -->
+
+            <!-- 2. 객관식: 제목 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-02" class="custom-checkbox-inp none">
+                <label for="print0701-02" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">2. 다음 글의 제목으로 가장 적절한 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">The realization of human domination over the environment began in the late 1700s with
+                  the industrial revolution. Advances in manufacturing transformed societies and economies while producing
+                  significant impacts on the environment. American society became structured on multiple industries’
+                  capitalistic goals as the development of the steam engine led to the mechanized production of goods in
+                  mass quantities. Rural agricultural communities with economies based on handmade goods and agriculture
+                  were abandoned for life in urban cities with large factories based on an economy of industrialized
+                  manufacturing. Innovations in the production of textiles, iron, and steel provided increased profits to
+                  private companies. Simultaneously, those industries exerted authority over the environment and began
+                  dumping hazardous by­products in public lands and waterways.</p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① Strategies for Industrial Innovations
+                </li>
+                <li class="qst-answer-list">
+                  ② Urbanization: A Road to a Better Life
+                </li>
+                <li class="qst-answer-list">
+                  ③ Industrial Development Hurt the Environment
+                </li>
+                <li class="qst-answer-list">
+                  ④ Technology: A Key to Sustainable Development
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ The Driving Force of Capitalism Was Not Greed
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 2. 객관식: 제목 -->
+
+            <!-- 3. 객관식: 밑줄 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-03" class="custom-checkbox-inp none">
+                <label for="print0701-03" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">3. 괄호 안의 내용이 다음 글에서 의미하는 바로 가장 적절한 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  If you had wanted to create a “self-driving” car in the 1950s, your best option might have been to strap
+                  a brick to the accelerator. Yes, the vehicle would have been able to move forward on its own, but it
+                  could not slow down, stop, or turn to avoid barriers. Obviously not ideal. But does that mean the entire
+                  concept of the self-driving car is not worth pursuing? No, it only means that at the time we did not yet
+                  have the tools we now possess to help enable vehicles to operate both autonomously and safely. This
+                  once-distant dream now seems within our reach. It is much the same
+                  story in medicine. Two decades ago, <b>(we were still taping bricks to accelerators.)</b> Today, we are
+                  approaching the point where we can begin to bring some appropriate technology to bear in ways that
+                  advance our understanding of patients as unique individuals. In fact, many patients are already wearing
+                  devices that monitor their conditions in real time, which
+                  allows doctors to talk to their patients in a specific, refined, and feedback-driven way that was not
+                  even possible a decade ago.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① the importance of medical education was overlooked
+                </li>
+                <li class="qst-answer-list">
+                  ② self-driving cars enabled patients to move around freely
+                </li>
+                <li class="qst-answer-list">
+                  ③ the devices for safe driving were unavailable at that time
+                </li>
+                <li class="qst-answer-list">
+                  ④ lack of advanced tools posed a challenge in understanding patients
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ appropriate technologies led to success in developing a new medicine
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 3. 객관식: 밑줄 유형 -->
+
+            <!-- 4. 객관식: 빈칸 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-04" class="custom-checkbox-inp none">
+                <label for="print0701-04" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">4. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것을 고르시오.</h2>
+              <div class="qst-content">
+                <p class="qst-txt">We must explore the relationship between children’s film production and consumption
+                  habits. The term “children’s film” implies ownership by children — their cinema — but films supposedly
+                  made for children have always been <span class="txt-bd"></span>, particularly in commercial
+                  cinemas. The considerable crossover in audience composition for children’s films can be shown by the
+                  fact that, in 2007, eleven Danish children’s and youth films attracted 59 per cent of theatrical
+                  admissions, and in 2014, German children’s films comprised seven out of the top twenty films at the
+                  national box office. This phenomenon corresponds with a broader, international embrace of what is
+                  seemingly children’s culture among audiences of diverse ages. The old prejudice that children’s film is
+                  some other realm, separate from (and forever subordinate to) a more legitimate cinema for adults is not
+                  supported by the realities of consumption: children’s film is at the heart of contemporary popular
+                  culture.</p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① centered on giving moral lessons
+                </li>
+                <li class="qst-answer-list">
+                  ② consumed by audiences of all ages
+                </li>
+                <li class="qst-answer-list">
+                  ③ appreciated through an artistic view
+                </li>
+                <li class="qst-answer-list">
+                  ④ produced by inexperienced directors
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ separated from the cinema for adults
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 4. 객관식: 빈칸 유형 -->
+
+            <!-- 4. 객관식: 빈칸 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-05" class="custom-checkbox-inp none">
+                <label for="print0701-05" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">5. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것을 고르시오.</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  Dancers often push themselves to the limits of their physical capabilities. But that push is misguided
+                  if it is directed toward accomplishing something physically impossible. For instance, a tall dancer with
+                  long feet may wish to perform repetitive vertical jumps to fast music, pointing his feet while in the
+                  air and lowering his heels to the floor between jumps. That may be impossible no matter how strong the
+                  dancer is. But a short­footed dancer may have no trouble! Another dancer may be struggling to complete a
+                  half­turn in the air. Understanding the connection between a rapid turn rate and the alignment of the
+                  body close to the rotation axis tells her how to accomplish her turn successfully. In both of these
+                  cases, understanding and working within the <span class="txt-bd"></span> imposed by nature and described
+                  by physical
+                  laws allows dancers to work efficiently, minimizing potential risk of injury.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① habits
+                </li>
+                <li class="qst-answer-list">
+                  ② cultures
+                </li>
+                <li class="qst-answer-list">
+                  ③ constraints
+                </li>
+                <li class="qst-answer-list">
+                  ④ hostilities
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ moralities
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 4. 객관식: 빈칸 유형 -->
+
+            <!-- 4. 객관식: 빈칸 유형 (접속부사) -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-06" class="custom-checkbox-inp none">
+                <label for="print0701-06" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">6. 다음 글의 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">Different parts of the brain’s visual system get information on a need-to-know basis.
+                  Cells that help your hand muscles reach out to an object need to know the size and location of the
+                  object, but they don’t need to know about color. They need to know a little about shape, but not in
+                  great detail. Cells that help you recognize people’s faces need to be extremely sensitive to details of
+                  shape, but they can pay less attention to location. It is natural to assume that anyone who sees an
+                  object sees everything about it ― the shape, color, location, and movement. <b>(A)</b> <span
+                  class="txt-bd"></span> , one part
+                  of your brain sees its shape, another sees color, another detects location, and another perceives
+                  movement. <b>(B)</b> <span class="txt-bd"></span> , after localized brain damage, it is possible to see
+                  certain aspects of an
+                  object and not others. Centuries ago, people found it difficult to imagine how someone could see an
+                  object without seeing what color it is. Even today, you might find it surprising to learn about people
+                  who see an object without seeing where it is, or see it without seeing whether it is moving.</p>
+              </div>
+              <ul class="qst-answer-list-grp type-col2">
+                <li class="qst-answer-list">
+                  <span class="list-word">(A)</span> <span class="list-word">(B)</span>
+                </li>
+                <li class="qst-answer-list">
+                  ① <span class="list-word">Consequently</span> <span class="list-word">However</span>
+                </li>
+                <li class="qst-answer-list">
+                  ② <span class="list-word">Thus</span> <span class="list-word">Despite</span>
+                </li>
+                <li class="qst-answer-list">
+                  ③ <span class="list-word">Therefore</span> <span class="list-word">Nonetheless</span>
+                </li>
+                <li class="qst-answer-list">
+                  ④ <span class="list-word">However</span> <span class="list-word">Therefore</span>
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ <span class="list-word">Additionally</span> <span class="list-word">Conversely</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 4. 객관식: 빈칸 유형 (접속부사) -->
+
+            <!-- 5. 객관식: 요지 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-07" class="custom-checkbox-inp none">
+                <label for="print0701-07" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">7. 다음 글의 요지로 가장 적절한 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  We tend to overrate the impact of new technologies in part because older technologies have become
+                  absorbed into the furniture of our lives, so as to be almost invisible. Take the baby bottle. Here is a
+                  simple implement that has transformed a fundamental human experience for vast numbers of infants and
+                  mothers, yet it finds no place in our histories of technology. This technology might be thought of as a
+                  classic time­shifting device, as it enables mothers to exercise more control over the timing of feeding.
+                  It can also function to save time, as bottle feeding allows for someone else to substitute for the
+                  mother’s time. Potentially, therefore, it has huge implications for the management of time in everyday
+                  life, yet it is entirely overlooked in discussions of high­speed society.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① 새로운 기술은 효율적인 시간 관리에 도움이 된다.
+                </li>
+                <li class="qst-answer-list">
+                  ② 새로운 기술에 비해 기존 기술의 영향력이 간과되고 있다.
+                </li>
+                <li class="qst-answer-list">
+                  ③ 현대 사회의 새로운 기술이 양육자의 역할을 대체하고 있다.
+                </li>
+                <li class="qst-answer-list">
+                  ④ 새로운 기술의 사용을 장려하는 사회적 인식이 요구된다.
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ 기존 기술의 활용은 새로운 기술의 개발에 도움이 된다.
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 5. 객관식: 요지 유형 -->
+
+            <!-- 6. 객관식: 목적 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-08" class="custom-checkbox-inp none">
+                <label for="print0701-08" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">8. 다음 글의 목적으로 가장 적절한 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  Dear Art Crafts People of Greenville, For the annual Crafts Fair on May 25 from 1 p.m. to 6 p.m., the
+                  Greenville Community Center is providing booth spaces to rent as in previous years. To reserve your
+                  space, please visit our website and complete a registration form by April 20. The rental fee is $50. All
+                  the money we receive from rental fees goes to support upcoming activities throughout the year. We expect
+                  all available spaces to be fully booked soon, so don’t get left out. We hope to see you at the fair.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① To ask for regular sponsorship for local artists
+                </li>
+                <li class="qst-answer-list">
+                  ② To introduce you to the booth reservation for the craft fair
+                </li>
+                <li class="qst-answer-list">
+                  ③ To explain how to return rental items
+                </li>
+                <li class="qst-answer-list">
+                  ④ To promote items made by local artists
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ To announce changes to the local event schedule
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 6. 객관식: 목적 유형 -->
+
+            <!-- 7. 객관식: 주장 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-09" class="custom-checkbox-inp none">
+                <label for="print0701-09" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">9. 다음 글에서 필자가 주장하는 바로 가장 적절한 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  Too many times people, especially in today’s generation, expect things to just happen overnight. When we
+                  have these false expectations, it tends to discourage us from continuing to move forward. Because this
+                  is a high tech society, everything we want has to be within the parameters of our comfort and
+                  convenience. If it doesn’t happen fast enough, we’re tempted to lose interest. So many people don’t want
+                  to take the time it requires to be successful. Success is not a matter of mere desire; you should
+                  develop patience in order to achieve it. Have you fallen prey to impatience? Great things take time to
+                  build.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① 성공하기 위해서는 인내심을 길러야 한다.
+                </li>
+                <li class="qst-answer-list">
+                  ② 안락함을 추구하기보다 한계에 도전해야 한다.
+                </li>
+                <li class="qst-answer-list">
+                  ③ 사회 변화의 속도에 맞춰 빠르게 대응해야 한다.
+                </li>
+                <li class="qst-answer-list">
+                  ④ 기회를 기다리기보다 능동적으로 행동해야 한다.
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ 흥미를 잃지 않으려면 자신이 좋아하는 일을 해야 한다.
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 7. 객관식: 주장 유형 -->
+
+            <!-- 8. 객관식: 지칭추론 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-10" class="custom-checkbox-inp none">
+                <label for="print0701-10" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">10. 다음 번호 중, 가리키는 대상이 나머지 넷과 다른 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  Christine was a cat owner who loved her furry companion, Leo. One morning, she noticed that Leo was not
+                  feeling well. Concerned for her beloved cat, Christine decided to take him to the animal hospital. As
+                  she always brought Leo to this hospital, she was certain that the vet knew well about Leo. <b>(A)
+                    She</b>
+                  desperately hoped Leo got the necessary care as soon as possible.
+                  The waiting room was filled with other pet owners. Finally, it was Leo’s turn to see the vet. Christine
+                  watched as the vet gently examined him. The vet said, “<b>(B) I</b> think Leo has a minor infection.”
+                  “Infection? Will he be okay?” asked Christine. “We need to do some tests to see if he is infected. But
+                  for the tests, it’s best for Leo to stay here,” replied the vet. It was heartbreaking for Christine to
+                  leave Leo at the animal hospital, but <b>(C) she</b> had to accept it was for the best.
+                  “I’ll call <b>(D) you</b> with updates as soon as we know anything,” said the vet. Throughout the day,
+                  Christine anxiously awaited news about Leo. Later that day, the phone rang and it was the vet. “The
+                  tests revealed a minor infection. Leo needs some medication and rest, but he'll be back to his playful
+                  self soon.” Relieved to hear the news, Christine rushed back to the animal hospital to pick up Leo.
+                  The vet provided detailed instructions on how to administer the medication and shared tips for a speedy
+                  recovery. Back at home, Christine created a comfortable
+                  space for Leo to rest and heal. <b>(E) She</b> patted him with love and attention, ensuring that he
+                  would
+                  recover in no time. As the days passed, Leo gradually regained his strength and playful spirit.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① (A)
+                </li>
+                <li class="qst-answer-list">
+                  ② (B)
+                </li>
+                <li class="qst-answer-list">
+                  ③ (C)
+                </li>
+                <li class="qst-answer-list">
+                  ④ (D)
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ (E)
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 8. 객관식: 지칭추론 유형 -->
+
+            <!-- 9. 객관식: 무관한 문장 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-11" class="custom-checkbox-inp none">
+                <label for="print0701-11" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">11. 다음 글에서 전체 흐름과 관계 없는 문장을 고르시오.</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  We are the only species that seasons its food, deliberately altering it with the highly flavored plant
+                  parts we call herbs and spices. It’s quite possible that our taste for spices has an evolutionary root.
+                  <b>(1)</b> Many spices have antibacterial properties — in fact, common seasonings such as garlic, onion,
+                  and
+                  oregano inhibit the growth of almost every bacterium tested. <b>(2)</b> And the cultures that make the
+                  heaviest
+                  use of spices — think of the garlic and black pepper of Thai food, the ginger and coriander of India,
+                  the chili peppers of Mexico — come from warmer climates, where bacterial spoilage is a bigger issue.
+                  <b>(3)</b>
+                  The changing climate can have a significant impact on the production and availability of spices,
+                  influencing their growth patterns and ultimately affecting global spice markets. <b>(4)</b> In contrast,
+                  the
+                  most lightly spiced cuisines — those of Scandinavia and northern Europe — are from cooler climates.
+                  <b>(5)</b>
+                  Our uniquely human attention to flavor, in this case the flavor of spices, turns out to have arisen as a
+                  matter of life and death.
+                </p>
+              </div>
+            </div>
+
+            <!-- END 9. 객관식: 무관한 문장 유형 -->
+
+            <!-- 10. 객관식: 순서 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-12" class="custom-checkbox-inp none">
+                <label for="print0701-12" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">12. 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h2>
+              <div class="qst-content">
+                <div class="qst-txt-box">
+                  <p class="qst-txt">Development of the human body from a single cell provides many examples of the
+                    structural richness
+                    that is possible when the repeated production of random variation is combined with nonrandom
+                    selection.</p>
+                </div>
+                <p class="qst-txt">
+                  (A) Those in the right place that make the right connections are stimulated, and those that don’t are
+                  eliminated. This process is much like sculpting. A natural consequence of the strategy is great
+                  variability from individual to individual at the cell and molecular levels, even though large­scale
+                  structures are quite similar.
+                </p>
+                <p class="qst-txt">
+                  (B) The survivors serve to produce new cells that undergo further rounds of selection. Except in the
+                  immune system, cells and extensions of cells are not genetically selected during development, but
+                  rather, are positionally selected.
+                </p>
+                <p class="qst-txt">
+                  (C) All phases of body development from embryo to adult exhibit random activities at the cellular level,
+                  and body formation depends on the new possibilities generated by these activities coupled with selection
+                  of those outcomes that satisfy previously built­in criteria. Always new structure is based on old
+                  structure, and at every stage selection favors some cells and eliminates others.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① (A) - (C) - (B)
+                </li>
+                <li class="qst-answer-list">
+                  ② (B) - (A) - (C)
+                </li>
+                <li class="qst-answer-list">
+                  ③ (B) - (C) - (A)
+                </li>
+                <li class="qst-answer-list">
+                  ④ (C) - (A) - (B)
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ (C) - (B) - (A)
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 10. 객관식: 순서 유형 -->
+
+            <!-- 11. 객관식: 삽입 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-13" class="custom-checkbox-inp none">
+                <label for="print0701-13" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">13. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h2>
+              <div class="qst-content">
+                <div class="qst-txt-box">
+                  <p class="qst-txt">However, there are many lines of evidence to suggest that vagrancy can, on rare
+                    occasions, dramatically alter the fate of populations, species or even whole ecosystems.</p>
+                </div>
+                <p class="qst-txt">
+                  It is a common assumption that most vagrant birds are ultimately doomed, aside from the rare cases where
+                  individuals are able to reorientate and return to their normal ranges. <b>[1]</b> In turn, it is also
+                  commonly
+                  assumed that vagrancy itself is a relatively unimportant biological phenomenon. <b>[2]</b> This is
+                  undoubtedly
+                  true for the majority of cases, as the most likely outcome of any given vagrancy event is that the
+                  individual will fail to find enough resources, and/or be exposed to inhospitable environmental
+                  conditions, and perish. <b>[3]</b> Despite being infrequent, these events can be extremely important
+                  when
+                  viewed at the timescales over which ecological and evolutionary processes unfold. <b>[4]</b> The most
+                  profound
+                  consequences of vagrancy relate to the establishment of new breeding sites, new migration routes and
+                  wintering locations. <b>[5]</b> Each of these can occur through different mechanisms, and at different
+                  frequencies, and they each have their own unique importance.
+                </p>
+              </div>
+            </div>
+
+            <!-- END 11. 객관식: 삽입 유형 -->
+
+            <!-- 12-1. 객관식: 내용 불일치 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-14" class="custom-checkbox-inp none">
+                <label for="print0701-14" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">14. 다음 글의 내용과 일치하지 않는 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">Theodore von Kármán, a Hungarian­American engineer, was one of the greatest minds of
+                  the twentieth century. He was born in Hungary and at an early age, he showed a talent for math and
+                  science. In 1908, he received a doctoral degree in engineering at the University of Göttingen in
+                  Germany. In the 1920s, he began traveling as a lecturer and consultant to industry. He was invited to
+                  the United States to advise engineers on the design of a wind tunnel at California Institute of
+                  Technology (Caltech). He became the director of the Guggenheim Aeronautical Laboratory at Caltech in
+                  1930. Later, he was awarded the National Medal of Science for his leadership in science and engineering.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① 어린 시절 수학과 과학에 재능을 보였다.
+                </li>
+                <li class="qst-answer-list">
+                  ② University of Göttingen에서 공학 박사 학위를 받았다.
+                </li>
+                <li class="qst-answer-list">
+                  ③ 1920년대에 강연자 겸 자문 위원으로 다니기 시작했다.
+                </li>
+                <li class="qst-answer-list">
+                  ④ Caltech의 공학자를 초청하여 조언을 구했다.
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ National Medal of Science를 받았다.
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 12-1. 객관식: 내용 불일치 유형 -->
+
+            <!-- 12-2. 객관식: 내용 불일치 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-15" class="custom-checkbox-inp none">
+                <label for="print0701-15" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">15. 다음 글의 내용과 일치하지 않는 것을 모두 고르시오. [정답 2개]</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  Gordon Parks was a photographer, author, film director, and musician. He documented the everyday lives
+                  of African Americans at a time when few people outside the black community were familiar with their
+                  lives. Parks was born the youngest of 15 children and grew up on his family’s farm. After the death of
+                  his mother, he went to live with a sister in Minnesota. Parks eventually dropped out of school and
+                  worked at various jobs. His interest in photography was inspired by a photo­essay he read about migrant
+                  farm workers. After he moved to Chicago, Parks began taking photos of poor African Americans. In 1949,
+                  he became the first African American to be a staff photographer for Life magazine. He also wrote music
+                  pieces in his life and in 1956 the Vienna Orchestra performed a piano concerto he wrote. Parks was an
+                  inspiring artist until he died in 2006.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① He was born the first of 15 children.
+                </li>
+                <li class="qst-answer-list">
+                  ② After my mother died, I went to live with my sister in Minnesota.
+                </li>
+                <li class="qst-answer-list">
+                  ③ He did not drop out of school and worked in various jobs.
+                </li>
+                <li class="qst-answer-list">
+                  ④ He was the first African American to become a photojournalist for Life magazine.
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ His piano concerto was performed by the Vienna Orchestra in 1956.
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 12-2. 객관식: 내용 불일치 유형 -->
+
+            <!-- 13-1. 객관식: 낱말 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-16" class="custom-checkbox-inp none">
+                <label for="print0701-16" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">16. 다음 번호 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  Emotion socialization — learning from other people about emotions and how to deal with them — starts
+                  early in life and plays a foundational role for emotion regulation development. Although extra­familial
+                  influences, such as peers or media, gain in importance during adolescence, parents remain the <b>[1]
+                    primary</b> socialization agents. For example, their own responses to emotional situations serve as a
+                  role
+                  model for emotion regulation, increasing the likelihood that their children will show <b>[2] similar</b>
+                  reactions in comparable situations. Parental practices at times when their children are faced with
+                  emotional challenges also impact emotion regulation development. Whereas direct soothing and directive
+                  guidance of what to do are beneficial for younger children, they may <b>[3] cultivate</b> adolescents’
+                  autonomy
+                  striving. In consequence, adolescents might pull away from, rather than turn toward, their parents in
+                  times of emotional crisis, unless parental practices are <b>[4] adjusted</b>. More suitable in
+                  adolescence is
+                  <b>[5] indirect</b> support of autonomous emotion regulation, such as through interest in, as well as
+                  awareness
+                  and nonjudgmental acceptance of, adolescents’ emotional experiences, and being available when the
+                  adolescent wants to talk.
+                </p>
+              </div>
+            </div>
+
+            <!-- END 13-1. 객관식: 낱말 유형 -->
+
+            <!-- 13-2. 객관식: 낱말 유형 [양자택일] -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-17" class="custom-checkbox-inp none">
+                <label for="print0701-17" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">17. 다음 번호 중, 문맥상 낱말의 쓰임이 적절한 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">Urban delivery vehicles can be adapted to better suit the density of urban
+                  distribution, which often involves smaller vehicles such as vans, including bicycles. The latter have
+                  the potential to become a preferred ‘last-mile’ vehicle, particularly in <b>(A) (low-density /
+                    high-density)</b> and congested areas. In locations where bicycle use is high, such as the
+                  Netherlands,
+                  delivery bicycles are also used to carry personal cargo (e.g., groceries). Due to their low acquisition
+                  and maintenance costs, cargo bicycles convey much potential in developed and developing countries alike,
+                  such as the becak (a three-wheeled bicycle) in Indonesia. Services using electrically assisted delivery
+                  tricycles have been <b>(B) (unsuccessfully / successfully)</b> implemented in France and are gradually
+                  being
+                  adopted across Europe for services as varied as parcel and catering deliveries. Using bicycles as cargo
+                  vehicles is particularly <b>(C) (discouraged / encouraged)</b> when combined with policies that restrict
+                  motor
+                  vehicle access to specific areas of a city, such as downtown or commercial districts, or with the
+                  extension of dedicated bike lanes.</p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  <span class="list-word">(A)</span><span class="list-word">(B)</span><span class="list-word">(C)</span>
+                </li>
+                <li class="qst-answer-list">
+                  ① <span class="list-word">low-density</span><span class="list-word">unsuccessfully</span><span
+                  class="list-word">discouraged</span>
+                </li>
+                <li class="qst-answer-list">
+                  ② <span class="list-word">low-density</span><span class="list-word">successfully</span><span
+                  class="list-word">encouraged</span>
+                </li>
+                <li class="qst-answer-list">
+                  ③ <span class="list-word">high-density</span><span class="list-word">unsuccessfully</span><span
+                  class="list-word">discouraged</span>
+                </li>
+                <li class="qst-answer-list">
+                  ④ <span class="list-word">high-density</span><span class="list-word">successfully</span><span
+                  class="list-word">discouraged</span>
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ <span class="list-word">high-density</span><span class="list-word">successfully</span><span
+                  class="list-word">encouraged</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 13-2. 객관식: 낱말 유형 [양자택일] -->
+
+            <!-- 14. 객관식: 요약 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-18" class="custom-checkbox-inp none">
+                <label for="print0701-18" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">18. 다음 글의 내용을 한 문장으로 요약하려고 한다. 빈칸 (A),(B)에 들어갈 말로 가장 적절한 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  The fast­growing, tremendous amount of data, collected and stored in large and numerous data
+                  repositories, has far exceeded our human ability for understanding without powerful tools. As a result,
+                  data collected in large data repositories become “data tombs” — data archives that are hardly visited.
+                  Important decisions are often made based not on the information–rich data stored in data repositories
+                  but rather on a decision maker’s instinct, simply because the decision maker does not have the tools to
+                  extract the valuable knowledge hidden in the vast amounts of data. Efforts have been made to develop
+                  expert system and knowledge­based technologies, which typically rely on users or domain experts to
+                  manually input knowledge into knowledge bases. However, this procedure is likely to
+                  cause biases and errors and is extremely costly and time consuming. The widening gap between data and
+                  information calls for the systematic development of tools that can turn data tombs into “golden nuggets”
+                  of knowledge.
+                </p>
+                <p class="qst-txt type-align-center">↓</p>
+                <div class="qst-txt-box">
+                  <p>As the vast amounts of data stored in repositories <b>(A)</b> <span class="txt-bd"></span> human
+                    understanding, effective tools
+                    to <b>(B)</b> <span class="txt-bd"></span> valuable knowledge are required for better decision­making.
+                  </p>
+                </div>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  <span class="list-word">(A)</span><span class="list-word">(B)</span>
+                </li>
+                <li class="qst-answer-list">
+                  ① <span class="list-word">overwhelm</span><span class="list-word">obtain</span>
+                </li>
+                <li class="qst-answer-list">
+                  ② <span class="list-word">overwhelm</span><span class="list-word">exchange</span>
+                </li>
+                <li class="qst-answer-list">
+                  ③ <span class="list-word">enhance</span><span class="list-word">apply</span>
+                </li>
+                <li class="qst-answer-list">
+                  ④ <span class="list-word">enhance</span><span class="list-word">discover</span>
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ <span class="list-word">fulfill</span><span class="list-word">access</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 14. 객관식: 요약 유형 -->
+
+            <!-- 15. 객관식: 내용추론(의미추론) 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-19" class="custom-checkbox-inp none">
+                <label for="print0701-19" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">19. 다음 글의 내용을 미루어 볼 때, 알 수 없는 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  “Craftsmanship” may suggest a way of life that declined with the arrival of industrial society ― but
+                  this is misleading. Craftsmanship names an enduring, basic human impulse, the desire to do a job well
+                  for its own sake. Craftsmanship cuts a far wider swath than skilled manual labor; it serves the computer
+                  programmer, the doctor, and the artist; parenting improves when it is practiced as a skilled craft, as
+                  does citizenship. In all these domains, craftsmanship focuses on objective standards, on the thing in
+                  itself. Social and economic conditions, however, often stand in the way of the craftsman’s discipline
+                  and commitment: schools may fail to provide the tools to do good work, and workplaces may not truly
+                  value the aspiration for quality. And though craftsmanship can reward an individual with a sense of
+                  pride in work, this reward is not simple. The craftsman often faces conflicting objective standards of
+                  excellence; the desire to do something well for its own sake can be weakened by competitive pressure, by
+                  frustration, or by obsession.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① Craftsmanship can foster a sense of pride and personal achievement when one's work meets high
+                  standards of quality.
+                </li>
+                <li class="qst-answer-list">
+                  ② Craftsmanship is relevant only to traditional professions like carpentry or pottery and does not apply
+                  to modern technological fields.
+                </li>
+                <li class="qst-answer-list">
+                  ③ The principles of craftsmanship apply across various professional fields, including medicine,
+                  programming, and the arts.
+                </li>
+                <li class="qst-answer-list">
+                  ④ External social and economic factors can impede the full realization of craftsmanship due to lack of
+                  support or resources.
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ Personal commitment to craftsmanship ensures consistent success and recognition in any professional
+                  field, regardless of external challenges.
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 15. 객관식: 내용추론(의미추론) 유형 -->
+
+            <!-- 16-1. 객관식: 어법 유형 [단어] -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-19" class="custom-checkbox-inp none">
+                <label for="print0701-19" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">19. 다음 글의 보기 (A)~(E) 단어 중에 어법상 틀린 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  Trends constantly suggest new opportunities for individuals to restage themselves, representing
+                  occasions for change. To understand how trends can ultimately give individuals power and freedom, one
+                  must first discuss fashion’s importance as a basis for change. The most common explanation offered by my
+                  informants as to why fashion is so appealing is <b>(A) that</b> it constitutes a kind of theatrical
+                  costumery.
+                  Clothes are part of how people present <b>(B) them</b> to the world, and fashion locates them in the
+                  present,
+                  relative to what is happening in society and to fashion’s own history. As a form of expression, fashion
+                  contains a host of ambiguities, enabling individuals to recreate the meanings <b>(C) associated</b> with
+                  specific pieces of clothing. Fashion is among the simplest and cheapest methods of self-expression:
+                  clothes can be <b>(D) inexpensively</b> purchased while making it easy to convey notions of wealth,
+                  intellectual stature, relaxation or environmental consciousness, even if none of these is true. Fashion
+                  can also strengthen agency in various ways, <b>(E) opening</b> up space for action.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① (A)
+                </li>
+                <li class="qst-answer-list">
+                  ② (B)
+                </li>
+                <li class="qst-answer-list">
+                  ③ (C)
+                </li>
+                <li class="qst-answer-list">
+                  ④ (D)
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ (E)
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 16-1. 객관식: 어법 유형 [단어] -->
+
+            <!-- 16-3. 객관식: 어법 유형 [문장] -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-20" class="custom-checkbox-inp none">
+                <label for="print0701-20" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">20. 다음 글의 보기 (A)~(E) 문장 중에 어법상 틀린 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  Trends constantly suggest new opportunities for individuals to restage themselves, representing
+                  occasions for change. To understand how trends can ultimately give individuals power and freedom, one
+                  must first discuss fashion’s importance as a basis for change. <b>(A) The most common explanation
+                    offered
+                    by my informants as to why fashion is so appealing is that it constitutes a kind of theatrical
+                    costumery.</b> <b>(B) Clothes are part of how people present them to the world, and fashion locates
+                    them
+                    in the
+                    present, relative to what is happening in society and to fashion’s own history.</b> <b>(C) As a form
+                    of
+                    expression, fashion contains a host of ambiguities, enabling individuals to recreate the meanings
+                    associated with specific pieces of clothing.</b> <b>(D) Fashion is among the simplest and cheapest
+                    methods of
+                    self-expression: clothes can be inexpensively purchased while making it easy to convey notions of
+                    wealth, intellectual stature, relaxation or environmental consciousness, even if none of these is
+                    true.</b>
+                  <b>(E) Fashion can also strengthen agency in various ways, opening up space for action.</b>
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① (A)
+                </li>
+                <li class="qst-answer-list">
+                  ② (B)
+                </li>
+                <li class="qst-answer-list">
+                  ③ (C)
+                </li>
+                <li class="qst-answer-list">
+                  ④ (D)
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ (E)
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 16-3. 객관식: 어법 유형 [문장] -->
+
+            <!-- 16-4. 객관식: 어법 유형 [단어-틀린갯수] -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-21" class="custom-checkbox-inp none">
+                <label for="print0701-21" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">21. 다음 글의 보기 (A)~(E) 단어 중에 어법상 틀린 개수는?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  Trends constantly suggest new opportunities for individuals to restage themselves, representing
+                  occasions for change. To understand how trends can ultimately give individuals power and freedom, one
+                  must first discuss fashion’s importance as a basis for change. The most common explanation offered by my
+                  informants as to why fashion is so appealing is <b>(A) that</b> it constitutes a kind of theatrical
+                  costumery.
+                  Clothes are part of how people present <b>(B) them</b> to the world, and fashion locates them in the
+                  present,
+                  relative to what is happening in society and to fashion’s own history. As a form of expression, fashion
+                  contains a host of ambiguities, enabling individuals to recreate the meanings <b>(C) associated</b> with
+                  specific pieces of clothing. Fashion is among the simplest and cheapest methods of self-expression:
+                  clothes can be <b>(D) inexpensively</b> purchased while making it easy to convey notions of wealth,
+                  intellectual stature, relaxation or environmental consciousness, even if none of these is true. Fashion
+                  can also strengthen agency in various ways, <b>(E) opening</b> up space for action.
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① 1개
+                </li>
+                <li class="qst-answer-list">
+                  ② 2개
+                </li>
+                <li class="qst-answer-list">
+                  ③ 3개
+                </li>
+                <li class="qst-answer-list">
+                  ④ 4개
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ 5개
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 16-4. 객관식: 어법 유형 [단어-틀린갯수] -->
+
+            <!-- 16-5. 객관식: 어법 유형 [문장-틀린갯수] -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-22" class="custom-checkbox-inp none">
+                <label for="print0701-22" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">22. 다음 글의 보기 (A)~(E) 단어 중에 어법상 틀린 개수는?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">
+                  Trends constantly suggest new opportunities for individuals to restage themselves, representing
+                  occasions for change. To understand how trends can ultimately give individuals power and freedom, one
+                  must first discuss fashion’s importance as a basis for change. <b>(A) The most common explanation
+                    offered
+                    by my informants as to why fashion is so appealing is that it constitutes a kind of theatrical
+                    costumery.</b> <b>(B) Clothes are part of how people present them to the world, and fashion locates
+                    them
+                    in the
+                    present, relative to what is happening in society and to fashion’s own history.</b> <b>(C) As a form
+                    of
+                    expression, fashion contains a host of ambiguities, enabling individuals to recreate the meanings
+                    associated with specific pieces of clothing.</b> <b>(D) Fashion is among the simplest and cheapest
+                    methods of
+                    self-expression: clothes can be inexpensively purchased while making it easy to convey notions of
+                    wealth, intellectual stature, relaxation or environmental consciousness, even if none of these is
+                    true.</b>
+                  <b>(E) Fashion can also strengthen agency in various ways, opening up space for action.</b>
+                </p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① 1개
+                </li>
+                <li class="qst-answer-list">
+                  ② 2개
+                </li>
+                <li class="qst-answer-list">
+                  ③ 3개
+                </li>
+                <li class="qst-answer-list">
+                  ④ 4개
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ 5개
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 16-5. 객관식: 어법 유형 [문장-틀린갯수] -->
+
+            <!-- 18. 객관식: 영영풀이 유형 -->
+            <div class="print07-qst type-multiple">
+              <div class="checkbox-item">
+                <input type="checkbox" name="range" id="print0701-23" class="custom-checkbox-inp none">
+                <label for="print0701-23" class="custom-checkbox"></label>
+              </div>
+              <h2 class="qst-ttl">23. 다음 해당하는 단어의 영영풀이 중 잘못된 것은?</h2>
+              <div class="qst-content">
+                <p class="qst-txt">The most prevalent problem kids report is that they feel like they need to be
+                  accessible at all times. Because technology allows for it, they feel an obligation. It’s easy for most
+                  of us to relate — you probably feel the same pressure in your own life! It is really challenging to deal
+                  with the fact that we’re human and can’t always respond instantly. For a teen or tween who’s still
+                  learning the ins and outs of social interactions, it’s even worse. Here’s how this behavior plays out
+                  sometimes: Your child texts one of his friends, and the friend doesn’t text back right away. Now it’s
+                  easy for your child to think, “This person doesn’t want to be my friend anymore!” So he texts again, and
+                  again, and again — “blowing up their phone.” This can be stress­inducing and even read as aggressive.
+                  But you can see how easily this could happen.</p>
+              </div>
+              <ul class="qst-answer-list-grp">
+                <li class="qst-answer-list">
+                  ① <b>Accessibility</b> : The quality of being able to be reached or entered.
+                </li>
+                <li class="qst-answer-list">
+                  ② <b>Obligation</b> : A duty or commitment.
+                </li>
+                <li class="qst-answer-list">
+                  ③ <b>Pressure</b> : The use of persuasion, influence, or intimidation to make someone do something.
+                </li>
+                <li class="qst-answer-list">
+                  ④ <b>Interactions</b> : A state where a person refrains from any form of communication with others.
+                </li>
+                <li class="qst-answer-list">
+                  ⑤ <b>Aggressive</b> : Behaving or done in a strong and forceful way.
+                </li>
+              </ul>
+            </div>
+
+            <!-- END 18. 객관식: 영영풀이 유형 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- END 변형문제 -->
+    </div>
+    <script src="gpt-tutor/assets/js/ui.js"></script>
+  </body>
+</html>

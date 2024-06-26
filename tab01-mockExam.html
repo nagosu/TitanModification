@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT TUTOR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="gpt-tutor/assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="gpt-tutor/assets/css/style.css">
+    <link rel="stylesheet" href="gpt-tutor/assets/css/print-style.css">
+    <script src="gpt-tutor/assets/js/vendor/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="header-top">
+          <div class="header-inner">
+            <h1 class="logo">
+              <a href="support.html">
+                <img src="gpt-tutor/assets/images/logo.svg" alt="TITAN">
+              </a>
+            </h1>
+            <div class="header-gnb-grp">
+              <a href="tab01-textbook.html" class="gnb active">수업준비</a>
+              <a href="page02-01.html" class="gnb ">수업</a>
+              <a href="page03-01.html" class="gnb ">관리</a>
+            </div>
+            <div class="header-right">
+              <div class="alarm-btn-set">
+                <button id="hd-alarm-btn" type="button" class="alarm-btn active">
+                  <i class="ico ico-bell"></i>
+                  <span class="txt-hidden">알람 버튼</span>
+                </button>
+                <div class="alarm-btn-modal-wrapper">
+                  <div class="alarm-btn-modal-container">
+
+                    <!-- 알람 첫장 -->
+                    <div class="alarm-btn-modal type-01">
+                      <div class="amodal-top">
+                        <h5 class="top-ttl">알림</h5>
+                      </div>
+                      <div class="amodal-content">
+
+                        <!-- TODO: 알림 있을 때 -->
+                        <div class="alarm-list-grp">
+                          <div class="alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <p class="txt">(자동 채점) 변형문제(문제),시험지명:·····</p>
+                          </div>
+                          <div class="alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <p class="txt">(자동 채점) 변형문제(문제),시험지명:·····</p>
+                          </div>
+                          <div class="alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <p class="txt">(자동 채점) 변형문제(문제),시험지명:·····</p>
+                          </div>
+                        </div>
+
+                        <!-- TODO: 알림 없을 때 -->
+                        <div class="nothing-alarm" style="display: none;">
+                          <p class="txt">아직 일정이 없어요.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- END 알람 첫장 -->
+
+                    <!-- 알람 둘째장 -->
+                    <div class="alarm-btn-modal type-02">
+                      <div class="amodal-top">
+                        <button type="button" class="ico-btn back-btn">
+                          <i class="ico ico-back"></i>
+                          <span class="txt-hidden">뒤로가기</span>
+                        </button>
+                        <h5 class="top-ttl">김민우</h5>
+                      </div>
+                      <div class="amodal-content">
+                        <div class="detail-alarm-list-grp">
+                          <div class="detail-alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <div class="txt-wrap">
+                              <p class="txt">(자동 채점) 변형문제(문제)</p>
+                              <p class="txt">시험지명:김포고 1학년 중간고사 테스트</p>
+                              <p class="txt">제출 점수:57점(8/14)</p>
+                            </div>
+                          </div>
+                          <div class="detail-alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <div class="txt-wrap">
+                              <p class="txt">(시험 응시) 변형문제(문제)</p>
+                              <p class="txt">시험지명:김포고 1학년 중간고사 테스트</p>
+                            </div>
+                          </div>
+                          <div class="detail-alarm-date">
+                            <p class="txt">2024년 2월 28일</p>
+                          </div>
+                          <div class="detail-alarm-list">
+                            <span class="time">오전 11:54</span>
+                            <h6 class="name">김민우</h6>
+                            <div class="txt-wrap">
+                              <p class="txt">(시험 응시) 변형문제(문제)</p>
+                              <p class="txt">시험지명:김포고 1학년 중간고사 테스트</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- END 알람 둘째장 -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- 로그인 전 -->
+              <a href="login.html" class="user-info-badge ">
+                <img src="gpt-tutor/assets/images/ico-user.svg" alt="" class="ico">
+                <span class="txt">로그인을 해주세요.</span>
+              </a>
+
+              <!-- END 로그인 전 -->
+
+              <!-- 로그인 후 -->
+              <div class="user-info-badge-wrap">
+                <div class="user-info-badge active">
+                  <img src="gpt-tutor/assets/images/ico-user.svg" alt="" class="ico">
+                  <span class="txt">username</span>
+                </div>
+                <div class="user-info-badge-list-wrap">
+                  <div class="user-info-badge-list-grp">
+                    <a href="company.html" class="list-btn">회사소개</a>
+                    <a href="support.html" class="list-btn">고객센터</a>
+                    <a href="account.html" class="list-btn">계정정보</a>
+                    <a href="login.html" class="list-btn">로그아웃</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END 로그인 후 -->
+            </div>
+          </div>
+        </div>
+        <div class="header-middle">
+          <div class="header-gnb-to-snb type-01 active">
+            <div class="header-snb-grp">
+              <a href="tab01-textbook.html" class="snb active">강의자료</a>
+              <a href="tab02-textbook.html" class="snb ">변형문제</a>
+              <a href="page01-01.html" class="snb ">외부문제 보내기</a>
+            </div>
+          </div>
+          <div class="header-gnb-to-snb type-02">
+            <div class="header-snb-grp">
+              <a href="page02-01.html" class="snb ">반별 출제현황</a>
+              <a href="page02-02.html" class="snb ">학생별 오답관리</a>
+            </div>
+          </div>
+          <div class="header-gnb-to-snb type-03">
+            <div class="header-snb-grp">
+              <a href="page03-01.html" class="snb ">학생관리</a>
+              <a href="page03-02.html" class="snb ">반 관리</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="header-notice">
+        <p class="notice-txt">공지사항 배너: 해당 공간은 공지사항을 위한 공간입니다.</p>
+      </div>
+      <script>
+        $('.header-gnb-grp .gnb.active').each(function(index) {
+          $('.header-gnb-to-snb').eq($(this).index()).addClass('active');
+        })
+        $('.header-gnb-grp .gnb').on('mouseover', function() {
+          $('.header-gnb-to-snb').removeClass('active');
+          $('.header-gnb-to-snb').eq($(this).index()).addClass('active');
+        })
+        $('.header-gnb-to-snb').each(function(index) {
+          $(this).css('left', $('.header-gnb-grp .gnb').eq(index).offset().left);
+        })
+        $('.header').on('mouseleave', function() {
+          $('.header-gnb-to-snb').removeClass('active');
+          $('.header-gnb-to-snb').eq($('.header-gnb-grp .gnb.active').index()).addClass('active');
+        })
+        // 알람 버튼 눌렀을 때
+        $('#hd-alarm-btn').on('click', function() {
+          $('.alarm-btn-modal-wrapper').addClass('active');
+        })
+        $('.alarm-btn-modal.type-01 .alarm-list').on('click', function() {
+          $('.alarm-btn-modal.type-02').addClass('active');
+        })
+        $('.alarm-btn-modal.type-02 .back-btn').on('click', function() {
+          $('.alarm-btn-modal.type-02').removeClass('active');
+        })
+        // 알람창 외 눌렀을 때
+        $(document).mouseup(function(e) {
+          var layerPopup = $(".alarm-btn-modal-wrapper");
+          if (layerPopup.has(e.target).length === 0) {
+            $('.alarm-btn-modal-wrapper').removeClass('active');
+            $('.alarm-btn-modal.type-02').removeClass('active');
+          }
+        });
+      </script>
+      <div class="page-container">
+
+        <!-- 왼쪽 사이드바 -->
+        <div class="major-sidebar">
+          <div class="major-sidebar-top">
+            <h1 class="major-sidebar-ttl">강의자료</h1>
+          </div>
+          <div class="major-sidebar-bottom">
+            <div class="major-sidebar-menu-container">
+
+              <!-- 강의자료 사이드바 -->
+              <ul class="major-sidebar-menu-list-grp ">
+
+                <!-- 사이드바 메뉴 1. 교과서 -->
+                <li class="major-sidebar-menu-list ">
+                  <a href="tab01-textbook.html" class="menu">
+                    <i class="ico">
+                      <img src="gpt-tutor/assets/images/ico-menu01-color.svg" alt="" class="ico-color">
+                      <img src="gpt-tutor/assets/images/ico-menu01-gray.svg" alt="" class="ico-gray">
+                    </i>
+                    <span class="txt">교과서</span>
+                  </a>
+
+                  <!-- 서브메뉴 -->
+                  <div class="major-sidebar-sub-menu">
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp active">
+                      <button type="button" class="sub-menu-btn">영어</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+
+                          <!-- TODO: 클릭되어있는 메뉴는 active 클래스가 적용됩니다 -->
+                          <button type="button" class="more-btn active">- YBM (박준언)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- YBM (한상호)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 능률 (양현권)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 능률 (김성곤)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 비상 (홍민표)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 동아 (이병민)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 금성 (최인철)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 천재 (이재영)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 지학사 (민찬규)</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">영어 Ⅰ</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- YBM (박준언)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- YBM (한상호)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 능률 (김성곤)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 교학사 (강문구)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 비상 (홍민표)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 동아 (권혁승)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 금성 (최인철)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 천재 (이재영)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 지학사 (민찬규)</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">영어 Ⅱ</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- YBM (박준언)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- YBM (한상호)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 능률 (김성곤)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 비상 (홍민표)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 동아 (권혁승)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 금성 (최인철)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 천재 (이재영)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 지학사 (민찬규)</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">영어독해와작문</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- YBM (신정현)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 능률 (양현권)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 비상 (김진완)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 동아 (권혁승)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 천재 (안병규)</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">실용영어</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- YBM (박준언)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 능률 (김성곤)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 천재 (안병규)</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">진로영어</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- YBM (박준언)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 능률 (김정렬)</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">영어권문화</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 능률 (김정렬)</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">심화영어 Ⅰ</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- YBM (신정현)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 능률 (허명혜)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 천재 (이재영)</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">심화영어독해 Ⅰ</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- YBM (신정현)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 능률 (허명혜)</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 천재 (안병규)</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- END 서브메뉴 -->
+                </li>
+
+                <!-- END 사이드바 메뉴 1. 교과서 -->
+
+                <!-- 사이드바 메뉴 2. 모의고사 -->
+                <li class="major-sidebar-menu-list active">
+                  <a href="tab01-mockExam.html" class="menu">
+                    <i class="ico">
+                      <img src="gpt-tutor/assets/images/ico-menu02-color.svg" alt="" class="ico-color">
+                      <img src="gpt-tutor/assets/images/ico-menu02-gray.svg" alt="" class="ico-gray">
+                    </i>
+                    <span class="txt">모의고사</span>
+                  </a>
+
+                  <!-- 서브메뉴 -->
+                  <div class="major-sidebar-sub-menu">
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp active">
+                      <button type="button" class="sub-menu-btn">고 1</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+
+                          <!-- TODO: 클릭되어있는 메뉴는 active 클래스가 적용됩니다 -->
+                          <button type="button" class="more-btn active">- 2024년 6월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2024년 3월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 11월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 9월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 6월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 3월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 11월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 9월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 6월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 3월</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">고 2</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+
+                          <!-- TODO: 클릭되어있는 메뉴는 active 클래스가 적용됩니다 -->
+                          <button type="button" class="more-btn active">- 2024년 6월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2024년 3월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 11월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 9월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 6월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 3월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 11월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 9월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 6월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 3월</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">고 3</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+
+                          <!-- TODO: 클릭되어있는 메뉴는 active 클래스가 적용됩니다 -->
+                          <button type="button" class="more-btn active">- 2024년 6월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2024년 3월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 11월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 9월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 6월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2023년 3월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 11월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 9월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 6월</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 2022년 3월</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- END 서브메뉴 -->
+                </li>
+
+                <!-- END 사이드바 메뉴 2. 모의고사 -->
+
+                <!-- 사이드바 메뉴 3. EBS -->
+                <li class="major-sidebar-menu-list ">
+                  <a href="tab01-ebs.html" class="menu">
+                    <i class="ico">
+                      <img src="gpt-tutor/assets/images/ico-menu03-color.svg" alt="" class="ico-color">
+                      <img src="gpt-tutor/assets/images/ico-menu03-gray.svg" alt="" class="ico-gray">
+                    </i>
+                    <span class="txt">EBS</span>
+                  </a>
+
+                  <!-- 서브메뉴 -->
+                  <div class="major-sidebar-sub-menu">
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp active">
+                      <button type="button" class="sub-menu-btn">2025 수능특강 영어</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+
+                          <!-- TODO: 클릭되어있는 메뉴는 active 클래스가 적용됩니다 -->
+                          <button type="button" class="more-btn active">- Part Ⅰ. 유형편 </button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- Part Ⅱ. 주제·소재편</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- Part Ⅲ. 테스트편</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">2025 수능특강 영어독해연습</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 틀리기 쉬운 유형편</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- Mini Test</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp">
+                      <button type="button" class="sub-menu-btn">2025 수능완성</button>
+                      <ul class="more-btn-list-grp">
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 유형편</button>
+                        </li>
+                        <li class="more-btn-list">
+                          <button type="button" class="more-btn">- 실전모의고사</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- END 서브메뉴 -->
+                </li>
+
+                <!-- END 사이드바 메뉴 3. EBS -->
+
+                <!-- 사이드바 메뉴 4. my 지문파일 -->
+
+                <!-- 활성화되었을 때 (active 클래스 달렸을 때) 편집 버튼 보입니다 -->
+                <li class="major-sidebar-menu-list ">
+                  <div class="menu">
+                    <a href="tab01-myPrintFile.html">
+                      <i class="ico">
+                        <img src="gpt-tutor/assets/images/ico-menu04-color.svg" alt="" class="ico-color">
+                        <img src="gpt-tutor/assets/images/ico-menu04-gray.svg" alt="" class="ico-gray">
+                      </i>
+                      <span class="txt">MY 지문파일</span>
+                    </a>
+                    <button type="button" class="btn gray-bd-btn btn-xsm file-edit-btn">편집</button>
+                  </div>
+
+                  <!-- 서브메뉴 -->
+                  <div class="major-sidebar-sub-menu">
+
+                    <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
+                    <div class="sub-menu-grp active">
+                      <div class="sub-menu-btn-align">
+                        <button type="button" class="sub-menu-btn">2023</button>
+                        <div class="edit-btns">
+                          <button type="button" class="btn ylw-bd-btn btn-xsm" onclick="location.href='tab01-myPrintFileEdit.html';">변경</button>
+                          <button type="button" class="btn red-bd-btn btn-xsm" onclick="openModal('del-check-modal');">삭제</button>
+                        </div>
+                      </div>
+                      <div class="sub-menu-btn-align">
+                        <button type="button" class="sub-menu-btn">2022</button>
+                        <div class="edit-btns">
+                          <button type="button" class="btn ylw-bd-btn btn-xsm" onclick="location.href='tab01-myPrintFileEdit.html';">변경</button>
+                          <button type="button" class="btn red-bd-btn btn-xsm" onclick="openModal('del-check-modal');">삭제</button>
+                        </div>
+                      </div>
+
+                      <!-- TODO: 추가하기 버튼을 누를 시 생기는 블록입니다. -->
+                      <div class="sub-menu-btn-align type-add" style="display: none;">
+                        <input type="text" class="form-inp">
+                        <button type="button" class="btn ylw-solid-btn btn-xsm">추가</button>
+                      </div>
+
+                      <!-- TODO: 제일 아래에 있는 추가하기 버튼입니다. 누를 시 sub-menu-btn-alig.type-add 가 추가됩니다. -->
+                      <div class="sub-menu-btn-align">
+                        <button id="printFile-add-btn" type="button" class="btn gray-bd-btn btn-full btn-xsm file-edit-btn">추가하기</button>
+                      </div>
+
+                      <!-- TODO: 추가하기 버튼 관련 임시 js 스크립트입니다. -->
+
+                      <!-- 어떤 느낌으로 구현되는지만 참고로 봐주시고, 실 기능에는 사용하지 말아주세요! -->
+                      <script>
+                        $('#printFile-add-btn').on('click', function() {
+                          $(this).parents('.sub-menu-btn-align').hide();
+                          $(this).parents('.sub-menu-btn-align').siblings('.sub-menu-btn-align.type-add').css('display', 'flex');
+                        })
+                      </script>
+                    </div>
+                  </div>
+
+                  <!-- END 서브메뉴 -->
+                </li>
+
+                <!-- END 사이드바 메뉴 4. my 지문파일 -->
+
+                <!-- 사이드바 메뉴 5. 신규지문 등록 -->
+                <li class="major-sidebar-menu-list ">
+                  <a href="tab01-enrollPrintFile.html" class="menu">
+                    <i class="ico">
+                      <img src="gpt-tutor/assets/images/ico-menu05-color.svg" alt="" class="ico-color">
+                      <img src="gpt-tutor/assets/images/ico-menu05-gray.svg" alt="" class="ico-gray">
+                    </i>
+                    <span class="txt">신규지문 등록</span>
+                  </a>
+                </li>
+
+                <!-- END 사이드바 메뉴 5. 신규지문 등록 -->
+              </ul>
+
+              <!-- END 강의자료 사이드바 -->
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-overlay"></div>
+
+        <!-- END 왼쪽 사이드바 -->
+
+        <!-- MY 지문파일 삭제할 시 확인 모달 -->
+        <div id="del-check-modal" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('del-check-modal');"></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">정말 삭제하시겠습니까?</p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-md">확인</button>
+              <button type="button" class="gray-bd-btn square-btn btn-md" onclick="closeModal('del-check-modal');">취소</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- END MY 지문파일 삭제할 시 확인 모달 -->
+
+        <!-- 오른쪽 컨텐츠 -->
+        <div class="wrapper">
+          <div class="container">
+            <div class="grid-grp">
+              <div class="grid">
+
+                <!-- 카드 세트 -->
+                <div class="card-set">
+
+                  <!-- 제목 -->
+                  <div class="card-set-ttl">
+                    <h3 class="ttl">지문</h3>
+                  </div>
+
+                  <!-- END 제목 -->
+
+                  <!-- 카드 -->
+                  <div class="card printfile-card">
+                    <div class="left" style="display: none;">
+                      <ul class="choice-list-grp">
+                        <li class="list">
+                          <input type="radio" name="teacher" checked id="teacher01" class="gray-label-inp none">
+                          <label for="teacher01" class="txt-wrap">
+                            <span class="dark-txt dot-txt">18~24</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher02" class="gray-label-inp none">
+                          <label for="teacher02" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">26</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher03" class="gray-label-inp none">
+                          <label for="teacher03" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">29~40</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher04" class="gray-label-inp none">
+                          <label for="teacher04" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">4과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher05" class="gray-label-inp none">
+                          <label for="teacher05" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">5과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher06" class="gray-label-inp none">
+                          <label for="teacher06" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">6과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher07" class="gray-label-inp none">
+                          <label for="teacher07" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">7과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher08" class="gray-label-inp none">
+                          <label for="teacher08" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">8과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher09" class="gray-label-inp none">
+                          <label for="teacher09" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">9과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher10" class="gray-label-inp none">
+                          <label for="teacher10" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">10과</span>
+                          </label>
+                        </li>
+                        <li class="list">
+                          <input type="radio" name="teacher" id="teacher10" class="gray-label-inp none">
+                          <label for="teacher10" class="txt-wrap gray-label">
+                            <span class="dark-txt dot-txt">Special Lesson</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="right">
+                      <div class="checkbox-item">
+                        <input type="checkbox" name="range" id="range01" class="custom-checkbox-inp none">
+                        <label for="range01" class="custom-checkbox"></label>
+                        <label for="range01" class="dark-txt">전체선택</label>
+                      </div>
+                      <ul class="check-list-grp">
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01" class="custom-checkbox-inp none">
+                            <label for="range01" class="custom-checkbox"></label>
+                            <label for="range01" class="dark-txt">18</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-02" class="custom-checkbox-inp none">
+                            <label for="range01-02" class="custom-checkbox"></label>
+                            <label for="range01-02" class="dark-txt">19</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-03" class="custom-checkbox-inp none">
+                            <label for="range01-03" class="custom-checkbox"></label>
+                            <label for="range01-03" class="dark-txt">20</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-04" class="custom-checkbox-inp none">
+                            <label for="range01-04" class="custom-checkbox"></label>
+                            <label for="range01-04" class="dark-txt">21</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-05" class="custom-checkbox-inp none">
+                            <label for="range01-05" class="custom-checkbox"></label>
+                            <label for="range01-05" class="dark-txt">22</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-06" class="custom-checkbox-inp none">
+                            <label for="range01-06" class="custom-checkbox"></label>
+                            <label for="range01-06" class="dark-txt">23</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range01-07" class="custom-checkbox-inp none">
+                            <label for="range01-07" class="custom-checkbox"></label>
+                            <label for="range01-07" class="dark-txt">25</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range02" class="custom-checkbox-inp none">
+                            <label for="range02" class="custom-checkbox"></label>
+                            <label for="range02" class="dark-txt">26</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03" class="custom-checkbox-inp none">
+                            <label for="range03" class="custom-checkbox"></label>
+                            <label for="range03" class="dark-txt">29</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-02" class="custom-checkbox-inp none">
+                            <label for="range03-02" class="custom-checkbox"></label>
+                            <label for="range03-02" class="dark-txt">30</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-03" class="custom-checkbox-inp none">
+                            <label for="range03-03" class="custom-checkbox"></label>
+                            <label for="range03-03" class="dark-txt">31</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-04" class="custom-checkbox-inp none">
+                            <label for="range03-04" class="custom-checkbox"></label>
+                            <label for="range03-04" class="dark-txt">32</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-05" class="custom-checkbox-inp none">
+                            <label for="range03-05" class="custom-checkbox"></label>
+                            <label for="range03-05" class="dark-txt">33</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-06" class="custom-checkbox-inp none">
+                            <label for="range03-06" class="custom-checkbox"></label>
+                            <label for="range03-06" class="dark-txt">34</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-07" class="custom-checkbox-inp none">
+                            <label for="range03-07" class="custom-checkbox"></label>
+                            <label for="range03-07" class="dark-txt">35</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-08" class="custom-checkbox-inp none">
+                            <label for="range03-08" class="custom-checkbox"></label>
+                            <label for="range03-08" class="dark-txt">36</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-09" class="custom-checkbox-inp none">
+                            <label for="range03-09" class="custom-checkbox"></label>
+                            <label for="range03-09" class="dark-txt">37</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-10" class="custom-checkbox-inp none">
+                            <label for="range03-10" class="custom-checkbox"></label>
+                            <label for="range03-10" class="dark-txt">38</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-11" class="custom-checkbox-inp none">
+                            <label for="range03-11" class="custom-checkbox"></label>
+                            <label for="range03-11" class="dark-txt">39</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range03-12" class="custom-checkbox-inp none">
+                            <label for="range03-12" class="custom-checkbox"></label>
+                            <label for="range03-12" class="dark-txt">40</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range04" class="custom-checkbox-inp none">
+                            <label for="range04" class="custom-checkbox"></label>
+                            <label for="range04" class="dark-txt">[41~42]</label>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <div class="checkbox-item">
+                            <input type="checkbox" name="range" id="range04" class="custom-checkbox-inp none">
+                            <label for="range04" class="custom-checkbox"></label>
+                            <label for="range04" class="dark-txt">[43~45]</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- END 카드 -->
+                </div>
+
+                <!-- END 카드 세트 -->
+              </div>
+              <div class="grid">
+
+                <!-- 카드 세트 -->
+                <div class="card-set">
+
+                  <!-- 제목 -->
+                  <div class="card-set-ttl">
+                    <h3 class="ttl">출제범위</h3>
+                  </div>
+
+                  <!-- END 제목 -->
+
+                  <!-- 카드 -->
+                  <div class="card range-card">
+                    <div class="card-content">
+                      <ul class="choice-list-grp">
+                        <li class="list">
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">고 1</span>
+                            <span class="gray-txt sm-txt">(2024년 6월)</span>
+                            <span class="dark-txt">/ 18~24</span>
+                          </div>
+                          <button type="button" class="right-btn">
+                            <span class="txt-hidden">삭제하기</span>
+                            <i class="ico ico-x ico-red-x"></i>
+                          </button>
+                        </li>
+                        <li class="list">
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">고 1</span>
+                            <span class="gray-txt sm-txt">(2024년 6월)</span>
+                            <span class="dark-txt">/ 26</span>
+                          </div>
+                          <button type="button" class="right-btn">
+                            <span class="txt-hidden">삭제하기</span>
+                            <i class="ico ico-x ico-red-x"></i>
+                          </button>
+                        </li>
+                        <li class="list">
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">고 1</span>
+                            <span class="gray-txt sm-txt">(2024년 6월)</span>
+                            <span class="dark-txt">/ [41~42]</span>
+                          </div>
+                          <button type="button" class="right-btn">
+                            <span class="txt-hidden">삭제하기</span>
+                            <i class="ico ico-x ico-red-x"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card-btn-wrap">
+                      <button type="button" class="btn ylw-solid-btn square-btn btn-md">
+                        <span class="txt">선택완료</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- END 카드 -->
+                </div>
+
+                <!-- END 카드 세트 -->
+              </div>
+              <div class="grid">
+
+                <!-- 카드 세트 -->
+                <div class="card-set">
+
+                  <!-- 제목 -->
+                  <div class="card-set-ttl">
+                    <h3 class="ttl">다운로드</h3>
+                  </div>
+
+                  <!-- END 제목 -->
+
+                  <!-- 카드 -->
+                  <div class="card download-card">
+                    <div class="card-content">
+                      <ul class="download-list-grp">
+                        <li class="list">
+                          <input type="checkbox" name="download" id="download01" class="custom-checkbox-inp none">
+                          <div class="custom-checkbox-btn">
+                            <span class="txt">판서용 지문</span>
+                          </div>
+                          <label for="download01" class="custom-checkbox type-02">
+                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
+                          </label>
+                          <button type="button" class="ylw-bd-btn square-btn btn-lg" onclick="openModal('preview-modal01');">미리보기</button>
+                        </li>
+                        <li class="list">
+                          <input type="checkbox" name="download" id="download02" class="custom-checkbox-inp none">
+                          <div class="custom-checkbox-btn">
+                            <span class="txt">단어</span>
+                          </div>
+                          <label for="download02" class="custom-checkbox type-02">
+                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
+                          </label>
+                          <button type="button" onclick="openModal('preview-modal02');" class="ylw-bd-btn square-btn btn-lg">미리보기</button>
+                        </li>
+                        <li class="list">
+                          <input type="checkbox" name="download" id="download03" class="custom-checkbox-inp none">
+                          <div class="custom-checkbox-btn">
+                            <span class="txt">강의자료</span>
+                          </div>
+                          <label for="download03" class="custom-checkbox type-02">
+                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
+                          </label>
+                          <button type="button" onclick="openModal('preview-modal03');" class="ylw-bd-btn square-btn btn-lg">미리보기</button>
+                        </li>
+                        <li class="list">
+                          <input type="checkbox" name="download" id="download04" class="custom-checkbox-inp none">
+                          <div class="custom-checkbox-btn">
+                            <span class="txt">워크북</span>
+                          </div>
+                          <label for="download04" class="custom-checkbox type-02">
+                            <img src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg" alt="" class="ico-check">
+                          </label>
+                          <button type="button" onclick="openModal('preview-modal04');" class="ylw-bd-btn square-btn btn-lg">미리보기</button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card-btn-wrap">
+                      <button type="button" class="btn ylw-bd-btn square-btn btn-md">
+                        <span class="txt">다운로드</span>
+                      </button>
+                      <button type="button" class="btn ylw-solid-btn square-btn btn-md" onclick="openModal('kakao-modal01');">
+                        <i class="ico ico-kakao"></i>
+                        <span class="txt">카카오톡으로 발송</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- END 카드 -->
+                </div>
+
+                <!-- END 카드 세트 -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 오른쪽 컨텐츠 -->
+
+        <!-- 팝업 -->
+
+        <!-- 팝업 1-1. 판서용 지문 미리보기 -->
+        <div id="preview-modal01" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('preview-modal01')"></div>
+          <div class="custom-modal preview-modal">
+
+            <!-- <button class="preview-modal-close-btn" onclick="closeModal('preview-modal01')">
+            <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
+          </button> -->
+            <div class="preview-modal-ttl">
+              <h4 class="ttl">판서용 지문 미리보기</h4>
+              <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal01')">확인</button>
+            </div>
+            <div class="preview-modal-content">
+              <div class="modal-sidebar">
+                <ul>
+
+                  <!-- TODO: 리스트 클릭시 active 효과 추가 -->
+                  <li class="active">
+                    <span class="dark-txt">판서용 지문</span>
+                  <li class="blank">
+                  </li>
+                </ul>
+              </div>
+              <div class="preview-modal-container">
+                <div class="preview-iframe-wrap">
+                  <iframe src="print04-01.html" frameborder="0"></iframe>
+                </div>
+                <div class="modal-right-sidebar">
+                  <div class="sidebar-ttl">
+                    <h6 class="ttl">재생성 문항</h6>
+                  </div>
+                  <ul>
+                    <li class="preview-choiced-list">
+                      <span class="txt">김은성/개인지문 1</span>
+                      <button type="button" class="ico-btn del-btn">
+                        <span class="txt-hidden">삭제하기</span>
+                        <i class="ico ico-x"></i>
+                      </button>
+                    </li>
+                  </ul>
+                  <button type="button" class="ylw-solid-btn btn-lg square-btn btn-full" onclick="openModal('regenerate-modal');">재생성</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 1-1. 판서용 지문 미리보기 -->
+
+        <!-- 팝업 1-2. 단어 팝업 미리보기 -->
+        <div id="preview-modal02" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('preview-modal02')"></div>
+          <div class="custom-modal preview-modal">
+
+            <!-- <button class="preview-modal-close-btn" onclick="closeModal('preview-modal01')">
+            <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
+          </button> -->
+            <div class="preview-modal-ttl">
+              <h4 class="ttl">단어 미리보기</h4>
+              <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal02')">확인</button>
+            </div>
+            <div class="preview-modal-content">
+              <div class="modal-sidebar" data-iframe-id="preview-02-iframe">
+                <ul>
+
+                  <!-- TODO: 리스트 클릭시 active 효과 추가 -->
+                  <li class="active" data-iframe-src="print02-01.html">
+                    <span class="dark-txt">단어</span>
+                  </li>
+                  <li data-iframe-src="print05-02.html">
+                    <span class="dark-txt">단어-정답지</span>
+                  </li>
+                  <li class="blank">
+                  </li>
+                </ul>
+              </div>
+              <div class="preview-modal-container">
+                <div class="preview-iframe-wrap">
+                  <iframe id="preview-02-iframe" src="print02-01.html" frameborder="0"></iframe>
+                </div>
+                <div class="modal-right-sidebar">
+                  <div class="sidebar-ttl">
+                    <h6 class="ttl">재생성 문항</h6>
+                  </div>
+                  <ul>
+                    <li class="preview-choiced-list">
+                      <span class="txt">김은성/개인지문 1</span>
+                      <button type="button" class="ico-btn del-btn">
+                        <span class="txt-hidden">삭제하기</span>
+                        <i class="ico ico-x"></i>
+                      </button>
+                    </li>
+                  </ul>
+                  <button type="button" class="ylw-solid-btn btn-lg square-btn btn-full" onclick="openModal('regenerate-modal');">재생성</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 1-2. 단어 팝업 미리보기 -->
+
+        <!-- 팝업 1-3. 강의 노트 미리보기 -->
+        <div id="preview-modal03" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('preview-modal03')"></div>
+          <div class="custom-modal preview-modal">
+
+            <!-- <button class="preview-modal-close-btn" onclick="closeModal('preview-modal01')">
+            <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
+          </button> -->
+            <div class="preview-modal-ttl">
+              <h4 class="ttl">강의자료 미리보기</h4>
+              <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal03')">확인</button>
+            </div>
+            <div class="preview-modal-content">
+              <div class="modal-sidebar" data-iframe-id="preview-03-iframe">
+                <ul>
+
+                  <!-- TODO: 리스트 클릭시 active 효과 추가 -->
+                  <li class="active" data-iframe-src="print01-01.html">
+                    <span class="dark-txt">강의자료</span>
+                  </li>
+                  <li data-iframe-src="print01-02.html">
+                    <span class="dark-txt">강의자료-리뷰테스트</span>
+                  </li>
+                  <li class="blank">
+                  </li>
+                </ul>
+              </div>
+              <div class="preview-modal-container">
+                <div class="preview-iframe-wrap">
+                  <iframe id="preview-03-iframe" src="print01-01.html" frameborder="0"></iframe>
+                </div>
+                <div class="modal-right-sidebar">
+                  <div class="sidebar-ttl">
+                    <h6 class="ttl">재생성 문항</h6>
+                  </div>
+                  <ul>
+                    <li class="preview-choiced-list">
+                      <span class="txt">김은성/개인지문 1</span>
+                      <button type="button" class="ico-btn del-btn">
+                        <span class="txt-hidden">삭제하기</span>
+                        <i class="ico ico-x"></i>
+                      </button>
+                    </li>
+                  </ul>
+                  <button type="button" class="ylw-solid-btn btn-lg square-btn btn-full" onclick="openModal('regenerate-modal');">재생성</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 1-3. 강의 노트 미리보기 -->
+
+        <!-- 팝업 1-4. 워크북 미리보기 -->
+        <div id="preview-modal04" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('preview-modal04')"></div>
+          <div class="custom-modal preview-modal">
+
+            <!-- <button class="preview-modal-close-btn" onclick="closeModal('preview-modal01')">
+            <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
+          </button> -->
+            <div class="preview-modal-ttl">
+              <h4 class="ttl">워크북 미리보기</h4>
+              <button type="button" class="ylw-bd-btn square-btn btn-md" onclick="closeModal('preview-modal04')">확인</button>
+            </div>
+            <div class="preview-modal-content">
+              <div class="modal-sidebar" data-iframe-id="preview-04-iframe">
+                <ul>
+
+                  <!-- TODO: 리스트 클릭시 active 효과 추가 -->
+                  <li class="active" data-iframe-src="print03-01.html">
+                    <span class="dark-txt">워크북</span>
+                  </li>
+                  <li data-iframe-src="print03-02.html">
+                    <span class="dark-txt">워크북 정답지</span>
+                  </li>
+                  <li class="blank">
+                  </li>
+                </ul>
+              </div>
+              <div class="preview-modal-container">
+                <div class="preview-iframe-wrap">
+                  <iframe id="preview-04-iframe" src="print03-01.html" frameborder="0"></iframe>
+                </div>
+                <div class="modal-right-sidebar">
+                  <div class="sidebar-ttl">
+                    <h6 class="ttl">재생성 문항</h6>
+                  </div>
+                  <ul>
+                    <li class="preview-choiced-list">
+                      <span class="txt">김은성/개인지문 1</span>
+                      <button type="button" class="ico-btn del-btn">
+                        <span class="txt-hidden">삭제하기</span>
+                        <i class="ico ico-x"></i>
+                      </button>
+                    </li>
+                  </ul>
+                  <button type="button" class="ylw-solid-btn btn-lg square-btn btn-full" onclick="openModal('regenerate-modal');">재생성</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 1-4. 워크북미리보기 -->
+
+        <!-- 팝업 2-1. 로딩 모달 (미리보기) -->
+        <div id="loading-modal01" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('loading-modal01');"></div>
+          <div class="custom-modal loading-modal">
+            <div class="loading-modal-ttl">미리보기</div>
+            <div class="loading-modal-content">
+              <div class="spinner-box">
+                <span class="dbl-spinner"></span>
+                <span class="dbl-spinner dbl-spinner01"></span>
+              </div>
+              <p class="dark-txt">로딩중 <span>5</span>%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 2-1. 로딩 모달 (미리보기) -->
+
+        <!-- 팝업 2-2. 로딩 모달 (자료 생성 중) -->
+        <div id="loading-modal02" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('loading-modal02');"></div>
+          <div class="custom-modal loading-modal">
+            <div class="loading-modal-ttl">자료 생성 중</div>
+            <div class="loading-modal-content">
+              <div class="spinner-box">
+                <span class="dbl-spinner"></span>
+                <span class="dbl-spinner dbl-spinner01"></span>
+              </div>
+              <p class="dark-txt">로딩중 <span>5</span>%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 2-2. 로딩 모달 (자료 생성 중) -->
+
+        <!-- 팝업. 재생성 완료 모달 -->
+        <div id="regenerate-modal" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('regenerate-modal');"></div>
+          <div class="custom-modal system-modal">
+            <h6 class="system-modal-ttl">재생성 문항</h6>
+            <div class="custom-modal-content">
+              <p class="txt txt-mb">선택하신 문항들의 <br>재생성 작업이 완료되었습니다.</p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-md" onclick="closeModal('regenerate-modal');">확인</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업. 재생성 완료 모달 -->
+
+        <!-- 카카오톡 전송하기 팝업 -->
+        <div id="kakao-modal01" class="modal-wrapper">
+          <div class="modal-overlay" onclick="closeModal('kakao-modal01');"></div>
+          <div class="custom-modal kakao-send-modal">
+
+            <!-- 모달 제목 -->
+            <div class="nmodal-ttl-wrap">
+              <h6 class="nmodal-ttl">카카오톡 전송하기</h6>
+              <button type="button" class="ico-btn close-btn" onclick="closeModal('kakao-modal01');">
+                <i class="ico ico-x"></i>
+                <span class="txt-hidden">닫기</span>
+              </button>
+            </div>
+
+            <!-- END 모달 제목 -->
+
+            <!-- 모달 내용 -->
+            <div class="nmodal-content">
+              <div class="inp-btn-grp type-search">
+                <input type="text" class="form-inp type-h35" placeholder="학생 이름 검색">
+                <button type="button" class="ylw-bd-btn inp-btn">검색</button>
+              </div>
+              <div class="stud-list-layout">
+
+                <!-- 왼쪽 -->
+                <div class="stud-list-left">
+                  <div class="tabs">
+                    <button type="button" class="tab active">학년</button>
+                    <button type="button" class="tab">반</button>
+                  </div>
+
+                  <!-- 탭에 따른 내용 -->
+
+                  <!-- TODO: 학년/반 선택함에 따라 내용이 달라집니다. -->
+                  <div class="stud-list-left-content">
+                    <div class="categ-grp">
+
+                      <!-- 대분류 -->
+                      <div class="categ-btn type-02">
+
+                        <!-- TODO: btn-left 영역을 누르면 부모의 categ-grp에 active 활성화가 되면서 서브그룹이 펼쳐집니다. -->
+                        <button type="button" class="btn-left">
+                          <span class="categ-arrow"></span>
+                          <h3 class="txt">중 3</h3>
+                          <p class="gray-txt">(6명)</p>
+                        </button>
+
+                        <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                        <button type="button" class="btn-right">
+                          <i class="ico ico-plus"></i>
+                          <span class="txt-hidden">추가하기</span>
+                        </button>
+                      </div>
+
+                      <!-- END 대분류 -->
+
+                      <!-- 중분류 -->
+                      <div class="sub-categ-grp">
+
+                        <!-- 중분류 내 리스트 -->
+                        <div class="sub-categ-btn">
+                          <span class="txt">김민지</span>
+
+                          <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                          <button type="button" class="btn-right">
+                            <i class="ico ico-plus"></i>
+                            <span class="txt-hidden">추가하기</span>
+                          </button>
+                        </div>
+
+                        <!-- END 중분류 내 리스트 -->
+                      </div>
+
+                      <!-- END 중분류 -->
+                    </div>
+                    <div class="categ-grp active">
+
+                      <!-- 대분류 -->
+                      <div class="categ-btn type-02">
+
+                        <!-- TODO: btn-left 영역을 누르면 부모의 categ-grp에 active 활성화가 되면서 서브그룹이 펼쳐집니다. -->
+                        <button type="button" class="btn-left">
+                          <span class="categ-arrow"></span>
+                          <h3 class="txt">고 1</h3>
+                          <p class="gray-txt">(1명)</p>
+                        </button>
+
+                        <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                        <button type="button" class="btn-right">
+                          <i class="ico ico-plus"></i>
+                          <span class="txt-hidden">추가하기</span>
+                        </button>
+                      </div>
+
+                      <!-- END 대분류 -->
+
+                      <!-- 중분류 -->
+                      <div class="sub-categ-grp">
+
+                        <!-- 중분류 내 리스트 -->
+                        <div class="sub-categ-btn">
+                          <span class="txt">김민지</span>
+
+                          <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                          <button type="button" class="btn-right">
+                            <i class="ico ico-plus"></i>
+                            <span class="txt-hidden">추가하기</span>
+                          </button>
+                        </div>
+
+                        <!-- END 중분류 내 리스트 -->
+                      </div>
+
+                      <!-- END 중분류 -->
+                    </div>
+                    <div class="categ-grp">
+
+                      <!-- 대분류 -->
+                      <div class="categ-btn type-02">
+
+                        <!-- TODO: btn-left 영역을 누르면 부모의 categ-grp에 active 활성화가 되면서 서브그룹이 펼쳐집니다. -->
+                        <button type="button" class="btn-left">
+                          <span class="categ-arrow"></span>
+                          <h3 class="txt">중 3</h3>
+                          <p class="gray-txt">(6명)</p>
+                        </button>
+
+                        <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                        <button type="button" class="btn-right">
+                          <i class="ico ico-plus"></i>
+                          <span class="txt-hidden">추가하기</span>
+                        </button>
+                      </div>
+
+                      <!-- END 대분류 -->
+
+                      <!-- 중분류 -->
+                      <div class="sub-categ-grp">
+
+                        <!-- 중분류 내 리스트 -->
+                        <div class="sub-categ-btn">
+                          <span class="txt">김민지</span>
+
+                          <!-- TODO: btn-right 영역을 누르면 오른쪽의 [선택된 학생] 명단으로 추가됩니다. -->
+                          <button type="button" class="btn-right">
+                            <i class="ico ico-plus"></i>
+                            <span class="txt-hidden">추가하기</span>
+                          </button>
+                        </div>
+
+                        <!-- END 중분류 내 리스트 -->
+                      </div>
+
+                      <!-- END 중분류 -->
+                    </div>
+                  </div>
+
+                  <!-- END 탭에 따른 내용 -->
+                </div>
+
+                <!-- END 왼쪽 -->
+
+                <!-- 오른쪽 -->
+                <div class="stud-list-right">
+                  <div class="stud-list-right-top">
+                    <span class="ttl">선택된 학생</span>
+                  </div>
+                  <div class="stud-list-right-content">
+                    <div class="categ-grp">
+
+                      <!-- 대분류 -->
+                      <div class="categ-btn type-02">
+                        <button type="button" class="btn-left">
+                          <span class="categ-arrow"></span>
+                          <h3 class="txt">중 3</h3>
+                          <p class="gray-txt">(6명)</p>
+                        </button>
+                        <button type="button" class="btn-right type-minus">
+                          <i class="ico ico-minus"></i>
+                          <span class="txt-hidden">빼기</span>
+                        </button>
+                      </div>
+
+                      <!-- END 대분류 -->
+
+                      <!-- 중분류 -->
+                      <div class="sub-categ-grp">
+
+                        <!-- 중분류 내 리스트 -->
+                        <div class="sub-categ-btn">
+                          <span class="txt">김민지</span>
+                          <button type="button" class="btn-right type-minus">
+                            <i class="ico ico-minus"></i>
+                            <span class="txt-hidden">빼기</span>
+                          </button>
+                        </div>
+
+                        <!-- END 중분류 내 리스트 -->
+                      </div>
+
+                      <!-- END 중분류 -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- END 오른쪽 -->
+              </div>
+            </div>
+
+            <!-- END 모달 내용 -->
+
+            <!-- 모달 끝쪽 버튼 -->
+            <div class="nmodal-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-smd">
+                <i class="ico ico-kakao"></i>
+                <span class="txt">카카오톡으로 전송하기</span>
+              </button>
+            </div>
+
+            <!-- END 모달 끝쪽 버튼 -->
+          </div>
+        </div>
+
+        <!-- END 카카오톡 전송하기 팝업 -->
+
+        <!-- END 팝업 -->
+      </div>
+    </div>
+    <script src="gpt-tutor/assets/js/ui.js"></script>
+  </body>
+</html>

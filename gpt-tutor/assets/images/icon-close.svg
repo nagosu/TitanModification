@@ -1,0 +1,7 @@
+<svg id="레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="레이어_1" data-name="레이어 1">
+    <path id="패스_1" data-name="패스 1" d="M0,0H24V24H0Z" fill="none"/>
+    <path id="패스_2" data-name="패스 2" d="M18,6,6,18" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_3" data-name="패스 3" d="M6,6,18,18" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
