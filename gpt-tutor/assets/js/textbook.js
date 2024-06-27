@@ -85,7 +85,7 @@ function showTexts(subject, publisher, lesson) {
       textHtmlContent += `
         <li class="list">
           <div class="checkbox-item">
-            <input type="checkbox" name="range" id="range${index}" class="custom-checkbox-inp none" />
+            <input type="checkbox" name="range" id="range${index}" class="custom-checkbox-inp none" onclick="addToCard('${subject}', '${publisher}', '${lesson}', '${text}', this)" />
             <label for="range${index}" class="custom-checkbox"></label>
             <label for="range${index}" class="dark-txt">${text}</label>
           </div>
@@ -95,4 +95,81 @@ function showTexts(subject, publisher, lesson) {
 
     $(".check-list-grp").html(textHtmlContent);
   });
+}
+
+// 선택된 항목들을 저장할 배열
+let selectedTexts = [];
+
+function addToCard(subject, publisher, lesson, text, element) {
+  // 출판사명과 저자명 분리
+  const publisherName = publisher.replace(/\s*\(.*?\)\s*/g, "");
+  const authorName = publisher.match(/\((.*?)\)/)[1];
+
+  if (element.checked) {
+    // 항목을 배열에 추가
+    selectedTexts.push({ subject, publisherName, authorName, lesson, text });
+  } else {
+    // 항목을 배열에서 제거
+    selectedTexts = selectedTexts.filter(
+      (item) =>
+        !(
+          item.subject === subject &&
+          item.publisherName === publisherName &&
+          item.authorName === authorName &&
+          item.lesson === lesson &&
+          item.text === text
+        )
+    );
+  }
+
+  // 배열을 정렬
+  selectedTexts.sort((a, b) => {
+    if (a.publisherName < b.publisherName) return -1;
+    if (a.publisherName > b.publisherName) return 1;
+    if (a.lesson < b.lesson) return -1;
+    if (a.lesson > b.lesson) return 1;
+    if (a.text < b.text) return -1;
+    if (a.text > b.text) return 1;
+    return 0;
+  });
+
+  // 정렬된 항목을 DOM에 업데이트
+  const cardList = $(".choice-list-grp.range");
+  cardList.html(""); // 기존 항목을 지우고
+
+  selectedTexts.forEach((item) => {
+    const textItem = `
+      <li class="list">
+        <div class="list-left">
+          <span class="dark-txt dot-txt">${item.publisherName}</span>
+          <span class="gray-txt sm-txt">(${item.authorName})</span>
+          <span class="dark-txt">/ ${item.lesson}</span>
+          <span class="dark-txt">/ ${item.text}</span>
+        </div>
+        <button type="button" class="right-btn" onclick="removeFromCard('${item.subject}', '${item.publisherName}', '${item.authorName}', '${item.lesson}', '${item.text}')">
+          <span class="txt-hidden">삭제하기</span>
+          <i class="ico ico-x ico-red-x"></i>
+        </button>
+      </li>
+    `;
+    cardList.append(textItem);
+  });
+}
+
+function removeFromCard(subject, publisherName, authorName, lesson, text) {
+  // 배열에서 항목 제거
+  selectedTexts = selectedTexts.filter(
+    (item) =>
+      !(
+        item.subject === subject &&
+        item.publisherName === publisherName &&
+        item.authorName === authorName &&
+        item.lesson === lesson &&
+        item.text === text
+      )
+  );
+
+  // DOM에서 항목 제거
+  const cardList = $(".choice-list-grp.range");
+  cardList.find(`span:contains('${text}')`).closest("li").remove();
 }

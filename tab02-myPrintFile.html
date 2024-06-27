@@ -28,7 +28,7 @@
           <div class="header-inner">
             <h1 class="logo">
               <a href="support.html">
-                <img src="gpt-tutor/assets/images/logo.svg" alt="TITAN" />
+                <img src="gpt-tutor/assets/images/logo.png" alt="TITAN" />
               </a>
             </h1>
             <div class="header-gnb-grp">
@@ -1454,6 +1454,7 @@
                     </div>
                     <div class="card-btn-wrap">
                       <button
+                        id="complete-selection-btn"
                         type="button"
                         class="btn ylw-solid-btn square-btn btn-md"
                       >
@@ -1560,7 +1561,7 @@
                                   </div>
                                 </div>
                               </li>
-                              <li class="list">
+                              <li class="list" id="type">
                                 <div class="label-inp">
                                   <label class="flist-label"
                                     >2. 학교 유형</label
@@ -1591,6 +1592,25 @@
                             </ul>
                           </div>
                         </div>
+                        <script>
+                          $(document).ready(function () {
+                            // 초기 상태 설정
+                            if ($("#question-type02").is(":checked")) {
+                              $("#type").hide();
+                            }
+
+                            // 학교 설정 버튼 클릭 시
+                            $("#question-type01").on("click", function () {
+                              $("#type").show();
+                            });
+
+                            // 랜덤 출제 버튼 클릭 시
+                            $("#question-type02").on("click", function () {
+                              $("#type").hide();
+                            });
+                          });
+                        </script>
+
                         <div class="settingcard-grid">
                           <input
                             type="checkbox"
@@ -1911,5 +1931,6 @@
       </div>
     </div>
     <script src="gpt-tutor/assets/js/ui.js"></script>
+    <script src="gpt-tutor/assets/js/scroll.js"></script>
   </body>
 </html>

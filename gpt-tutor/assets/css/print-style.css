@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: "LOTTERIACHAB";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2") format("woff2");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -53,6 +54,14 @@
 
 .print-wrapper.type-print01:after {
   background-color: #ffdda0;
+}
+
+.print-wrapper.type-print01.type-print05:before {
+  background-color: #ded3fe;
+}
+
+.print-wrapper.type-print01.type-print05:after {
+  background-color: #ded3fe;
 }
 
 .print-wrapper.type-print02:before {
@@ -184,17 +193,49 @@
 }
 
 .num-ttl {
-  font-family: "LOTTERIACHAB";
+  /* font-family: "LOTTERIACHAB"; */
+  /* 폰트 안깨지게 수정했으니 사용하셔도 됩니다. */
+  font-weight: bold;
 }
 
 .print-wrapper.type-print01 .num-ttl {
   color: #ffdda0;
-  text-shadow: -2px 0 #ff7623, 0 2px #ff7623, 2px 0 #ff7623, 0 -2px #ff7623;
+  text-shadow: calc(1.5px * 1) 0 0 #ff7623,
+    calc(1.5px * 0.9239) calc(1.5px * 0.3827) 0 #ff7623,
+    calc(1.5px * 0.7071) calc(1.5px * 0.7071) 0 #ff7623,
+    calc(1.5px * 0.3827) calc(1.5px * 0.9239) 0 #ff7623,
+    0 calc(1.5px * 1) 0 #ff7623,
+    calc(1.5px * -0.3827) calc(1.5px * 0.9239) 0 #ff7623,
+    calc(1.5px * -0.7071) calc(1.5px * 0.7071) 0 #ff7623,
+    calc(1.5px * -0.9239) calc(1.5px * 0.3827) 0 #ff7623,
+    calc(1.5px * -1) 0 0 #ff7623,
+    calc(1.5px * -0.9239) calc(1.5px * -0.3827) 0 #ff7623,
+    calc(1.5px * -0.7071) calc(1.5px * -0.7071) 0 #ff7623,
+    calc(1.5px * -0.3827) calc(1.5px * -0.9239) 0 #ff7623,
+    0 calc(1.5px * -1) 0 #ff7623,
+    calc(1.5px * 0.3827) calc(1.5px * -0.9239) 0 #ff7623,
+    calc(1.5px * 0.7071) calc(1.5px * -0.7071) 0 #ff7623,
+    calc(1.5px * 0.9239) calc(1.5px * -0.3827) 0 #ff7623;
 }
 
 .print-wrapper.type-print02 .num-ttl {
   color: #ded3fe;
-  text-shadow: -2px 0 #8c78fe, 0 2px #8c78fe, 2px 0 #8c78fe, 0 -2px #8c78fe;
+  text-shadow: calc(1.5px * 1) 0 0 #8c78fe,
+    calc(1.5px * 0.9239) calc(1.5px * 0.3827) 0 #8c78fe,
+    calc(1.5px * 0.7071) calc(1.5px * 0.7071) 0 #8c78fe,
+    calc(1.5px * 0.3827) calc(1.5px * 0.9239) 0 #8c78fe,
+    0 calc(1.5px * 1) 0 #8c78fe,
+    calc(1.5px * -0.3827) calc(1.5px * 0.9239) 0 #8c78fe,
+    calc(1.5px * -0.7071) calc(1.5px * 0.7071) 0 #8c78fe,
+    calc(1.5px * -0.9239) calc(1.5px * 0.3827) 0 #8c78fe,
+    calc(1.5px * -1) 0 0 #8c78fe,
+    calc(1.5px * -0.9239) calc(1.5px * -0.3827) 0 #8c78fe,
+    calc(1.5px * -0.7071) calc(1.5px * -0.7071) 0 #8c78fe,
+    calc(1.5px * -0.3827) calc(1.5px * -0.9239) 0 #8c78fe,
+    0 calc(1.5px * -1) 0 #8c78fe,
+    calc(1.5px * 0.3827) calc(1.5px * -0.9239) 0 #8c78fe,
+    calc(1.5px * 0.7071) calc(1.5px * -0.7071) 0 #8c78fe,
+    calc(1.5px * 0.9239) calc(1.5px * -0.3827) 0 #8c78fe;
 }
 
 .prt-mini-ttl {
@@ -216,6 +257,10 @@
   background-color: rgba(255, 237, 84, 0.5);
 }
 
+.print-wrapper.type-print01.type-print05 .prt-mini-ttl:before {
+  background-color: rgba(140, 120, 254, 0.3);
+}
+
 .print-wrapper.type-print02 .prt-mini-ttl:before {
   background-color: rgba(140, 120, 254, 0.3);
 }
@@ -235,6 +280,10 @@
   color: #ff7623;
 }
 
+.print-wrapper.type-print01.type-print05 .prt-mini-ttl span {
+  color: #8c78fe;
+}
+
 .print-wrapper.type-print02 .prt-mini-ttl span {
   color: #8c78fe;
 }
@@ -244,7 +293,10 @@
 }
 
 .prt-mini-ttl.type-other span {
-  font-family: "Inter", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Inter", "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 600;
 }
 
@@ -272,6 +324,11 @@
 .print-wrapper.type-print01 .outline-box {
   background-color: #fff5e6;
   border: 2px solid #ffeed4;
+}
+
+.print-wrapper.type-print01.type-print05 .outline-box {
+  background-color: #f6f3fe;
+  border: 2px solid #ded3fe;
 }
 
 .print-wrapper.type-print02 .outline-box {
@@ -790,7 +847,7 @@
   padding: 3px 10px;
 }
 .print-wrapper.type-print05 .top-right-txt .txt-ttl {
-  color: #ff7623;
+  color: #8c78fe;
   font-weight: 800;
   margin-right: 10px;
 }
@@ -798,7 +855,7 @@
   font-weight: 600;
 }
 .print-wrapper.type-print05 .prt-mini-ttl-wrap {
-  border-bottom: 2px solid #ff7623;
+  border-bottom: 2px solid #8c78fe;
   width: 100%;
   padding-bottom: 7px;
 }
@@ -807,7 +864,7 @@
 }
 .print-wrapper.type-print05 .prt-answer-list-grp {
   padding: 20px 0;
-  border-bottom: 2px solid #ff7623;
+  border-bottom: 2px solid #8c78fe;
 }
 .print-wrapper.type-print05 .prt-answer-list {
   position: relative;
@@ -843,7 +900,7 @@
   line-height: 1.4;
 }
 .print-wrapper.type-print05 .inner-ttl {
-  color: #ff7623;
+  color: #8c78fe;
   font-size: 16px;
   font-weight: 600;
   margin-top: 15px;
@@ -1121,7 +1178,9 @@
 .print-wrapper.type-print03 .inner-content-wrap {
   margin-top: 10px;
 }
-.print-wrapper.type-print03 .inner-content-wrap > .prt-mini-ttl.type-other.type-sm {
+.print-wrapper.type-print03
+  .inner-content-wrap
+  > .prt-mini-ttl.type-other.type-sm {
   margin-bottom: 2px;
 }
 .print-wrapper.type-print03 .blank-inp {
@@ -1417,7 +1476,7 @@
   padding: 55px;
 }
 .print-container.type-writing .print-content-wrap {
-  border: 3px solid #FEC20E;
+  border: 3px solid #fec20e;
   height: 100%;
   position: relative;
 }
@@ -1476,8 +1535,11 @@
   margin-bottom: 0;
 }
 .print-container.type-writing .writing-content .num-ttl {
-  font-family: "Inter", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  background-color: #FEC20E;
+  font-family: "Inter", "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background-color: #fec20e;
   min-width: 25px;
   display: inline-flex;
   flex-shrink: 0;
@@ -1565,7 +1627,10 @@
   height: 130px;
   overflow: hidden;
 }
-.print-container.type-wordtest .short-answer-content .picture-wrap .picture-img {
+.print-container.type-wordtest
+  .short-answer-content
+  .picture-wrap
+  .picture-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1842,7 +1907,9 @@ body.print07-body {
   border-bottom: 1px solid #000;
   margin-bottom: -1px;
 }
-.print-wrapper.type-print07.type-answer .answer-tbl .tbl-cell-grp:nth-child(5n) {
+.print-wrapper.type-print07.type-answer
+  .answer-tbl
+  .tbl-cell-grp:nth-child(5n) {
   border-right: 0;
 }
 .print-wrapper.type-print07.type-answer .answer-tbl .tbl-cell:first-child {
@@ -1859,7 +1926,9 @@ body.print07-body {
   padding: 3px 0;
   position: relative;
 }
-.print-wrapper.type-print07.type-answer .answer-tbl .tbl-cell:first-child:before {
+.print-wrapper.type-print07.type-answer
+  .answer-tbl
+  .tbl-cell:first-child:before {
   content: "";
   width: 100%;
   height: 1px;

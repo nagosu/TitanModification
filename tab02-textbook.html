@@ -28,7 +28,7 @@
           <div class="header-inner">
             <h1 class="logo">
               <a href="support.html">
-                <img src="gpt-tutor/assets/images/logo.svg" alt="TITAN" />
+                <img src="gpt-tutor/assets/images/logo.png" alt="TITAN" />
               </a>
             </h1>
             <div class="header-gnb-grp">
@@ -1253,7 +1253,7 @@
                   <!-- 카드 -->
                   <div class="card printfile-card">
                     <div class="left">
-                      <ul class="choice-list-grp">
+                      <ul class="choice-list-grp lesson">
                         <li class="list">
                           <input
                             type="radio"
@@ -1477,44 +1477,7 @@
                   <!-- 카드 -->
                   <div class="card range-card">
                     <div class="card-content">
-                      <ul class="choice-list-grp">
-                        <li class="list">
-                          <div class="list-left">
-                            <span class="dark-txt dot-txt">YBM</span>
-                            <span class="gray-txt sm-txt">(박준언)</span>
-                            <span class="dark-txt">/ 1과</span>
-                            <span class="dark-txt">/ 본문 1</span>
-                          </div>
-                          <button type="button" class="right-btn">
-                            <span class="txt-hidden">삭제하기</span>
-                            <i class="ico ico-x ico-red-x"></i>
-                          </button>
-                        </li>
-                        <li class="list">
-                          <div class="list-left">
-                            <span class="dark-txt dot-txt">YBM</span>
-                            <span class="gray-txt sm-txt">(박준언)</span>
-                            <span class="dark-txt">/ 1과</span>
-                            <span class="dark-txt">/ 본문 2</span>
-                          </div>
-                          <button type="button" class="right-btn">
-                            <span class="txt-hidden">삭제하기</span>
-                            <i class="ico ico-x ico-red-x"></i>
-                          </button>
-                        </li>
-                        <li class="list">
-                          <div class="list-left">
-                            <span class="dark-txt dot-txt">YBM</span>
-                            <span class="gray-txt sm-txt">(박준언)</span>
-                            <span class="dark-txt">/ 1과</span>
-                            <span class="dark-txt">/ 본문 3</span>
-                          </div>
-                          <button type="button" class="right-btn">
-                            <span class="txt-hidden">삭제하기</span>
-                            <i class="ico ico-x ico-red-x"></i>
-                          </button>
-                        </li>
-                      </ul>
+                      <ul class="choice-list-grp range"></ul>
                     </div>
                     <div class="card-btn-wrap">
                       <button
@@ -1720,16 +1683,32 @@
                                   </button>
                                 </div>
                                 <div class="search-result-box">
-                                  <button type="button" class="txt-btn">
+                                  <button
+                                    type="button"
+                                    class="txt-btn"
+                                    style="font-size: 12px"
+                                  >
                                     대전 도인고
                                   </button>
-                                  <button type="button" class="txt-btn">
+                                  <button
+                                    type="button"
+                                    class="txt-btn"
+                                    style="font-size: 12px"
+                                  >
                                     대전 대전고
                                   </button>
-                                  <button type="button" class="txt-btn">
+                                  <button
+                                    type="button"
+                                    class="txt-btn"
+                                    style="font-size: 12px"
+                                  >
                                     대전 남대전고
                                   </button>
-                                  <button type="button" class="txt-btn">
+                                  <button
+                                    type="button"
+                                    class="txt-btn"
+                                    style="font-size: 12px"
+                                  >
                                     대전 여대전고
                                   </button>
                                 </div>
@@ -1801,7 +1780,7 @@
                                   </div>
                                 </div>
                               </li>
-                              <li class="list">
+                              <li id="question-options" class="list">
                                 <!-- TODO: 랜덤 출제 체크시 disabled 가 달립니다. -->
                                 <select id="qst-type01" class="form-inp inp-sm">
                                   <option value="객관식">객관식</option>
@@ -1949,16 +1928,22 @@
                                   <span class="txt">추가하기</span>
                                 </button>
                               </li>
-                              <li class="list">
+                              <li id="question-list" class="list">
                                 <div class="label-inp">
                                   <label class="flist-label"
                                     >3. 유형 목록</label
                                   >
                                 </div>
                                 <div class="search-result-box">
-                                  <p class="dot-txt">객관식 - 빈칸</p>
-                                  <p class="dot-txt">객관식 - 빈칸</p>
-                                  <p class="dot-txt">객관식 - 빈칸</p>
+                                  <p class="dot-txt" style="font-size: 12px">
+                                    객관식 - 빈칸
+                                  </p>
+                                  <p class="dot-txt" style="font-size: 12px">
+                                    객관식 - 빈칸
+                                  </p>
+                                  <p class="dot-txt" style="font-size: 12px">
+                                    객관식 - 빈칸
+                                  </p>
                                 </div>
                               </li>
                             </ul>
@@ -2638,6 +2623,8 @@
       </div>
     </div>
     <script src="gpt-tutor/assets/js/ui.js"></script>
+    <script src="gpt-tutor/assets/js/textbook.js"></script>
+    <script src="gpt-tutor/assets/js/random.js"></script>
     <script>
       $("[data-tab]").on("click", function () {
         $("[data-tab]").removeClass("active");

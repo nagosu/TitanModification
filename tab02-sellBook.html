@@ -28,7 +28,7 @@
           <div class="header-inner">
             <h1 class="logo">
               <a href="support.html">
-                <img src="gpt-tutor/assets/images/logo.svg" alt="TITAN" />
+                <img src="gpt-tutor/assets/images/logo.png" alt="TITAN" />
               </a>
             </h1>
             <div class="header-gnb-grp">
@@ -996,7 +996,7 @@
                   </a>
 
                   <!-- 서브메뉴 -->
-                  <div class="major-sidebar-sub-menu">
+                  <div class="major-sidebar-sub-menu" id="sellbook-menu">
                     <!-- 펼쳐질 때 active 클래스가 적용됩니다 -->
                     <div class="sub-menu-grp active">
                       <button type="button" class="sub-menu-btn">
@@ -1446,32 +1446,7 @@
                   <!-- 카드 -->
                   <div class="card range-card">
                     <div class="card-content">
-                      <ul class="choice-list-grp">
-                        <li class="list">
-                          <div class="list-left">
-                            <span class="dark-txt dot-txt"
-                              >워드마스터 고등 어원</span
-                            >
-                            <span class="dark-txt">/ Day 1~40</span>
-                          </div>
-                          <button type="button" class="right-btn">
-                            <span class="txt-hidden">삭제하기</span>
-                            <i class="ico ico-x ico-red-x"></i>
-                          </button>
-                        </li>
-                        <li class="list">
-                          <div class="list-left">
-                            <span class="dark-txt dot-txt"
-                              >워드마스터 고등 어원</span
-                            >
-                            <span class="dark-txt">/ Day PLUS 1~40</span>
-                          </div>
-                          <button type="button" class="right-btn">
-                            <span class="txt-hidden">삭제하기</span>
-                            <i class="ico ico-x ico-red-x"></i>
-                          </button>
-                        </li>
-                      </ul>
+                      <ul class="choice-list-grp range"></ul>
                     </div>
                     <div class="card-btn-wrap">
                       <button
@@ -1573,11 +1548,15 @@
                         </li>
                       </ul>
                       <div class="settingcard-grid-grp">
-                        <div class="settingcard-grid">
+                        <div
+                          class="settingcard-grid"
+                          style="opacity: 0.4; pointer-events: none"
+                        >
                           <input
                             type="checkbox"
                             id="setting01"
                             class="custom-checkbox-inp none"
+                            disabled
                           />
                           <div class="settingcard-btn">
                             <label
@@ -1758,7 +1737,7 @@
                                   </div>
                                 </div>
                               </li>
-                              <li class="list">
+                              <li id="question-options" class="list">
                                 <!-- TODO: 랜덤 출제 체크시 disabled 가 달립니다. -->
                                 <select id="qst-type01" class="form-inp inp-sm">
                                   <option value="객관식">객관식</option>
@@ -1906,7 +1885,7 @@
                                   <span class="txt">추가하기</span>
                                 </button>
                               </li>
-                              <li class="list">
+                              <li id="question-list" class="list">
                                 <div class="label-inp">
                                   <label class="flist-label"
                                     >3. 유형 목록</label
@@ -2595,6 +2574,8 @@
       </div>
     </div>
     <script src="gpt-tutor/assets/js/ui.js"></script>
+    <script src="gpt-tutor/assets/js/sellbook.js"></script>
+    <script src="gpt-tutor/assets/js/random.js"></script>
     <script>
       $("[data-tab]").on("click", function () {
         $("[data-tab]").removeClass("active");
