@@ -572,6 +572,10 @@ img {
 }
 
 .pagination-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin-top: 40px;
   display: flex;
   align-items: center;

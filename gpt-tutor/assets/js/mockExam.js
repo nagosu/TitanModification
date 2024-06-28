@@ -1,54 +1,53 @@
 $(document).ready(function () {
-  $.getJSON("gpt-tutor/assets/json/mockExam-data.json", function (data) {
-    const grades = data;
-    let gradeHtmlContent = "";
+  const grades = mockExamData;
+  let gradeHtmlContent = "";
 
-    // 첫 번째 학년을 초기 active로 설정
-    const firstGrade = Object.keys(grades)[0];
+  // 첫 번째 학년을 초기 active로 설정
+  const firstGrade = Object.keys(grades)[0];
 
-    // 각 학년
-    for (const [grade, examYears] of Object.entries(grades)) {
-      const isActiveGrade = grade === firstGrade ? "active" : "";
+  // 각 학년
+  for (const [grade, examYears] of Object.entries(grades)) {
+    const isActiveGrade = grade === firstGrade ? "active" : "";
+    gradeHtmlContent += `
+      <div class="sub-menu-grp ${isActiveGrade}" onclick="activateGrade(this, '${grade}')">
+        <button type="button" class="sub-menu-btn">${grade}</button>
+        <ul class="more-btn-list-grp">
+    `;
+
+    // 첫 번째 출제년도를 초기 active로 설정
+    const firstYear = Object.keys(examYears)[0];
+
+    // 각 출제년도
+    for (const [year] of Object.entries(examYears)) {
+      const isActiveYear = year === firstYear ? "active" : "";
       gradeHtmlContent += `
-        <div class="sub-menu-grp ${isActiveGrade}" onclick="activateGrade(this, '${grade}')">
-          <button type="button" class="sub-menu-btn">${grade}</button>
-          <ul class="more-btn-list-grp">
+        <li class="more-btn-list">
+          <button type="button" class="more-btn ${isActiveYear}" onclick="showExamItems('${grade}', '${year}', this)">- ${year}</button>
+        </li>
       `;
-
-      // 첫 번째 출제년도를 초기 active로 설정
-      const firstYear = Object.keys(examYears)[0];
-
-      // 각 출제년도
-      for (const [year] of Object.entries(examYears)) {
-        const isActiveYear = year === firstYear ? "active" : "";
-        gradeHtmlContent += `
-          <li class="more-btn-list">
-            <button type="button" class="more-btn ${isActiveYear}" onclick="showExamItems('${grade}', '${year}', this)">- ${year}</button>
-          </li>
-        `;
-      }
-
-      gradeHtmlContent += `</ul></div>`;
     }
 
-    $(".major-sidebar-sub-menu").html(gradeHtmlContent);
+    gradeHtmlContent += `</ul></div>`;
+  }
 
-    // 초기 첫 번째 출제년도의 항목번호를 보여줌
-    showExamItems(firstGrade, Object.keys(grades[firstGrade])[0]);
-  });
+  $(".major-sidebar-sub-menu").html(gradeHtmlContent);
+
+  // 초기 첫 번째 출제년도의 항목번호를 보여줌
+  showExamItems(firstGrade, Object.keys(grades[firstGrade])[0]);
 });
 
 function activateGrade(element, grade) {
   $(".sub-menu-grp").removeClass("active");
   $(element).addClass("active");
+
   // 첫 번째 출제년도의 항목번호를 보여줌
-  const firstYear = Object.keys(grades[grade])[0];
-  showExamItems(grade, firstYear);
+  // const firstYear = Object.keys(mockExamData[grade])[0];
+  // showExamItems(grade, firstYear);
 
   // 첫 번째 출제년도 버튼 클릭
-  const firstMoreBtn = $(element).find("ul > li > button").first();
-  firstMoreBtn.addClass("active");
-  firstMoreBtn.trigger("click");
+  // const firstMoreBtn = $(element).find("ul > li > button").first();
+  // firstMoreBtn.addClass("active");
+  // firstMoreBtn.trigger("click");
 }
 
 function showExamItems(grade, year, element) {
@@ -56,25 +55,24 @@ function showExamItems(grade, year, element) {
     $(".more-btn").removeClass("active");
     $(element).addClass("active");
   }
-  $.getJSON("gpt-tutor/assets/json/mockExam-data.json", function (data) {
-    const items = data[grade][year];
-    let itemHtmlContent = "";
 
-    // 각 항목번호
-    items.forEach((item, index) => {
-      itemHtmlContent += `
-        <li class="list">
-          <div class="checkbox-item">
-            <input type="checkbox" name="range" id="range${index}" class="custom-checkbox-inp none" onclick="addToCard('${grade}', '${year}', '${item}', this)" />
-            <label for="range${index}" class="custom-checkbox"></label>
-            <label for="range${index}" class="dark-txt">${item}</label>
-          </div>
-        </li>
-      `;
-    });
+  const items = mockExamData[grade][year];
+  let itemHtmlContent = "";
 
-    $(".check-list-grp").html(itemHtmlContent);
+  // 각 항목번호
+  items.forEach((item, index) => {
+    itemHtmlContent += `
+      <li class="list">
+        <div class="checkbox-item">
+          <input type="checkbox" name="range" id="range${index}" class="custom-checkbox-inp none" onclick="addToCard('${grade}', '${year}', '${item}', this)" />
+          <label for="range${index}" class="custom-checkbox"></label>
+          <label for="range${index}" class="dark-txt">${item}</label>
+        </div>
+      </li>
+    `;
   });
+
+  $(".check-list-grp").html(itemHtmlContent);
 }
 
 // 선택된 항목들을 저장할 배열

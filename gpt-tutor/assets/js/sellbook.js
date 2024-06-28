@@ -1,41 +1,40 @@
+// sellbook.js
 $(document).ready(function () {
-  $.getJSON("gpt-tutor/assets/json/sellbook-data.json", function (data) {
-    const sellBooks = data["시중단어책"];
-    let bookHtmlContent = "";
+  const sellBooks = sellbookData["시중단어책"];
+  let bookHtmlContent = "";
 
-    // 첫 번째 책을 초기 active로 설정
-    const firstBook = Object.keys(sellBooks)[0];
+  // 첫 번째 책을 초기 active로 설정
+  const firstBook = Object.keys(sellBooks)[0];
 
-    // 각 책
-    for (const [bookTitle, contents] of Object.entries(sellBooks)) {
-      const isActiveBook = bookTitle === firstBook ? "active" : "";
+  // 각 책
+  for (const [bookTitle, contents] of Object.entries(sellBooks)) {
+    const isActiveBook = bookTitle === firstBook ? "active" : "";
+    bookHtmlContent += `
+      <div class="sub-menu-grp ${isActiveBook}">
+        <button type="button" class="sub-menu-btn" onclick="activateBook(this, '${bookTitle}')">${bookTitle}</button>
+        <ul class="more-btn-list-grp">
+    `;
+
+    // 첫 번째 내용을 초기 active로 설정
+    const firstContent = Object.keys(contents)[0];
+
+    // 각 내용
+    for (const contentTitle of Object.keys(contents)) {
+      const isActiveContent = contentTitle === firstContent ? "active" : "";
       bookHtmlContent += `
-        <div class="sub-menu-grp ${isActiveBook}">
-          <button type="button" class="sub-menu-btn" onclick="activateBook(this, '${bookTitle}')">${bookTitle}</button>
-          <ul class="more-btn-list-grp">
+        <li class="more-btn-list">
+          <button type="button" class="more-btn ${isActiveContent}" onclick="showContent('${bookTitle}', '${contentTitle}', this)">- ${contentTitle}</button>
+        </li>
       `;
-
-      // 첫 번째 내용을 초기 active로 설정
-      const firstContent = Object.keys(contents)[0];
-
-      // 각 내용
-      for (const contentTitle of Object.keys(contents)) {
-        const isActiveContent = contentTitle === firstContent ? "active" : "";
-        bookHtmlContent += `
-          <li class="more-btn-list">
-            <button type="button" class="more-btn ${isActiveContent}" onclick="showContent('${bookTitle}', '${contentTitle}', this)">- ${contentTitle}</button>
-          </li>
-        `;
-      }
-
-      bookHtmlContent += `</ul></div>`;
     }
 
-    $(".major-sidebar-sub-menu").html(bookHtmlContent);
+    bookHtmlContent += `</ul></div>`;
+  }
 
-    // 초기 첫 번째 책의 첫 번째 내용을 보여줌
-    showContent(firstBook, Object.keys(sellBooks[firstBook])[0]);
-  });
+  $(".major-sidebar-sub-menu").html(bookHtmlContent);
+
+  // 초기 첫 번째 책의 첫 번째 내용을 보여줌
+  showContent(firstBook, Object.keys(sellBooks[firstBook])[0]);
 });
 
 function activateBook(element, bookTitle) {
@@ -59,25 +58,23 @@ function showContent(bookTitle, contentTitle, element) {
     ).addClass("active");
   }
 
-  $.getJSON("gpt-tutor/assets/json/sellbook-data.json", function (data) {
-    const contents = data["시중단어책"][bookTitle][contentTitle];
-    let contentHtmlContent = "";
+  const contents = sellbookData["시중단어책"][bookTitle][contentTitle];
+  let contentHtmlContent = "";
 
-    // 각 내용을 체크박스 항목으로 추가
-    contents.forEach((content, index) => {
-      contentHtmlContent += `
-        <li class="list">
-          <div class="checkbox-item" style="align-items: flex-start">
-            <input type="checkbox" name="range" id="range${index}" class="custom-checkbox-inp none" onclick="addToCard('${bookTitle}', '${content}', this)" />
-            <label for="range${index}" class="custom-checkbox" style="margin-top: 2.5px"></label>
-            <label for="range${index}" class="dark-txt">${content}</label>
-          </div>
-        </li>
-      `;
-    });
-
-    $(".check-list-grp").html(contentHtmlContent);
+  // 각 내용을 체크박스 항목으로 추가
+  contents.forEach((content, index) => {
+    contentHtmlContent += `
+      <li class="list">
+        <div class="checkbox-item" style="align-items: flex-start">
+          <input type="checkbox" name="range" id="range${index}" class="custom-checkbox-inp none" onclick="addToCard('${bookTitle}', '${content}', this)" />
+          <label for="range${index}" class="custom-checkbox" style="margin-top: 2.5px"></label>
+          <label for="range${index}" class="dark-txt">${content}</label>
+        </div>
+      </li>
+    `;
   });
+
+  $(".check-list-grp").html(contentHtmlContent);
 }
 
 // 선택된 항목들을 저장할 배열

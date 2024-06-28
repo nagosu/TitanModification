@@ -1,49 +1,47 @@
 $(document).ready(function () {
-  $.getJSON("gpt-tutor/assets/json/ebs-data.json", function (data) {
-    const ebs = data["EBS"];
-    let subjectHtmlContent = "";
+  const ebs = ebsData["EBS"];
+  let subjectHtmlContent = "";
 
-    // 첫 번째 과목을 초기 active로 설정
-    const firstSubject = Object.keys(ebs)[0];
+  // 첫 번째 과목을 초기 active로 설정
+  const firstSubject = Object.keys(ebs)[0];
 
-    // 각 과목
-    for (const [subject, parts] of Object.entries(ebs)) {
-      const isActiveSubject = subject === firstSubject ? "active" : "";
-      subjectHtmlContent += `
+  // 각 과목
+  for (const [subject, parts] of Object.entries(ebs)) {
+    const isActiveSubject = subject === firstSubject ? "active" : "";
+    subjectHtmlContent += `
         <div class="sub-menu-grp ${isActiveSubject}">
           <button type="button" class="sub-menu-btn" onclick="activateSubject(this, '${subject}')">${subject}</button>
           <ul class="more-btn-list-grp">
       `;
 
-      // 첫 번째 파트를 초기 active로 설정
-      const firstPart = Object.keys(parts)[0];
+    // 첫 번째 파트를 초기 active로 설정
+    const firstPart = Object.keys(parts)[0];
 
-      // 각 파트
-      for (const [part, lessons] of Object.entries(parts)) {
-        const isActivePart = part === firstPart ? "active" : "";
-        subjectHtmlContent += `
+    // 각 파트
+    for (const [part, lessons] of Object.entries(parts)) {
+      const isActivePart = part === firstPart ? "active" : "";
+      subjectHtmlContent += `
           <li class="more-btn-list">
             <button type="button" class="more-btn ${isActivePart}" onclick="showLessons('${subject}', '${part}', this)">- ${part}</button>
           </li>
         `;
-      }
-
-      subjectHtmlContent += `</ul></div>`;
     }
 
-    $(".major-sidebar-sub-menu").html(subjectHtmlContent);
+    subjectHtmlContent += `</ul></div>`;
+  }
 
-    // 초기 첫 번째 파트의 첫 번째 과를 보여줌
-    showLessons(firstSubject, Object.keys(ebs[firstSubject])[0]);
-  });
+  $(".major-sidebar-sub-menu").html(subjectHtmlContent);
+
+  // 초기 첫 번째 파트의 첫 번째 과를 보여줌
+  showLessons(firstSubject, Object.keys(ebs[firstSubject])[0]);
 });
 
 function activateSubject(element, subject) {
   $(".sub-menu-grp").removeClass("active");
   $(element).parent().addClass("active");
   // 첫 번째 파트의 첫 번째 과를 보여줌
-  const firstPart = Object.keys(ebs[subject])[0];
-  showLessons(subject, firstPart);
+  // const firstPart = Object.keys(ebs[subject])[0];
+  // showLessons(subject, firstPart);
 }
 
 function showLessons(subject, part, element) {
@@ -51,17 +49,17 @@ function showLessons(subject, part, element) {
     $(".more-btn").removeClass("active");
     $(element).addClass("active");
   }
-  $.getJSON("gpt-tutor/assets/json/ebs-data.json", function (data) {
-    const lessons = data["EBS"][subject][part];
-    let lessonHtmlContent = "";
 
-    // 첫 번째 과를 초기 active로 설정
-    const firstLesson = Object.keys(lessons)[0];
+  const lessons = ebsData["EBS"][subject][part];
+  let lessonHtmlContent = "";
 
-    // 각 과
-    Object.keys(lessons).forEach((lesson, index) => {
-      const isActiveLesson = lesson === firstLesson ? "checked" : "";
-      lessonHtmlContent += `
+  // 첫 번째 과를 초기 active로 설정
+  const firstLesson = Object.keys(lessons)[0];
+
+  // 각 과
+  Object.keys(lessons).forEach((lesson, index) => {
+    const isActiveLesson = lesson === firstLesson ? "checked" : "";
+    lessonHtmlContent += `
         <li class="list">
           <input type="radio" name="teacher" id="teacher${index}" class="gray-label-inp none" ${isActiveLesson} onclick="showTexts('${subject}', '${part}', '${lesson}')" />
           <label for="teacher${index}" class="txt-wrap">
@@ -69,20 +67,18 @@ function showLessons(subject, part, element) {
           </label>
         </li>
       `;
-    });
-
-    $(".choice-list-grp.lesson").html(lessonHtmlContent);
-    showTexts(subject, part, firstLesson);
   });
+
+  $(".choice-list-grp.lesson").html(lessonHtmlContent);
+  showTexts(subject, part, firstLesson);
 }
 
 function showTexts(subject, part, lesson) {
-  $.getJSON("gpt-tutor/assets/json/ebs-data.json", function (data) {
-    const texts = data["EBS"][subject][part][lesson];
-    let textHtmlContent = "";
+  const texts = ebsData["EBS"][subject][part][lesson];
+  let textHtmlContent = "";
 
-    texts.forEach((text, index) => {
-      textHtmlContent += `
+  texts.forEach((text, index) => {
+    textHtmlContent += `
         <li class="list">
           <div class="checkbox-item">
             <input type="checkbox" name="range" id="range${index}" class="custom-checkbox-inp none" onclick="addToCard('${subject}', '${part}', '${lesson}', '${text}', this)" />
@@ -91,10 +87,9 @@ function showTexts(subject, part, lesson) {
           </div>
         </li>
       `;
-    });
-
-    $(".check-list-grp").html(textHtmlContent);
   });
+
+  $(".check-list-grp").html(textHtmlContent);
 }
 
 // 선택된 항목들을 저장할 배열

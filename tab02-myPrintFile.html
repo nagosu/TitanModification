@@ -1512,6 +1512,45 @@
                             />
                           </div>
                         </li>
+                        <li class="list">
+                          <label class="flist-label">시험 마감일</label>
+                          <div class="flist-inp">
+                            <div class="inp-grp">
+                              <select class="form-inp inp-sm">
+                                <option value="2024">2024</option>
+                              </select>
+                              <select class="form-inp inp-sm">
+                                <option value="2024">02</option>
+                              </select>
+                              <select class="form-inp inp-sm">
+                                <option value="2024">29</option>
+                              </select>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list">
+                          <label class="flist-label">커트라인</label>
+                          <div class="flist-inp">
+                            <div class="cutline-grp">
+                              <input
+                                type="text"
+                                value="80%"
+                                class="form-inp inp-sm cutline-form-inp"
+                              />
+                              <div class="cutline-rangebar">
+                                <span class="txt">0%</span>
+                                <input
+                                  type="range"
+                                  class="cutline-range"
+                                  min="0"
+                                  max="100"
+                                  step="80"
+                                />
+                                <span class="txt">100%</span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
                       </ul>
                       <div class="settingcard-grid-grp">
                         <div class="settingcard-grid">
@@ -1520,20 +1559,40 @@
                             id="setting01"
                             class="custom-checkbox-inp none"
                           />
-                          <label for="setting01" class="custom-checkbox-btn">
-                            <img
-                              src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg"
-                              alt=""
-                              class="ico-check"
-                            />
-                            <span class="txt">문제 생성/설정</span>
-                          </label>
+                          <div class="settingcard-btn">
+                            <label
+                              for="setting01"
+                              class="custom-checkbox type-03"
+                            ></label>
+                            <label for="setting01" class="custom-checkbox-txt">
+                              <span class="txt">문제 생성/설정</span>
+                            </label>
+                          </div>
                           <div class="custom-checkbox-content">
-                            <ul class="mini-flist-list-grp">
+                            <div class="tabs type-02">
+                              <button
+                                type="button"
+                                data-tab="inner-tab-content01"
+                                class="tab active"
+                              >
+                                학교별 유형
+                              </button>
+                              <button
+                                type="button"
+                                data-tab="inner-tab-content02"
+                                class="tab"
+                              >
+                                직접 유형 설정
+                              </button>
+                            </div>
+                            <ul
+                              id="inner-tab-content01"
+                              class="mini-flist-list-grp type-first active"
+                            >
                               <li class="list">
-                                <div class="label-inp">
+                                <div class="label-inp col-label-inp">
                                   <label class="flist-label"
-                                    >1. 문제 유형</label
+                                    >1. 문제 갯수 설정</label
                                   >
                                   <div class="flist-inp">
                                     <input
@@ -1545,7 +1604,7 @@
                                     <label
                                       for="question-type01"
                                       class="ylw-rounded-btn"
-                                      >학교 설정</label
+                                      >10개</label
                                     >
                                     <input
                                       type="radio"
@@ -1556,23 +1615,46 @@
                                     <label
                                       for="question-type02"
                                       class="ylw-rounded-btn"
-                                      >랜덤 출제</label
+                                      >20개</label
+                                    >
+                                    <input
+                                      type="radio"
+                                      name="question-type"
+                                      id="question-type03"
+                                      class="ylw-rounded-btn-inp none"
+                                    />
+                                    <label
+                                      for="question-type03"
+                                      class="ylw-rounded-btn"
+                                      >30개</label
                                     >
                                   </div>
                                 </div>
                               </li>
-                              <li class="list" id="type">
+                              <li class="list">
                                 <div class="label-inp">
                                   <label class="flist-label"
                                     >2. 학교 유형</label
                                   >
                                   <div class="flist-inp">
+                                    <!-- TODO: disabled 처리 되어야함, 아래 검색 후 자동입력 부분임 -->
                                     <input
                                       type="text"
                                       class="form-inp inp-sm"
                                       placeholder="텍스트 입력"
+                                      disabled
+                                      value="대전 도안고"
                                     />
                                   </div>
+                                </div>
+                                <div class="inp-btn-grp type-search">
+                                  <input type="text" class="form-inp inp-sm" />
+                                  <button
+                                    type="button"
+                                    class="ylw-bd-btn btn-sm inp-btn"
+                                  >
+                                    검색
+                                  </button>
                                 </div>
                                 <div class="search-result-box">
                                   <button type="button" class="txt-btn">
@@ -1590,51 +1672,263 @@
                                 </div>
                               </li>
                             </ul>
+                            <ul
+                              id="inner-tab-content02"
+                              class="mini-flist-list-grp type-first"
+                            >
+                              <li class="list">
+                                <div class="label-inp col-label-inp">
+                                  <label class="flist-label"
+                                    >1. 문제 갯수 설정</label
+                                  >
+                                  <div class="flist-inp">
+                                    <input
+                                      type="radio"
+                                      name="question-type"
+                                      id="question-type0201"
+                                      class="ylw-rounded-btn-inp none"
+                                    />
+                                    <label
+                                      for="question-type0201"
+                                      class="ylw-rounded-btn"
+                                      >10개</label
+                                    >
+                                    <input
+                                      type="radio"
+                                      name="question-type"
+                                      id="question-type0202"
+                                      class="ylw-rounded-btn-inp none"
+                                    />
+                                    <label
+                                      for="question-type0202"
+                                      class="ylw-rounded-btn"
+                                      >20개</label
+                                    >
+                                    <input
+                                      type="radio"
+                                      name="question-type"
+                                      id="question-type0203"
+                                      class="ylw-rounded-btn-inp none"
+                                    />
+                                    <label
+                                      for="question-type0203"
+                                      class="ylw-rounded-btn"
+                                      >30개</label
+                                    >
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="list">
+                                <div class="label-inp">
+                                  <label class="flist-label"
+                                    >2. 문제 유형</label
+                                  >
+                                  <div class="flist-inp">
+                                    <input
+                                      type="checkbox"
+                                      name="question-type"
+                                      id="question-type02-random"
+                                      class="ylw-rounded-btn-inp none"
+                                    />
+                                    <label
+                                      for="question-type02-random"
+                                      class="ylw-rounded-btn"
+                                      >랜덤 출제</label
+                                    >
+                                  </div>
+                                </div>
+                              </li>
+                              <li id="question-options" class="list">
+                                <!-- TODO: 랜덤 출제 체크시 disabled 가 달립니다. -->
+                                <select id="qst-type01" class="form-inp inp-sm">
+                                  <option value="객관식">객관식</option>
+                                  <option value="단답형">단답형</option>
+                                  <option value="서술형">서술형</option>
+                                </select>
+
+                                <!-- TODO: 랜덤 출제 체크시 disabled 가 달립니다. -->
+                                <select
+                                  id="qst-type02"
+                                  class="form-inp inp-sm"
+                                ></select>
+
+                                <!-- TODO: 객관식~서술형 따라 옵션이 바뀌는 script -->
+                                <script>
+                                  var qstOptions01 = [
+                                    "주제",
+                                    "제목",
+                                    "밑줄",
+                                    "빈칸",
+                                    "요지",
+                                    "목적",
+                                    "주장",
+                                    "지칭추론",
+                                    "무관한 문장",
+                                    "순서",
+                                    "삽입",
+                                    "내용 불일치",
+                                    "낱말",
+                                    "요약",
+                                    "내용추론(의미추론)",
+                                    "어법",
+                                    "영영풀이",
+                                  ];
+                                  var qstOptions02 = [
+                                    "빈칸",
+                                    "요약",
+                                    "어법",
+                                    "낱말+어법 혼합",
+                                  ];
+                                  var qstOptions03 = ["문장완성", "어법"];
+                                  $("#qst-type01").each(function () {
+                                    if ($(this).val() == "객관식") {
+                                      for (
+                                        var i = 0;
+                                        i < qstOptions01.length;
+                                        i++
+                                      ) {
+                                        var option =
+                                          document.createElement("option");
+                                        option.value = qstOptions01[i];
+                                        option.text = qstOptions01[i];
+                                        document
+                                          .querySelector("#qst-type02")
+                                          .appendChild(option);
+                                      }
+                                    }
+                                    if ($(this).val() == "단답형") {
+                                      for (
+                                        var i = 0;
+                                        i < qstOptions02.length;
+                                        i++
+                                      ) {
+                                        var option =
+                                          document.createElement("option");
+                                        option.value = qstOptions02[i];
+                                        option.text = qstOptions02[i];
+                                        document
+                                          .querySelector("#qst-type02")
+                                          .appendChild(option);
+                                      }
+                                    }
+                                    if ($(this).val() == "서술형") {
+                                      for (
+                                        var i = 0;
+                                        i < qstOptions03.length;
+                                        i++
+                                      ) {
+                                        var option =
+                                          document.createElement("option");
+                                        option.value = qstOptions03[i];
+                                        option.text = qstOptions03[i];
+                                        document
+                                          .querySelector("#qst-type02")
+                                          .appendChild(option);
+                                      }
+                                    }
+                                  });
+                                  $("#qst-type01").on("change", function () {
+                                    var optionType = $(this).val();
+                                    if (optionType == "객관식") {
+                                      $("#qst-type02 option").remove();
+                                      for (
+                                        var i = 0;
+                                        i < qstOptions01.length;
+                                        i++
+                                      ) {
+                                        var option =
+                                          document.createElement("option");
+                                        option.value = qstOptions01[i];
+                                        option.text = qstOptions01[i];
+                                        document
+                                          .querySelector("#qst-type02")
+                                          .appendChild(option);
+                                      }
+                                    }
+                                    if (optionType == "단답형") {
+                                      $("#qst-type02 option").remove();
+                                      for (
+                                        var i = 0;
+                                        i < qstOptions02.length;
+                                        i++
+                                      ) {
+                                        var option =
+                                          document.createElement("option");
+                                        option.value = qstOptions02[i];
+                                        option.text = qstOptions02[i];
+                                        document
+                                          .querySelector("#qst-type02")
+                                          .appendChild(option);
+                                      }
+                                    }
+                                    if (optionType == "서술형") {
+                                      $("#qst-type02 option").remove();
+                                      for (
+                                        var i = 0;
+                                        i < qstOptions03.length;
+                                        i++
+                                      ) {
+                                        var option =
+                                          document.createElement("option");
+                                        option.value = qstOptions03[i];
+                                        option.text = qstOptions03[i];
+                                        document
+                                          .querySelector("#qst-type02")
+                                          .appendChild(option);
+                                      }
+                                    }
+                                  });
+                                </script>
+                                <button
+                                  type="button"
+                                  class="ylw-solid-btn btn-smd square-btn btn-full"
+                                >
+                                  <span class="txt">추가하기</span>
+                                </button>
+                              </li>
+                              <li id="question-list" class="list">
+                                <div class="label-inp">
+                                  <label class="flist-label"
+                                    >3. 유형 목록</label
+                                  >
+                                </div>
+                                <div class="search-result-box">
+                                  <p class="dot-txt">객관식 - 빈칸</p>
+                                  <p class="dot-txt">객관식 - 빈칸</p>
+                                  <p class="dot-txt">객관식 - 빈칸</p>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
                         </div>
-                        <script>
-                          $(document).ready(function () {
-                            // 초기 상태 설정
-                            if ($("#question-type02").is(":checked")) {
-                              $("#type").hide();
-                            }
-
-                            // 학교 설정 버튼 클릭 시
-                            $("#question-type01").on("click", function () {
-                              $("#type").show();
-                            });
-
-                            // 랜덤 출제 버튼 클릭 시
-                            $("#question-type02").on("click", function () {
-                              $("#type").hide();
-                            });
-                          });
-                        </script>
-
                         <div class="settingcard-grid">
                           <input
                             type="checkbox"
                             id="setting02"
                             class="custom-checkbox-inp none"
                           />
-                          <label for="setting02" class="custom-checkbox-btn">
-                            <img
-                              src="gpt-tutor/assets/images/ico-custom-checkbox-btn-check.svg"
-                              alt=""
-                              class="ico-check"
-                            />
-                            <span class="txt">단어 생성/설정</span>
-                          </label>
+                          <div class="settingcard-btn">
+                            <label
+                              for="setting02"
+                              class="custom-checkbox type-03"
+                            ></label>
+                            <label for="setting02" class="custom-checkbox-txt">
+                              <span class="txt">단어 생성/설정</span>
+                            </label>
+                          </div>
                           <div class="custom-checkbox-content">
                             <ul class="mini-flist-list-grp">
                               <li class="list">
                                 <div class="label-inp">
                                   <label class="flist-label">총 단어수</label>
                                   <div class="flist-inp">
+                                    <!-- TODO: disabled 처리 되어야함, 사용자 입력 불가, 자동입력-->
                                     <input
                                       type="text"
                                       class="form-inp inp-sm"
+                                      disabled
                                       placeholder="텍스트 입력"
+                                      value="380"
                                     />
                                   </div>
                                 </div>
@@ -1654,7 +1948,7 @@
                               <li class="list">
                                 <div class="label-inp col-label-inp">
                                   <label class="flist-label">문제 유형</label>
-                                  <div class="flist-inp">
+                                  <div class="flist-inp type-checkboxes">
                                     <div class="checkbox-item">
                                       <input
                                         type="checkbox"
@@ -1728,9 +2022,10 @@
                       </div>
                     </div>
                     <div class="card-btn-wrap">
+                      <!-- TODO: 활성화시키려면 btn-before 클래스를 지워주세요!! -->
                       <button
                         type="button"
-                        class="btn ylw-solid-btn square-btn btn-md"
+                        class="btn ylw-solid-btn square-btn btn-md btn-before"
                       >
                         <span class="txt">적용하기</span>
                       </button>
@@ -1932,5 +2227,14 @@
     </div>
     <script src="gpt-tutor/assets/js/ui.js"></script>
     <script src="gpt-tutor/assets/js/scroll.js"></script>
+    <script src="gpt-tutor/assets/js/random.js"></script>
+    <script>
+      $("[data-tab]").on("click", function () {
+        $("[data-tab]").removeClass("active");
+        $(this).addClass("active");
+        $(".mini-flist-list-grp.type-first").removeClass("active");
+        $("#" + $(this).attr("data-tab")).addClass("active");
+      });
+    </script>
   </body>
 </html>
