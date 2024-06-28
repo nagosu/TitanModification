@@ -1491,7 +1491,53 @@
                   <!-- 카드 -->
                   <div class="card range-card">
                     <div class="card-content">
-                      <ul class="choice-list-grp range"></ul>
+                      <ul class="choice-list-grp range">
+                        <li class="list">
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">고1</span>
+                            <span class="gray-txt sm-txt">(2024년 6월)</span>
+                            <span class="dark-txt">/ 21</span>
+                          </div>
+                          <button
+                            type="button"
+                            class="right-btn"
+                            onclick="removeFromCard('${selectedItem.grade}', '${selectedItem.year}', '${selectedItem.item}')"
+                          >
+                            <span class="txt-hidden">삭제하기</span>
+                            <i class="ico ico-x ico-red-x"></i>
+                          </button>
+                        </li>
+                        <li class="list">
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">고2</span>
+                            <span class="gray-txt sm-txt">(2023년 3월)</span>
+                            <span class="dark-txt">/ 24</span>
+                          </div>
+                          <button
+                            type="button"
+                            class="right-btn"
+                            onclick="removeFromCard('${selectedItem.grade}', '${selectedItem.year}', '${selectedItem.item}')"
+                          >
+                            <span class="txt-hidden">삭제하기</span>
+                            <i class="ico ico-x ico-red-x"></i>
+                          </button>
+                        </li>
+                        <li class="list">
+                          <div class="list-left">
+                            <span class="dark-txt dot-txt">고3</span>
+                            <span class="gray-txt sm-txt">(2024년 9월)</span>
+                            <span class="dark-txt">/ 37</span>
+                          </div>
+                          <button
+                            type="button"
+                            class="right-btn"
+                            onclick="removeFromCard('${selectedItem.grade}', '${selectedItem.year}', '${selectedItem.item}')"
+                          >
+                            <span class="txt-hidden">삭제하기</span>
+                            <i class="ico ico-x ico-red-x"></i>
+                          </button>
+                        </li>
+                      </ul>
                     </div>
                     <div class="card-btn-wrap">
                       <button
