@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GPT TUTOR</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <link rel="stylesheet" href="gpt-tutor/assets/css/vendor/reset.css">
-    <link rel="stylesheet" href="gpt-tutor/assets/css/style.css">
-    <link rel="stylesheet" href="gpt-tutor/assets/css/print-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="gpt-tutor/assets/css/vendor/reset.css?v=1.0" />
+    <link rel="stylesheet" href="gpt-tutor/assets/css/style.css" />
+    <link rel="stylesheet" href="gpt-tutor/assets/css/print-style.css" />
     <script src="gpt-tutor/assets/js/vendor/jquery-3.6.1.min.js"></script>
   </head>
   <style>
@@ -21,18 +29,21 @@
   </style>
   <body class="print-body">
     <div id="app">
-
       <!-- 객관식 단어/주관식 단어 테스트 -->
       <div class="print-wrapper type-print01">
         <span class="print-page">1</span>
         <div class="print-container type-wordtest">
-
           <!-- 표지 내용 영역 -->
           <div class="print-content-wrap">
             <div class="inner-content-wrap">
               <h2 class="prt-mini-ttl">
                 <div class="checkbox-item">
-                  <input type="checkbox" name="range" id="print0501-01" class="custom-checkbox-inp none">
+                  <input
+                    type="checkbox"
+                    name="range"
+                    id="print0501-01"
+                    class="custom-checkbox-inp none"
+                  />
                   <label for="print0501-01" class="custom-checkbox"></label>
                 </div>
                 <span>객관식 단어 테스트 문제</span>
@@ -137,7 +148,9 @@
                       <span>[문제 4] 다음 구문의 한글 뜻을 고르시오.</span>
                     </h3>
                     <div class="word-example-wrap">
-                      <span class="word-example">창의적으로 문제를 해결하다</span>
+                      <span class="word-example"
+                        >창의적으로 문제를 해결하다</span
+                      >
                     </div>
                     <div class="word-answer-wrap">
                       <div class="prt-mini-ttl type-other type-xsm">
@@ -169,7 +182,12 @@
             <div class="inner-content-wrap">
               <h2 class="prt-mini-ttl">
                 <div class="checkbox-item">
-                  <input type="checkbox" name="range" id="print0501-05" class="custom-checkbox-inp none">
+                  <input
+                    type="checkbox"
+                    name="range"
+                    id="print0501-05"
+                    class="custom-checkbox-inp none"
+                  />
                   <label for="print0501-05" class="custom-checkbox"></label>
                 </div>
                 <span>주관식 단어 테스트 문제</span>
@@ -178,13 +196,22 @@
                 <div class="dashed-box">
                   <div class="short-answer-content">
                     <figure class="picture-wrap">
-                      <img src="gpt-tutor/assets/images/img-short-answer-example.png" alt="" class="picture-img">
+                      <img
+                        src="gpt-tutor/assets/images/img-short-answer-example.png"
+                        alt=""
+                        class="picture-img"
+                      />
                     </figure>
                     <div class="answer-txt-wrap">
                       <h3 class="prt-mini-ttl type-other type-sm">
-                        <span>[문제5] 다음 그림과 관련한 단어를 영어로 쓰시오.</span>
+                        <span
+                          >[문제5] 다음 그림과 관련한 단어를 영어로
+                          쓰시오.</span
+                        >
                       </h3>
-                      <p class="txt">[주관식] R<input class="blank-inp"> (품사: 명사)</p>
+                      <p class="txt">
+                        [주관식] R<input class="blank-inp" /> (품사: 명사)
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -202,13 +229,17 @@
       <div class="print-wrapper type-print01">
         <span class="print-page">2</span>
         <div class="print-container type-wordtest">
-
           <!-- 표지 내용 영역 -->
           <div class="print-content-wrap">
             <div class="inner-content-wrap">
               <h2 class="prt-mini-ttl">
                 <div class="checkbox-item">
-                  <input type="checkbox" name="range" id="print0501-06" class="custom-checkbox-inp none">
+                  <input
+                    type="checkbox"
+                    name="range"
+                    id="print0501-06"
+                    class="custom-checkbox-inp none"
+                  />
                   <label for="print0501-06" class="custom-checkbox"></label>
                 </div>
                 <span>영영풀이 테스트 문제</span>
@@ -217,14 +248,20 @@
                 <div class="dashed-box">
                   <div class="word-test-list">
                     <h3 class="prt-mini-ttl type-other type-sm">
-                      <span>[문제 6~10] 다음의 사전적 영영풀이에 해당하는 단어를 고르시오.</span>
+                      <span
+                        >[문제 6~10] 다음의 사전적 영영풀이에 해당하는 단어를
+                        고르시오.</span
+                      >
                     </h3>
-                    <br>
+                    <br />
                     <h3 class="prt-mini-ttl type-other type-sm">
                       <span>[문제 6]</span>
                     </h3>
                     <div class="word-example-wrap">
-                      <span class="word-example">The process of making machines operate without human control.</span>
+                      <span class="word-example"
+                        >The process of making machines operate without human
+                        control.</span
+                      >
                     </div>
                     <div class="word-answer-wrap">
                       <div class="prt-mini-ttl type-other type-xsm">
@@ -255,8 +292,10 @@
                       <span>[문제 7]</span>
                     </h3>
                     <div class="word-example-wrap">
-                      <span class="word-example">The state of being exposed to the possibility of something bad
-                      happening.</span>
+                      <span class="word-example"
+                        >The state of being exposed to the possibility of
+                        something bad happening.</span
+                      >
                     </div>
                     <div class="word-answer-wrap">
                       <div class="prt-mini-ttl type-other type-xsm">
@@ -287,8 +326,10 @@
                       <span>[문제 8]</span>
                     </h3>
                     <div class="word-example-wrap">
-                      <span class="word-example">A machine capable of carrying out complex tasks as if it were a
-                      human.</span>
+                      <span class="word-example"
+                        >A machine capable of carrying out complex tasks as if
+                        it were a human.</span
+                      >
                     </div>
                     <div class="word-answer-wrap">
                       <div class="prt-mini-ttl type-other type-xsm">
@@ -319,8 +360,10 @@
                       <span>[문제 9]</span>
                     </h3>
                     <div class="word-example-wrap">
-                      <span class="word-example">A very powerful computer that can process vast amounts of
-                      information.</span>
+                      <span class="word-example"
+                        >A very powerful computer that can process vast amounts
+                        of information.</span
+                      >
                     </div>
                     <div class="word-answer-wrap">
                       <div class="prt-mini-ttl type-other type-xsm">
@@ -351,8 +394,10 @@
                       <span>[문제 10]</span>
                     </h3>
                     <div class="word-example-wrap">
-                      <span class="word-example">The act of generating ideas or answers by using imagination to find new
-                      solutions.</span>
+                      <span class="word-example"
+                        >The act of generating ideas or answers by using
+                        imagination to find new solutions.</span
+                      >
                     </div>
                     <div class="word-answer-wrap">
                       <div class="prt-mini-ttl type-other type-xsm">
@@ -393,13 +438,17 @@
       <div class="print-wrapper type-print01">
         <span class="print-page">3</span>
         <div class="print-container type-wordtest">
-
           <!-- 표지 내용 영역 -->
           <div class="print-content-wrap">
             <div class="inner-content-wrap">
               <h2 class="prt-mini-ttl">
                 <div class="checkbox-item">
-                  <input type="checkbox" name="range" id="print0501-11" class="custom-checkbox-inp none">
+                  <input
+                    type="checkbox"
+                    name="range"
+                    id="print0501-11"
+                    class="custom-checkbox-inp none"
+                  />
                   <label for="print0501-11" class="custom-checkbox"></label>
                 </div>
                 <span>동의어 테스트 문제</span>
@@ -408,14 +457,20 @@
                 <div class="dashed-box">
                   <div class="word-test-list">
                     <h3 class="prt-mini-ttl type-other type-sm">
-                      <span>[문제 11~15] 다음의 문맥상 밑줄친 단어의 동의어를 고르시오.</span>
+                      <span
+                        >[문제 11~15] 다음의 문맥상 밑줄친 단어의 동의어를
+                        고르시오.</span
+                      >
                     </h3>
-                    <br>
+                    <br />
                     <h3 class="prt-mini-ttl type-other type-sm">
                       <span>[문제 11]</span>
                     </h3>
                     <div class="word-example-wrap">
-                      <span class="word-example">The jobs are at <u>risk</u> because of automation.</span>
+                      <span class="word-example"
+                        >The jobs are at <u>risk</u> because of
+                        automation.</span
+                      >
                     </div>
                     <div class="word-answer-wrap">
                       <div class="prt-mini-ttl type-other type-xsm">
@@ -446,7 +501,9 @@
                       <span>[문제 12]</span>
                     </h3>
                     <div class="word-example-wrap">
-                      <span class="word-example">Workers could be <u>replaced</u> by robots.</span>
+                      <span class="word-example"
+                        >Workers could be <u>replaced</u> by robots.</span
+                      >
                     </div>
                     <div class="word-answer-wrap">
                       <div class="prt-mini-ttl type-other type-xsm">
@@ -477,7 +534,10 @@
                       <span>[문제 13]</span>
                     </h3>
                     <div class="word-example-wrap">
-                      <span class="word-example">Highly skilled jobs are <u>difficult</u> to automate.</span>
+                      <span class="word-example"
+                        >Highly skilled jobs are <u>difficult</u> to
+                        automate.</span
+                      >
                     </div>
                     <div class="word-answer-wrap">
                       <div class="prt-mini-ttl type-other type-xsm">
@@ -508,7 +568,10 @@
                       <span>[문제 14]</span>
                     </h3>
                     <div class="word-example-wrap">
-                      <span class="word-example">A supercomputer can <u>suggest</u> treatments in an automated way.</span>
+                      <span class="word-example"
+                        >A supercomputer can <u>suggest</u> treatments in an
+                        automated way.</span
+                      >
                     </div>
                     <div class="word-answer-wrap">
                       <div class="prt-mini-ttl type-other type-xsm">
@@ -539,7 +602,10 @@
                       <span>[문제 15]</span>
                     </h3>
                     <div class="word-example-wrap">
-                      <span class="word-example">Creatively solving problems is an irreplaceable skill.</span>
+                      <span class="word-example"
+                        >Creatively solving problems is an irreplaceable
+                        skill.</span
+                      >
                     </div>
                     <div class="word-answer-wrap">
                       <div class="prt-mini-ttl type-other type-xsm">
