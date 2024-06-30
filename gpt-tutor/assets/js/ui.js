@@ -59,6 +59,7 @@ function closeModal(id) {
 
 function allCloseModal() {
   $(".modal-wrapper").removeClass("active");
+  document.body.style.overflow = "";
 }
 $(".major-sidebar .sub-menu-btn").on("click", function () {
   $(".major-sidebar .sub-menu-grp").removeClass("active");
