@@ -687,6 +687,14 @@ img {
   text-decoration: underline;
 }
 
+.header-snb-grp .snb.active.red {
+  color: #ff2e2e;
+}
+
+.header-snb-grp .snb.active.blue {
+  color: #0080ff;
+}
+
 .header-notice {
   background-color: #222f63;
   display: flex;
@@ -982,6 +990,14 @@ img {
   border-bottom: 1px solid #dce4e8;
   padding: 8px 0;
   text-align: center;
+}
+
+.major-sidebar-top.red {
+  background-color: #de594f;
+}
+
+.major-sidebar-top.blue {
+  background-color: #0080ff;
 }
 
 .major-sidebar-top .major-sidebar-ttl {
