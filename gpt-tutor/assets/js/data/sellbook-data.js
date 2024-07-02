@@ -1,7 +1,7 @@
 const sellbookData = {
   시중단어책: {
     "워드마스터 고등 어원": {
-      "Day 1~40 + Day PLUS 1~40": [
+      "Day 1~40": [
         "Day 1",
         "Day 2",
         "Day 3",
@@ -42,6 +42,8 @@ const sellbookData = {
         "Day 38",
         "Day 39",
         "Day 40",
+      ],
+      "Day PLUS 1~40": [
         "Day PLUS 1",
         "Day PLUS 2",
         "Day PLUS 3",
@@ -84,8 +86,8 @@ const sellbookData = {
         "Day PLUS 40",
       ],
     },
-    "워드마스터 고등 Basic (2023)": {
-      "Day 1~30 +  Day PLUS 1~30": [
+    "워드마스터 고등 Basic(2023)": {
+      "Day 1~30": [
         "Day 1",
         "Day 2",
         "Day 3",
@@ -116,6 +118,8 @@ const sellbookData = {
         "Day 28",
         "Day 29",
         "Day 30",
+      ],
+      "Day PLUS 1~30": [
         "Day PLUS 1",
         "Day PLUS 2",
         "Day PLUS 3",
@@ -148,8 +152,8 @@ const sellbookData = {
         "Day PLUS 30",
       ],
     },
-    "워드마스터 고등 Complete (2020)": {
-      "Day 1~30 +  Day PLUS 1~30": [
+    "워드마스터 고등 Complete(2020)": {
+      "Day 1~30": [
         "Day 1",
         "Day 2",
         "Day 3",
@@ -180,6 +184,8 @@ const sellbookData = {
         "Day 28",
         "Day 29",
         "Day 30",
+      ],
+      "Day PLUS 1~30": [
         "Day PLUS 1",
         "Day PLUS 2",
         "Day PLUS 3",
@@ -212,8 +218,8 @@ const sellbookData = {
         "Day PLUS 30",
       ],
     },
-    "워드마스터 수능2000": {
-      "Day 1~50 + Day PLUS 1~50": [
+    "워드마스터 수능2000(2022)": {
+      "Day 1~50": [
         "Day 1",
         "Day 2",
         "Day 3",
@@ -264,6 +270,8 @@ const sellbookData = {
         "Day 48",
         "Day 49",
         "Day 50",
+      ],
+      "Day PLUS 1~50": [
         "Day PLUS 1",
         "Day PLUS 2",
         "Day PLUS 3",
@@ -316,8 +324,8 @@ const sellbookData = {
         "Day PLUS 50",
       ],
     },
-    "워드마스터 하이퍼 2000 (2021)": {
-      "Day 1~50 + Day PLUS 1~50": [
+    "워드마스터 하이퍼 2000(2021)": {
+      "Day 1~50": [
         "Day 1",
         "Day 2",
         "Day 3",
@@ -368,6 +376,8 @@ const sellbookData = {
         "Day 48",
         "Day 49",
         "Day 50",
+      ],
+      "Day PLUS 1~50": [
         "Day PLUS 1",
         "Day PLUS 2",
         "Day PLUS 3",
@@ -484,7 +494,7 @@ const sellbookData = {
         "Day 60",
       ],
     },
-    "해커스 보카 고등 기본 (2022)": {
+    "해커스 보카 고등 기본(2022)": {
       "Day 1~30": [
         "Day 1",
         "Day 2",
@@ -518,7 +528,7 @@ const sellbookData = {
         "Day 30",
       ],
     },
-    "해커스 보카 수능필수2000 (2022)": {
+    "해커스 보카 수능필수2000(2022)": {
       "Day 1~50": [
         "Day 1",
         "Day 2",
@@ -572,7 +582,7 @@ const sellbookData = {
         "Day 50",
       ],
     },
-    "해커스 보카 수능완성 1800 (2021)": {
+    "해커스 보카 수능완성 1800(2021)": {
       "Day 1~45": [
         "Day 1",
         "Day 2",
@@ -622,7 +632,7 @@ const sellbookData = {
       ],
     },
     "능률 VOCA 어원편": {
-      "Day 1~60 + 혼동어휘": [
+      "Day 1~60": [
         "Day 1",
         "Day 2",
         "Day 3",
@@ -683,6 +693,8 @@ const sellbookData = {
         "Day 58",
         "Day 59",
         "Day 60",
+      ],
+      혼동어휘: [
         "한번에 외우는 핵심 다의어",
         "접사에 따른 혼동어휘 1",
         "접사에 따른 혼동어휘 2",
@@ -693,7 +705,7 @@ const sellbookData = {
         "철자가 비슷한 혼동어휘 3",
       ],
     },
-    "능률 VOCA 어원편 Lite (2022)": {
+    "능률 VOCA 어원편 Lite(2022)": {
       "Unit 1~35": [
         "Unit 1",
         "Unit 2",
@@ -732,7 +744,7 @@ const sellbookData = {
         "Unit 35",
       ],
     },
-    "능률 VOCA 고교기본 (2022)": {
+    "능률 VOCA 고교기본(2022)": {
       "Day 1~45": [
         "Day 1",
         "Day 2",
