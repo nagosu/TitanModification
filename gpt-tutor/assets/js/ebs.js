@@ -131,7 +131,7 @@ function addToCard(subject, part, lesson, text, element) {
 
   selectedTexts.forEach((item, index) => {
     const textItem = `
-      <li class="list">
+      <li class="list" data-index="${index}">
         <div class="list-left">
           <span class="dark-txt dot-txt">${item.subject}</span>
           <span class="gray-txt sm-txt">(${item.part})</span>
@@ -154,23 +154,11 @@ function removeFromCard(index) {
 
   // DOM에서 항목 제거
   const cardList = $("#range-list");
-  cardList.html(""); // 기존 항목을 지우고
+  cardList.find(`li[data-index="${index}"]`).remove();
 
-  selectedTexts.forEach((item, index) => {
-    const textItem = `
-      <li class="list">
-        <div class="list-left">
-          <span class="dark-txt dot-txt">${item.subject}</span>
-          <span class="gray-txt sm-txt">(${item.part})</span>
-          <span class="dark-txt">/ ${item.lesson}</span>
-          <span class="dark-txt">/ ${item.text}</span>
-        </div>
-        <button type="button" class="right-btn" onclick="removeFromCard(${index})">
-          <span class="txt-hidden">삭제하기</span>
-          <i class="ico ico-x ico-red-x"></i>
-        </button>
-      </li>
-    `;
-    cardList.append(textItem);
+  // 인덱스를 다시 설정
+  cardList.find("li").each((i, li) => {
+    $(li).attr("data-index", i);
+    $(li).find(".right-btn").attr("onclick", `removeFromCard(${i})`);
   });
 }

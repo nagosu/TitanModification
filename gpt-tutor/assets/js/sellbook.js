@@ -108,14 +108,14 @@ function addToCard(bookTitle, content, element) {
   const cardList = $(".choice-list-grp.range");
   cardList.html(""); // 기존 항목을 지우고
 
-  selectedItems.forEach((selectedItem) => {
+  selectedItems.forEach((selectedItem, index) => {
     const itemElement = `
-      <li class="list">
+      <li class="list" data-index="${index}">
         <div class="list-left">
           <span class="dark-txt dot-txt">${selectedItem.bookTitle}</span>
           <span class="dark-txt">/ ${selectedItem.content}</span>
         </div>
-        <button type="button" class="right-btn" onclick="removeFromCard('${selectedItem.bookTitle}', '${selectedItem.content}')">
+        <button type="button" class="right-btn" onclick="removeFromCard(${index})">
           <span class="txt-hidden">삭제하기</span>
           <i class="ico ico-x ico-red-x"></i>
         </button>
@@ -125,16 +125,17 @@ function addToCard(bookTitle, content, element) {
   });
 }
 
-function removeFromCard(bookTitle, content) {
+function removeFromCard(index) {
   // 배열에서 항목 제거
-  selectedItems = selectedItems.filter(
-    (selectedItem) =>
-      !(
-        selectedItem.bookTitle === bookTitle && selectedItem.content === content
-      )
-  );
+  selectedItems.splice(index, 1);
 
   // DOM에서 항목 제거
   const cardList = $(".choice-list-grp.range");
-  cardList.find(`span:contains('${content}')`).closest("li").remove();
+  cardList.find(`li[data-index="${index}"]`).remove();
+
+  // 인덱스를 다시 설정
+  cardList.find("li").each((i, li) => {
+    $(li).attr("data-index", i);
+    $(li).find(".right-btn").attr("onclick", `removeFromCard(${i})`);
+  });
 }

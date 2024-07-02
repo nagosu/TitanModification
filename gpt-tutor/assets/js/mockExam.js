@@ -109,15 +109,15 @@ function addToCard(grade, year, item, element) {
   const cardList = $(".choice-list-grp.range");
   cardList.html(""); // 기존 항목을 지우고
 
-  selectedItems.forEach((selectedItem) => {
+  selectedItems.forEach((selectedItem, index) => {
     const itemElement = `
-      <li class="list">
+      <li class="list" data-index="${index}">
         <div class="list-left">
           <span class="dark-txt dot-txt">${selectedItem.grade}</span>
           <span class="gray-txt sm-txt">(${selectedItem.year})</span>
           <span class="dark-txt">/ ${selectedItem.item}</span>
         </div>
-        <button type="button" class="right-btn" onclick="removeFromCard('${selectedItem.grade}', '${selectedItem.year}', '${selectedItem.item}')">
+        <button type="button" class="right-btn" onclick="removeFromCard(${index})">
           <span class="txt-hidden">삭제하기</span>
           <i class="ico ico-x ico-red-x"></i>
         </button>
@@ -127,18 +127,17 @@ function addToCard(grade, year, item, element) {
   });
 }
 
-function removeFromCard(grade, year, item) {
+function removeFromCard(index) {
   // 배열에서 항목 제거
-  selectedItems = selectedItems.filter(
-    (selectedItem) =>
-      !(
-        selectedItem.grade === grade &&
-        selectedItem.year === year &&
-        selectedItem.item === item
-      )
-  );
+  selectedItems.splice(index, 1);
 
   // DOM에서 항목 제거
   const cardList = $(".choice-list-grp.range");
-  cardList.find(`span:contains('${item}')`).closest("li").remove();
+  cardList.find(`li[data-index="${index}"]`).remove();
+
+  // 인덱스를 다시 설정
+  cardList.find("li").each((i, li) => {
+    $(li).attr("data-index", i);
+    $(li).find(".right-btn").attr("onclick", `removeFromCard(${i})`);
+  });
 }

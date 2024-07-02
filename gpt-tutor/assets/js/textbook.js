@@ -96,15 +96,12 @@ function showTexts(subject, publisher, lesson) {
 let selectedTexts = [];
 
 function addToCard(subject, publisher, lesson, text, element) {
-  // 출판사명과 저자명 분리
   const publisherName = publisher.replace(/\s*\(.*?\)\s*/g, "");
   const authorName = publisher.match(/\((.*?)\)/)[1];
 
   if (element.checked) {
-    // 항목을 배열에 추가
     selectedTexts.push({ subject, publisherName, authorName, lesson, text });
   } else {
-    // 항목을 배열에서 제거
     selectedTexts = selectedTexts.filter(
       (item) =>
         !(
@@ -117,7 +114,6 @@ function addToCard(subject, publisher, lesson, text, element) {
     );
   }
 
-  // 배열을 정렬
   selectedTexts.sort((a, b) => {
     if (a.publisherName < b.publisherName) return -1;
     if (a.publisherName > b.publisherName) return 1;
@@ -128,20 +124,19 @@ function addToCard(subject, publisher, lesson, text, element) {
     return 0;
   });
 
-  // 정렬된 항목을 DOM에 업데이트
   const cardList = $(".choice-list-grp.range");
-  cardList.html(""); // 기존 항목을 지우고
+  cardList.html("");
 
-  selectedTexts.forEach((item) => {
+  selectedTexts.forEach((item, index) => {
     const textItem = `
-      <li class="list">
+      <li class="list" data-index="${index}">
         <div class="list-left">
           <span class="dark-txt dot-txt">${item.publisherName}</span>
           <span class="gray-txt sm-txt">(${item.authorName})</span>
           <span class="dark-txt">/ ${item.lesson}</span>
           <span class="dark-txt">/ ${item.text}</span>
         </div>
-        <button type="button" class="right-btn" onclick="removeFromCard('${item.subject}', '${item.publisherName}', '${item.authorName}', '${item.lesson}', '${item.text}')">
+        <button type="button" class="right-btn" onclick="removeFromCard(${index})">
           <span class="txt-hidden">삭제하기</span>
           <i class="ico ico-x ico-red-x"></i>
         </button>
@@ -151,20 +146,17 @@ function addToCard(subject, publisher, lesson, text, element) {
   });
 }
 
-function removeFromCard(subject, publisherName, authorName, lesson, text) {
+function removeFromCard(index) {
   // 배열에서 항목 제거
-  selectedTexts = selectedTexts.filter(
-    (item) =>
-      !(
-        item.subject === subject &&
-        item.publisherName === publisherName &&
-        item.authorName === authorName &&
-        item.lesson === lesson &&
-        item.text === text
-      )
-  );
+  selectedTexts.splice(index, 1);
 
   // DOM에서 항목 제거
   const cardList = $(".choice-list-grp.range");
-  cardList.find(`span:contains('${text}')`).closest("li").remove();
+  cardList.find(`li[data-index="${index}"]`).remove();
+
+  // 인덱스를 다시 설정
+  cardList.find("li").each((i, li) => {
+    $(li).attr("data-index", i);
+    $(li).find(".right-btn").attr("onclick", `removeFromCard(${i})`);
+  });
 }
