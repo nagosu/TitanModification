@@ -688,11 +688,11 @@ img {
 }
 
 .header-snb-grp .snb.active.red {
-  color: #ff2e2e;
+  color: #b22222;
 }
 
 .header-snb-grp .snb.active.blue {
-  color: #0080ff;
+  color: #4169e1;
 }
 
 .header-notice {
@@ -993,11 +993,11 @@ img {
 }
 
 .major-sidebar-top.red {
-  background-color: #de594f;
+  background-color: rgba(255, 182, 193, 0.6);
 }
 
 .major-sidebar-top.blue {
-  background-color: #0080ff;
+  background-color: rgba(135, 206, 235, 0.5);
 }
 
 .major-sidebar-top .major-sidebar-ttl {
@@ -2788,7 +2788,7 @@ select.form-inp {
   margin-left: auto;
   width: 20px;
   height: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-x'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M18 6l-12 12' /%3E%3Cpath d='M6 6l12 12' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ff5757' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='icon icon-tabler icons-tabler-outline icon-tabler-x'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M18 6l-12 12' /%3E%3Cpath d='M6 6l12 12' /%3E%3C/svg%3E");
   background-size: 20px;
   padding: 0;
   border: 0;
