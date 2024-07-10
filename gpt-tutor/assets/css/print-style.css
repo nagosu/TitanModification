@@ -7,15 +7,93 @@
   font-style: normal;
 }
 .print-body {
-  width: 900px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 
 .print-wrapper {
   width: 900px;
-  min-height: 297mm;
-  margin: 0 auto;
+  /* min-height: 297mm; */
+  /* margin: 0 auto; */
   position: relative;
+  transform: scale(0.806);
+  transform-origin: 0 0;
+}
+@media all and (max-width: 735px) {
+  .print-wrapper {
+    transform: scale(0.766);
+  }
+}
+@media all and (max-width: 700px) {
+  .print-wrapper {
+    transform: scale(0.766);
+  }
+}
+@media all and (max-width: 680px) {
+  .print-wrapper {
+    transform: scale(0.744);
+  }
+}
+@media all and (max-width: 650px) {
+  .print-wrapper {
+    transform: scale(0.711);
+  }
+}
+@media all and (max-width: 630px) {
+  .print-wrapper {
+    transform: scale(0.689);
+  }
+}
+@media all and (max-width: 600px) {
+  .print-wrapper {
+    transform: scale(0.655);
+  }
+}
+@media all and (max-width: 570px) {
+  .print-wrapper {
+    transform: scale(0.622);
+  }
+}
+@media all and (max-width: 550px) {
+  .print-wrapper {
+    transform: scale(0.6);
+  }
+}
+@media all and (max-width: 530px) {
+  .print-wrapper {
+    transform: scale(0.578);
+  }
+}
+@media all and (max-width: 500px) {
+  .print-wrapper {
+    transform: scale(0.544);
+  }
+}
+@media all and (max-width: 490px) {
+  .print-wrapper {
+    transform: scale(0.533);
+  }
+}
+@media all and (max-width: 470px) {
+  .print-wrapper {
+    transform: scale(0.511);
+  }
+}
+@media all and (max-width: 450px) {
+  .print-wrapper {
+    transform: scale(0.489);
+  }
+}
+@media all and (max-width: 410px) {
+  .print-wrapper {
+    transform: scale(0.444);
+  }
+}
+@media all and (max-width: 380px) {
+  .print-wrapper {
+    transform: scale(0.411);
+  }
 }
 .print-wrapper .checkbox-item {
   position: absolute;

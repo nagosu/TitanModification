@@ -2064,7 +2064,7 @@
                           </label>
                           <button
                             type="button"
-                            onclick="openModal('preview-modal02')"
+                            onclick="openModal('preview-modal05')"
                             class="ylw-bd-btn square-btn btn-lg"
                           >
                             미리보기
@@ -2083,6 +2083,7 @@
                           </label>
                           <button
                             type="button"
+                            onclick="openModal('preview-modal06')"
                             class="ylw-bd-btn square-btn btn-lg"
                           >
                             미리보기
@@ -2113,35 +2114,35 @@
 
         <!-- 팝업 -->
 
-        <!-- 팝업 1. 문제 미리보기 -->
-        <div id="preview-modal02" class="modal-wrapper">
+        <!-- 팝업 1-1. 문제 미리보기 -->
+        <div id="preview-modal05" class="modal-wrapper">
           <div
             class="modal-overlay"
-            onclick="closeModal('preview-modal02')"
+            onclick="closeModal('preview-modal05')"
           ></div>
           <div class="custom-modal preview-modal">
             <!-- <button class="preview-modal-close-btn" onclick="closeModal('preview-modal01')">
-            <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
-          </button> -->
+    <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
+  </button> -->
             <div class="preview-modal-ttl">
-              <h4 class="ttl">단어 미리보기</h4>
+              <h4 class="ttl">변형문제 미리보기</h4>
               <button
                 type="button"
                 class="ylw-bd-btn square-btn btn-md"
-                onclick="closeModal('preview-modal02')"
+                onclick="closeModal('preview-modal05')"
               >
                 확인
               </button>
             </div>
             <div class="preview-modal-content">
-              <div class="modal-sidebar" data-iframe-id="preview-02-iframe">
+              <div class="modal-sidebar" data-iframe-id="preview-07-iframe">
                 <ul>
                   <!-- TODO: 리스트 클릭시 active 효과 추가 -->
-                  <li class="active" data-iframe-src="print02-01.html">
-                    <span class="dark-txt">단어</span>
+                  <li class="active" data-iframe-src="print07-01.html">
+                    <span class="dark-txt">변형문제</span>
                   </li>
-                  <li data-iframe-src="print05-02.html">
-                    <span class="dark-txt">단어-정답지</span>
+                  <li data-iframe-src="print07-04.html">
+                    <span class="dark-txt">해설지</span>
                   </li>
                   <li class="blank"></li>
                 </ul>
@@ -2149,8 +2150,8 @@
               <div class="preview-modal-container">
                 <div class="preview-iframe-wrap">
                   <iframe
-                    id="preview-02-iframe"
-                    src="print02-01.html"
+                    id="preview-07-iframe"
+                    src="print07-01.html"
                     frameborder="0"
                   ></iframe>
                 </div>
@@ -2180,7 +2181,79 @@
           </div>
         </div>
 
-        <!-- END 팝업 1. 문제 미리보기 -->
+        <!-- END 팝업 1-1. 문제 미리보기 -->
+
+        <!-- 팝업 1-2. 단어 미리보기 -->
+        <div id="preview-modal06" class="modal-wrapper">
+          <div
+            class="modal-overlay"
+            onclick="closeModal('preview-modal06')"
+          ></div>
+          <div class="custom-modal preview-modal">
+            <!-- <button class="preview-modal-close-btn" onclick="closeModal('preview-modal01')">
+    <img src="gpt-tutor/assets/images/icon-close.svg" alt="">
+  </button> -->
+            <div class="preview-modal-ttl">
+              <h4 class="ttl">단어테스트 미리보기</h4>
+              <button
+                type="button"
+                class="ylw-bd-btn square-btn btn-md"
+                onclick="closeModal('preview-modal05')"
+              >
+                확인
+              </button>
+            </div>
+            <div class="preview-modal-content">
+              <div class="modal-sidebar" data-iframe-id="preview-05-iframe">
+                <ul>
+                  <!-- TODO: 리스트 클릭시 active 효과 추가 -->
+                  <li class="active" data-iframe-src="print05-01.html">
+                    <span class="dark-txt">단어테스트</span>
+                  </li>
+                  <li data-iframe-src="print05-02.html">
+                    <span class="dark-txt">정답지</span>
+                  </li>
+                  <li data-iframe-src="print05-03.html">
+                    <span class="dark-txt">해설지</span>
+                  </li>
+                  <li class="blank"></li>
+                </ul>
+              </div>
+              <div class="preview-modal-container">
+                <div class="preview-iframe-wrap">
+                  <iframe
+                    id="preview-05-iframe"
+                    src="print05-01.html"
+                    frameborder="0"
+                  ></iframe>
+                </div>
+                <div class="modal-right-sidebar">
+                  <div class="sidebar-ttl">
+                    <h6 class="ttl">재생성 문항</h6>
+                  </div>
+                  <ul>
+                    <li class="preview-choiced-list">
+                      <span class="txt">김은성/개인지문 1</span>
+                      <button type="button" class="ico-btn del-btn">
+                        <span class="txt-hidden">삭제하기</span>
+                        <i class="ico ico-red-x"></i>
+                      </button>
+                    </li>
+                  </ul>
+                  <button
+                    type="button"
+                    class="ylw-solid-btn btn-lg square-btn btn-full"
+                    onclick="openModal('regenerate-modal');"
+                  >
+                    재생성
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 팝업 1-2. 단어 미리보기 -->
 
         <!-- 팝업 2-1. 로딩 모달 (미리보기) -->
         <div id="loading-modal01" class="modal-wrapper">
