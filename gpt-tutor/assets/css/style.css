@@ -5139,3 +5139,8 @@ select.form-inp {
     width: 380px;
   }
 }
+@media all and (max-width: 630px) {
+  .preview-modal-container .preview-iframe-wrap {
+    width: 350px;
+  }
+}

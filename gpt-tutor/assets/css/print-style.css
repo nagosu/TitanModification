@@ -20,79 +20,84 @@
   transform: scale(0.806);
   transform-origin: 0 0;
 }
-@media all and (max-width: 735px) {
+@media all and (max-width: 737px) {
   .print-wrapper {
-    transform: scale(0.766);
+    transform: scale(0.801);
   }
 }
 @media all and (max-width: 700px) {
   .print-wrapper {
-    transform: scale(0.766);
+    transform: scale(0.761);
   }
 }
 @media all and (max-width: 680px) {
   .print-wrapper {
-    transform: scale(0.744);
+    transform: scale(0.739);
   }
 }
 @media all and (max-width: 650px) {
   .print-wrapper {
-    transform: scale(0.711);
+    transform: scale(0.705);
   }
 }
 @media all and (max-width: 630px) {
   .print-wrapper {
-    transform: scale(0.689);
+    transform: scale(0.683);
   }
 }
 @media all and (max-width: 600px) {
   .print-wrapper {
-    transform: scale(0.655);
+    transform: scale(0.65);
   }
 }
 @media all and (max-width: 570px) {
   .print-wrapper {
-    transform: scale(0.622);
+    transform: scale(0.616);
   }
 }
 @media all and (max-width: 550px) {
   .print-wrapper {
-    transform: scale(0.6);
+    transform: scale(0.594);
   }
 }
 @media all and (max-width: 530px) {
   .print-wrapper {
-    transform: scale(0.578);
+    transform: scale(0.572);
   }
 }
 @media all and (max-width: 500px) {
   .print-wrapper {
-    transform: scale(0.544);
+    transform: scale(0.539);
   }
 }
 @media all and (max-width: 490px) {
   .print-wrapper {
-    transform: scale(0.533);
+    transform: scale(0.528);
   }
 }
 @media all and (max-width: 470px) {
   .print-wrapper {
-    transform: scale(0.511);
+    transform: scale(0.505);
   }
 }
 @media all and (max-width: 450px) {
   .print-wrapper {
-    transform: scale(0.489);
+    transform: scale(0.483);
   }
 }
 @media all and (max-width: 410px) {
   .print-wrapper {
-    transform: scale(0.444);
+    transform: scale(0.439);
   }
 }
 @media all and (max-width: 380px) {
   .print-wrapper {
-    transform: scale(0.411);
+    transform: scale(0.405);
+  }
+}
+@media all and (max-width: 350px) {
+  .print-wrapper {
+    transform: scale(0.372);
   }
 }
 .print-wrapper .checkbox-item {
