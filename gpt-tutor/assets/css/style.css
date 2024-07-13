@@ -4375,6 +4375,110 @@ select.form-inp {
     width: 100%;
   }
 }
+@media all and (max-width: 1060px) {
+  .page-container {
+    width: 100%;
+    padding: 15px;
+  }
+  .page-container.exam-test-page {
+    padding: 0;
+  }
+  .major-sidebar {
+    width: 230px;
+    min-height: calc(100vh - 200px);
+  }
+  .modal-sidebar {
+    width: 100%;
+    overflow: auto;
+    border: 0;
+  }
+  .modal-sidebar::-webkit-scrollbar {
+    height: 3px;
+  }
+  .preview-modal-content {
+    flex-direction: column;
+  }
+  .modal-sidebar ul {
+    display: flex;
+  }
+  .modal-sidebar li {
+    padding: 10px 17px;
+    border: 0;
+    border-right: 1px solid #dce4e8;
+    border-top: 1px solid #dce4e8;
+    flex-shrink: 0;
+    min-width: 100px;
+  }
+  .modal-sidebar li:first-child {
+    border-left: 1px solid #dce4e8;
+  }
+  .modal-sidebar li .dark-txt {
+    font-size: 13px;
+  }
+  .modal-sidebar li .sm-txt {
+    font-size: 11px;
+  }
+  .major-sidebar-menu-list .btn-xsm {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+  .major-sidebar-menu-list .sub-menu-btn-align.type-add .form-inp {
+    height: 23px;
+  }
+  .qst-send-layout {
+    flex-wrap: wrap;
+  }
+  .qst-send-layout .qst-send-left {
+    width: 100%;
+    flex: auto;
+  }
+  .qst-send-layout .qst-send-right {
+    width: 100%;
+    flex: auto;
+  }
+  .qst-send-layout .card.type-minh450 {
+    min-height: 300px;
+  }
+  .tbl-wrapper {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+  .tbl-wrapper .tbl {
+    width: 150%;
+  }
+  .tbl-choices-bar.lesson .bar-btns {
+    margin-left: 0;
+  }
+  .tbl-choices-bar.lesson {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    height: auto;
+  }
+  .cls-exam-page .default-tbl {
+    padding-bottom: 120px;
+  }
+  .cls-exam-page .tbl-cell:nth-child(5) {
+    width: 200px;
+  }
+  .cls-exam-page .hover-set .hover-set-lists-wrap,
+  .stud-exam-page .hover-set .hover-set-lists-wrap {
+    position: relative;
+    display: none;
+  }
+  .cls-exam-page .hover-set:hover .hover-set-lists-wrap,
+  .stud-exam-page .hover-set:hover .hover-set-lists-wrap {
+    display: block;
+    padding-top: 0;
+  }
+  .exam-view-layout {
+    padding-right: 360px;
+  }
+  .exam-view-right {
+    width: 360px;
+  }
+}
 @media all and (max-width: 991px) {
   .header .logo {
     width: 70px;
@@ -4484,7 +4588,7 @@ select.form-inp {
     width: 15px;
   }
 }
-@media all and (max-width: 991px) {
+@media all and (max-width: 974px) {
   .sidebar {
     position: fixed;
     top: 69px;
@@ -4507,6 +4611,17 @@ select.form-inp {
   }
   .page-container {
     width: 96%;
+  }
+  .major-sidebar {
+    width: 190px;
+    min-height: calc(100vh - 200px);
+  }
+  .wrapper {
+    width: 600px;
+  }
+  .tbl-choices-bar .bar-btn {
+    font-size: 14px;
+    min-width: 120px;
   }
 }
 @media all and (max-width: 768px) {
@@ -4860,110 +4975,8 @@ select.form-inp {
   }
 }
 @media all and (max-width: 1024px) {
-  .page-container {
-    width: 100%;
-    padding: 15px;
-  }
-  .page-container.exam-test-page {
-    padding: 0;
-  }
-  .major-sidebar {
-    width: 230px;
-    min-height: calc(100vh - 200px);
-  }
-  .modal-sidebar {
-    width: 100%;
-    overflow: auto;
-    border: 0;
-  }
-  .modal-sidebar::-webkit-scrollbar {
-    height: 3px;
-  }
-  .preview-modal-content {
-    flex-direction: column;
-  }
-  .modal-sidebar ul {
-    display: flex;
-  }
-  .modal-sidebar li {
-    padding: 10px 17px;
-    border: 0;
-    border-right: 1px solid #dce4e8;
-    border-top: 1px solid #dce4e8;
-    flex-shrink: 0;
-    min-width: 100px;
-  }
-  .modal-sidebar li:first-child {
-    border-left: 1px solid #dce4e8;
-  }
-  .modal-sidebar li .dark-txt {
-    font-size: 13px;
-  }
-  .modal-sidebar li .sm-txt {
-    font-size: 11px;
-  }
   .preview-modal-container .preview-iframe-wrap {
     width: 650px;
-  }
-  .major-sidebar-menu-list .btn-xsm {
-    font-size: 12px;
-    padding: 3px 8px;
-  }
-  .major-sidebar-menu-list .sub-menu-btn-align.type-add .form-inp {
-    height: 23px;
-  }
-  .qst-send-layout {
-    flex-wrap: wrap;
-  }
-  .qst-send-layout .qst-send-left {
-    width: 100%;
-    flex: auto;
-  }
-  .qst-send-layout .qst-send-right {
-    width: 100%;
-    flex: auto;
-  }
-  .qst-send-layout .card.type-minh450 {
-    min-height: 300px;
-  }
-  .tbl-wrapper {
-    width: 100%;
-    overflow: hidden;
-    overflow-x: auto;
-  }
-  .tbl-wrapper .tbl {
-    width: 150%;
-  }
-  .tbl-choices-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    height: auto;
-  }
-  .tbl-choices-bar .bar-btns {
-    margin-left: 0;
-  }
-  .cls-exam-page .default-tbl {
-    padding-bottom: 120px;
-  }
-  .cls-exam-page .tbl-cell:nth-child(5) {
-    width: 200px;
-  }
-  .cls-exam-page .hover-set .hover-set-lists-wrap,
-  .stud-exam-page .hover-set .hover-set-lists-wrap {
-    position: relative;
-    display: none;
-  }
-  .cls-exam-page .hover-set:hover .hover-set-lists-wrap,
-  .stud-exam-page .hover-set:hover .hover-set-lists-wrap {
-    display: block;
-    padding-top: 0;
-  }
-  .exam-view-layout {
-    padding-right: 360px;
-  }
-  .exam-view-right {
-    width: 360px;
   }
 }
 @media all and (max-width: 991px) {
@@ -5090,12 +5103,6 @@ select.form-inp {
   }
   .tbl-choices-bar .bar-ttl {
     font-size: 18px;
-  }
-  .tbl-choices-bar .bar-btn {
-    height: 35px;
-    font-size: 14px;
-    min-width: auto;
-    padding: 0 15px;
   }
   .tbl-choices-bar .bar-btns {
     flex-wrap: wrap;

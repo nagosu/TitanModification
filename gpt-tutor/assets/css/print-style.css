@@ -8,95 +8,92 @@
 }
 .print-body {
   width: 100%;
-  height: auto;
   margin: 0 auto;
 }
-
-.print-wrapper {
-  width: 900px;
-  /* min-height: 297mm; */
-  /* margin: 0 auto; */
-  position: relative;
-  transform: scale(0.806);
+#appPrint {
   transform-origin: 0 0;
 }
+.print-wrapper {
+  width: 900px;
+  position: relative;
+}
 @media all and (max-width: 737px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.801);
   }
 }
 @media all and (max-width: 700px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.761);
   }
 }
 @media all and (max-width: 680px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.739);
   }
 }
 @media all and (max-width: 650px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.705);
   }
 }
 @media all and (max-width: 630px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.683);
   }
 }
 @media all and (max-width: 600px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.65);
   }
 }
 @media all and (max-width: 570px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.616);
   }
 }
 @media all and (max-width: 550px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.594);
   }
 }
 @media all and (max-width: 530px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.572);
   }
 }
 @media all and (max-width: 500px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.539);
   }
 }
 @media all and (max-width: 490px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.528);
   }
 }
 @media all and (max-width: 470px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.505);
   }
 }
 @media all and (max-width: 450px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.483);
   }
 }
 @media all and (max-width: 410px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.439);
   }
 }
 @media all and (max-width: 380px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.405);
   }
 }
 @media all and (max-width: 350px) {
-  .print-wrapper {
+  #appPrint {
     transform: scale(0.372);
   }
 }
