@@ -139,7 +139,8 @@ img {
   border: 4px solid transparent;
 }
 
-.simplebar-track {
+/* simplebar 테스트중 */
+/* .simplebar-track {
   width: 10px !important;
 }
 
@@ -148,7 +149,7 @@ img {
   opacity: 1 !important;
   border-radius: 16px !important;
   border: 4px solid transparent;
-}
+} */
 
 .checkbox-item {
   display: flex;
