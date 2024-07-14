@@ -4944,7 +4944,7 @@ select.form-inp {
     gap: 70px;
   }
   .modal-sidebar {
-    width: 157px;
+    width: fit-content;
   }
   .tbl-top-opt-container {
     flex-wrap: wrap;
