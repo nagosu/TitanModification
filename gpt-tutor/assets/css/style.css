@@ -366,6 +366,7 @@ img {
 .btn-sm {
   height: 24px;
   font-size: 12px;
+  white-space: nowrap;
 }
 
 .btn-full {
