@@ -258,6 +258,7 @@ img {
 
 .ylw-bd-btn .txt {
   color: inherit;
+  white-space: nowrap;
 }
 
 .ylw-bd-btn:hover {
@@ -366,7 +367,6 @@ img {
 .btn-sm {
   height: 24px;
   font-size: 12px;
-  white-space: nowrap;
 }
 
 .btn-full {
@@ -996,6 +996,15 @@ img {
 .sidebar-overlay.active {
   opacity: 1;
   pointer-events: visible;
+}
+
+.tbl-wrapper {
+  overflow-x: auto;
+  height: 650px;
+}
+
+.tbl-wrapper .tbl {
+  width: 150%;
 }
 
 .major-sidebar-top {
@@ -3273,7 +3282,7 @@ select.form-inp {
   z-index: 1;
 }
 .hover-set .hover-set-lists-wrap {
-  opacity: 0;
+  display: none;
   position: absolute;
   top: 0;
   left: auto;
@@ -3312,7 +3321,7 @@ select.form-inp {
 }
 
 .hover-set:hover .hover-set-lists-wrap {
-  opacity: 1;
+  display: block;
   pointer-events: visible;
 }
 .hover-set:hover .hover-set-btn {
@@ -4383,6 +4392,17 @@ select.form-inp {
     flex-shrink: 0;
   }
 }
+@media all and (max-width: 1340px) {
+  .tbl-choices-bar.lesson .bar-btns {
+    margin-left: 0;
+  }
+  .tbl-choices-bar.lesson {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    height: auto;
+  }
+}
 @media all and (max-width: 1200px) {
   .edit-tbl-content .tbody .edit-list {
     width: 100%;
@@ -4460,26 +4480,17 @@ select.form-inp {
   .tbl-wrapper .tbl {
     width: 150%;
   }
-  .tbl-choices-bar.lesson .bar-btns {
-    margin-left: 0;
-  }
-  .tbl-choices-bar.lesson {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    height: auto;
-  }
   .cls-exam-page .default-tbl {
     padding-bottom: 120px;
   }
   .cls-exam-page .tbl-cell:nth-child(5) {
     width: 200px;
   }
-  .cls-exam-page .hover-set .hover-set-lists-wrap,
+  /* .cls-exam-page .hover-set .hover-set-lists-wrap,
   .stud-exam-page .hover-set .hover-set-lists-wrap {
     position: relative;
     display: none;
-  }
+  } */
   .cls-exam-page .hover-set:hover .hover-set-lists-wrap,
   .stud-exam-page .hover-set:hover .hover-set-lists-wrap {
     display: block;
