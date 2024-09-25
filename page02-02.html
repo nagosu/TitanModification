@@ -658,14 +658,14 @@
             <!-- 모달 제목 -->
             <div class="nmodal-ttl-wrap">
               <h6 class="nmodal-ttl">오답보기</h6>
-              <button
+              <!-- <button
                 type="button"
                 class="ico-btn close-btn"
                 onclick="closeModal('incorrect-view-popup');"
               >
                 <i class="ico ico-x"></i>
                 <span class="txt-hidden">닫기</span>
-              </button>
+              </button> -->
             </div>
 
             <!-- END 모달 제목 -->
@@ -742,10 +742,11 @@
 
             <!-- 모달 끝쪽 버튼 -->
             <div class="nmodal-btn-wrap">
-              <button type="button" class="ylw-solid-btn modal-btn">
-                <span class="txt">유사문제 재시험 발송</span>
-              </button>
-              <button type="button" class="ylw-bd-btn02 modal-btn">
+              <button
+                type="button"
+                class="ylw-bd-btn02 modal-btn"
+                onclick="closeModal('incorrect-view-popup');"
+              >
                 <span class="txt">확인</span>
               </button>
             </div>

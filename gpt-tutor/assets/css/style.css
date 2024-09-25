@@ -1491,6 +1491,32 @@ img {
   padding: 34px 15px;
 }
 
+.system-modal .custom-modal-content .spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+}
+
+.system-modal .custom-modal-content .spinner {
+  border: 4px solid rgba(0, 0, 0, 0.02);
+  border-top: 4px solid #fec20f;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .system-modal .custom-modal-btn-wrap {
   padding: 15px;
   display: flex;
@@ -1794,9 +1820,27 @@ img {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 410px;
+  gap: 15px;
+  max-width: 500px;
   margin: 0 auto;
+}
+
+.auth-container .form-wrap .form-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.auth-container .form-wrap .form-container span {
+  width: 150px;
+  font-size: 17px;
+  color: #333;
+  font-weight: 600;
+}
+
+.auth-container .form-wrap .form-container input {
+  width: 100%;
 }
 
 .auth-container .form-wrap .login-opt {
@@ -2836,6 +2880,7 @@ select.form-inp {
   margin-bottom: 0;
 }
 .qst-unit .qst-unit-ttl {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -2856,6 +2901,25 @@ select.form-inp {
   height: 35px;
   font-size: 14px;
   max-width: 207px;
+}
+.qst-unit .qst-unit-ttl .delete-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  cursor: pointer;
+}
+.add-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.add-container .add-btn {
+  width: 40px;
+  cursor: pointer;
 }
 .qst-unit .qst-unit-gray-box {
   background-color: #fafafa;
@@ -4127,12 +4191,46 @@ select.form-inp {
   border-radius: 6px;
   padding: 15px;
 }
+.exam-test-container .description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
 .exam-test-container .cont-ttl {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.24px;
   padding: 15px 0 30px;
   text-align: center;
+}
+.exam-test-container .form-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+.exam-test-container .form-wrap .form-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.form-wrap .form-container span {
+  width: 80px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+.form-wrap .form-container input {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  border: 1px solid #dce4e8;
+  border-radius: 6px;
 }
 .exam-test-container .cont-dl {
   display: flex;

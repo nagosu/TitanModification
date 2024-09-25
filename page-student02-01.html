@@ -299,13 +299,90 @@
                 <!-- END 문제 7 -->
               </div>
               <div class="exam-view-right-btn-wrap">
-                <button type="button" class="ylw-solid-btn square-btn btn-md">
+                <button
+                  type="button"
+                  class="ylw-solid-btn square-btn btn-md"
+                  onclick="openModal('submit-confirm-modal')"
+                >
                   제출하기
                 </button>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- 제출 확인 모달 -->
+        <div id="submit-confirm-modal" class="modal-wrapper">
+          <div
+            class="modal-overlay"
+            onclick="closeModal('submit-confirm-modal');"
+          ></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">
+                작성한 답안을 제출하고<br />
+                자동 채점을 하시겠습니까?
+              </p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button
+                type="button"
+                class="ylw-solid-btn square-btn btn-md"
+                onclick="
+                closeModal('submit-confirm-modal'); 
+                openModal('auto-check-modal'); 
+                window.open('page-student03-01.html', '_blank');
+                window.open('page-student04-01.html', '_blank');"
+              >
+                확인
+              </button>
+              <button
+                type="button"
+                class="gray-bd-btn square-btn btn-md"
+                onclick="closeModal('submit-confirm-modal');"
+              >
+                취소
+              </button>
+            </div>
+          </div>
+        </div>
+        <script>
+          function TwoPopup(url1, url2, name1, name2) {
+            popup1 = window.open(url1, name1, "width=500,height=500");
+            popup2 = window.open(url2, name2, "width=200,height=200");
+          }
+        </script>
+        <!-- END 제출 확인 모달 -->
+
+        <!-- 자동 채점 모달 -->
+        <div id="auto-check-modal" class="modal-wrapper">
+          <div
+            class="modal-overlay"
+            onclick="closeModal('auto-check-modal');"
+          ></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">자동 채점을 진행하고 있습니다.</p>
+              <div class="spinner-container">
+                <div class="spinner"></div>
+              </div>
+              <p class="txt">로딩중 50%</p>
+            </div>
+            <!-- <div class="custom-modal-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-md">
+                확인
+              </button>
+              <button
+                type="button"
+                class="gray-bd-btn square-btn btn-md"
+                onclick="closeModal('auto-check-modal');"
+              >
+                취소
+              </button>
+            </div> -->
+          </div>
+        </div>
+        <!-- END 자동 채점 모달 -->
       </div>
     </div>
     <script src="gpt-tutor/assets/js/ui.js"></script>

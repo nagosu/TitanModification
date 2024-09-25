@@ -294,7 +294,7 @@
                 ><span class="txt">회원가입</span></a
               >
               <button
-                onclick="openModal('invite-modal');"
+                onclick="openModal('login-error-modal');"
                 type="button"
                 class="gray-bd-btn square-btn btn-lg"
               >
@@ -335,6 +335,58 @@
         </div>
 
         <!-- END 팝업 1-1. 로그인/카카오톡 로그인 모달 -->
+
+        <!-- 회원 정보 오류 모달 -->
+        <div id="login-error-modal" class="modal-wrapper">
+          <div
+            class="modal-overlay"
+            onclick="closeModal('login-error-modal');"
+          ></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">
+                회원 정보를 찾을 수 없습니다.<br />
+                로그인 정보를 확인해주세요.
+              </p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button
+                type="button"
+                class="ylw-solid-btn square-btn btn-md"
+                onclick="closeModal('login-error-modal');"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- END 회원 정보 오류 모달 -->
+
+        <!-- 로그인 제한 모달 -->
+        <div id="login-restriction-modal" class="modal-wrapper">
+          <div
+            class="modal-overlay"
+            onclick="closeModal('login-restriction-modal');"
+          ></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">
+                로그인이 제한된 계정입니다.<br /><br />
+                고객센터에 문의해 주세요.<br />(02-000-0000)
+              </p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button
+                type="button"
+                class="ylw-solid-btn square-btn btn-md"
+                onclick="closeModal('login-restriction-modal');"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- END 로그인 제한 모달 -->
 
         <!-- 팝업 1-2. 로그인/카카오톡 로그인 모달 오류 -->
         <div id="invite-error-modal" class="modal-wrapper">

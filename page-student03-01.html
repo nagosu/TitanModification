@@ -50,6 +50,14 @@
                   <dt class="dt">* 정답</dt>
                   <dd class="dd">42문제</dd>
                 </dl>
+                <dl class="cont-dl">
+                  <dt class="dt">* 오답 문제 번호</dt>
+                </dl>
+                <dl class="cont-dl">
+                  <dd class="dd" style="margin-left: 15px">
+                    01 , 09, 11, 15, 20, 21, 25, 30
+                  </dd>
+                </dl>
               </div>
             </div>
             <div class="cont-btn-wrap">
@@ -64,16 +72,104 @@
 
           <!-- TODO: 시험에 불합격했을 때 보여주는 컨테이너 -->
           <div class="exam-test-container">
-            <h1 class="cont-ttl">시험에 불합격하셨습니다.</h1>
+            <h1 class="cont-ttl" style="padding-bottom: 10px">
+              시험에 불합격하셨습니다.
+            </h1>
+            <span class="description">
+              (* 오답문제 유형의 재시험이 발송 됩니다.)</span
+            >
             <div class="border-box">
-              <p class="txt">오답문제 유형의 재시험이 발송됩니다.</p>
+              <dl class="cont-dl">
+                <dt class="dt">1. 제목</dt>
+                <dd class="dd">고 1 모의고사</dd>
+              </dl>
+              <dl class="cont-dl">
+                <dt class="dt">2. 커트라인</dt>
+                <dd class="dd">80%</dd>
+              </dl>
+              <dl class="cont-dl">
+                <dt class="dt">3. 나의점수</dt>
+                <dd class="dd">84%</dd>
+              </dl>
+              <div class="inner-cont-dl">
+                <dl class="cont-dl">
+                  <dt class="dt">* 총 문제수</dt>
+                  <dd class="dd">50문제</dd>
+                </dl>
+                <dl class="cont-dl">
+                  <dt class="dt">* 정답</dt>
+                  <dd class="dd">42문제</dd>
+                </dl>
+                <dl class="cont-dl">
+                  <dt class="dt">* 오답 문제 번호</dt>
+                </dl>
+                <dl class="cont-dl">
+                  <dd class="dd" style="margin-left: 15px">
+                    01 , 09, 11, 15, 20, 21, 25, 30
+                  </dd>
+                </dl>
+              </div>
             </div>
             <div class="cont-btn-wrap">
+              <button
+                type="button"
+                class="ylw-bd-btn02 square-btn btn-md"
+                style="white-space: nowrap"
+              >
+                재시험 보기
+              </button>
+              <button
+                type="button"
+                class="ylw-solid-btn square-btn btn-md"
+                style="white-space: nowrap; padding: 0 15px"
+              >
+                정답 및 해설지 보기
+              </button>
               <button type="button" class="ylw-bd-btn02 square-btn btn-md">
                 나가기
               </button>
             </div>
           </div>
+
+          <!-- 재시험 완료 컨테이너-->
+          <div class="exam-test-container">
+            <h1 class="cont-ttl">재시험을 완료하셨습니다.</h1>
+            <div class="border-box">
+              <dl class="cont-dl">
+                <dt class="dt">1. 제목</dt>
+                <dd class="dd">고 1 모의고사 재시험</dd>
+              </dl>
+              <dl class="cont-dl">
+                <dt class="dt">2. 나의점수</dt>
+                <dd class="dd">90%</dd>
+              </dl>
+              <div class="inner-cont-dl">
+                <dl class="cont-dl">
+                  <dt class="dt">* 총 문제수</dt>
+                  <dd class="dd">10문제</dd>
+                </dl>
+                <dl class="cont-dl">
+                  <dt class="dt">* 정답</dt>
+                  <dd class="dd">9문제</dd>
+                </dl>
+                <dl class="cont-dl">
+                  <dt class="dt">* 오답 문제 번호</dt>
+                </dl>
+                <dl class="cont-dl">
+                  <dd class="dd" style="margin-left: 15px">09</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="cont-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-md">
+                정답 및 해설지 보기
+              </button>
+              <button type="button" class="ylw-bd-btn02 square-btn btn-md">
+                나가기
+              </button>
+            </div>
+          </div>
+          <!-- END 재시험 완료 컨테이너-->
         </div>
       </div>
     </div>

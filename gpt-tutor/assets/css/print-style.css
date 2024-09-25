@@ -1976,6 +1976,7 @@ body.print07-body {
   width: 100%;
   border: 2px solid #000;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -1983,22 +1984,25 @@ body.print07-body {
 .print-wrapper.type-print07.type-answer .answer-tbl .tbl-cell-grp {
   display: flex;
   align-items: stretch;
-  border-right: 1px solid #000;
-  width: 20%;
-  border-bottom: 1px solid #000;
-  margin-bottom: -1px;
+  /* border-right: 1px solid #000; */
+  width: 100%;
+  border-bottom: 2px solid #000;
 }
-.print-wrapper.type-print07.type-answer
+.print-wrapper.type-print07.type-answer .answer-tbl .tbl-cell-grp:last-child {
+  border-bottom: 0;
+}
+/* .print-wrapper.type-print07.type-answer
   .answer-tbl
   .tbl-cell-grp:nth-child(5n) {
   border-right: 0;
-}
+} */
 .print-wrapper.type-print07.type-answer .answer-tbl .tbl-cell:first-child {
   background-color: #e2e2e2;
   font-weight: 500;
+  border-right: 2px solid #000;
 }
 .print-wrapper.type-print07.type-answer .answer-tbl .tbl-cell {
-  border-right: 1px solid #000;
+  /* border-right: 1px solid #000; */
   flex: 1;
   display: inline-flex;
   align-items: center;

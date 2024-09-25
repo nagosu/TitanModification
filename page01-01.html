@@ -416,6 +416,12 @@
                           </option>
                           <option value="어법 단어">어법 단어</option>
                         </select>
+                        <img
+                          src="./gpt-tutor/assets/images/Remove_light.svg"
+                          alt="삭제"
+                          class="delete-btn"
+                          onclick="openModal('confirm-del-modal')"
+                        />
                       </div>
                       <div class="qst-unit-gray-box">
                         <label for="q-01-01" class="multiple-qst">
@@ -485,6 +491,12 @@
                             주관식 빈칸 (3개)
                           </option>
                         </select>
+                        <img
+                          src="./gpt-tutor/assets/images/Remove_light.svg"
+                          alt="삭제"
+                          class="delete-btn"
+                          onclick="openModal('confirm-del-modal')"
+                        />
                       </div>
                       <div class="qst-unit-gray-box" style="position: relative">
                         <textarea
@@ -525,6 +537,12 @@
                             주관식 빈칸 (3개)
                           </option>
                         </select>
+                        <img
+                          src="./gpt-tutor/assets/images/Remove_light.svg"
+                          alt="삭제"
+                          class="delete-btn"
+                          onclick="openModal('confirm-del-modal')"
+                        />
                       </div>
                       <div class="qst-unit-gray-box">
                         <div class="qst-form-inp-list">
@@ -565,6 +583,12 @@
                             주관식 빈칸 (1개)
                           </option>
                         </select>
+                        <img
+                          src="./gpt-tutor/assets/images/Remove_light.svg"
+                          alt="삭제"
+                          class="delete-btn"
+                          onclick="openModal('confirm-del-modal')"
+                        />
                       </div>
                       <div class="qst-unit-gray-box">
                         <div class="qst-form-inp-list">
@@ -612,6 +636,12 @@
                             주관식 빈칸 (3곳)
                           </option>
                         </select>
+                        <img
+                          src="./gpt-tutor/assets/images/Remove_light.svg"
+                          alt="삭제"
+                          class="delete-btn"
+                          onclick="openModal('confirm-del-modal')"
+                        />
                       </div>
                       <div class="qst-unit-gray-box">
                         <div class="tbl-arw-tbl">
@@ -636,6 +666,13 @@
                         </div>
                       </div>
                     </div>
+                    <div class="add-container">
+                      <img
+                        src="./gpt-tutor/assets/images/Add_ring_light.svg"
+                        alt="삭제"
+                        class="add-btn"
+                      />
+                    </div>
 
                     <!-- END 정답지 문제 5. 어법 단어일 경우 -->
                   </div>
@@ -659,6 +696,66 @@
             </div>
           </div>
         </div>
+
+        <!-- 삭제 확인 모달 -->
+        <div id="confirm-del-modal" class="modal-wrapper">
+          <div
+            class="modal-overlay"
+            onclick="closeModal('confirm-del-modal');"
+          ></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">해당 파일을 삭제하시겠습니까?</p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-md">
+                확인
+              </button>
+              <button
+                type="button"
+                class="gray-bd-btn square-btn btn-md"
+                onclick="closeModal('confirm-del-modal');"
+              >
+                취소
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- END 삭제 확인 모달 -->
+
+        <!-- 카카오 계정 연동 모달 -->
+        <div
+          id="kakao-account-modal"
+          class="modal-wrapper"
+          style="z-index: 1001"
+        >
+          <div
+            class="modal-overlay"
+            onclick="closeModal('kakao-account-modal');"
+          ></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">
+                연동된 카카오 계정을 확인할 수 없습니다.<br />카카오 계정 연동을
+                진행하시겠습니까?
+              </p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button type="button" class="ylw-solid-btn square-btn btn-md">
+                확인
+              </button>
+              <button
+                type="button"
+                class="gray-bd-btn square-btn btn-md"
+                onclick="closeModal('kakao-account-modal');"
+              >
+                취소
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- END 카카오 계정 연동 모달 -->
 
         <!-- 카카오톡 전송하기 팝업 -->
         <div id="kakao-modal01" class="modal-wrapper">
@@ -871,7 +968,11 @@
 
             <!-- 모달 끝쪽 버튼 -->
             <div class="nmodal-btn-wrap">
-              <button type="button" class="ylw-solid-btn square-btn btn-smd">
+              <button
+                type="button"
+                class="ylw-solid-btn square-btn btn-smd"
+                onclick='openModal("kakao-account-modal")'
+              >
                 <i class="ico ico-kakao"></i>
                 <span class="txt">카카오톡으로 전송하기</span>
               </button>
