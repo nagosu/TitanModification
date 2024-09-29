@@ -284,7 +284,7 @@
             </div>
             <div class="form-btn-wrap">
               <button
-                onclick="openModal('invite-modal');"
+                onclick="openModal('id-email-error-modal'); openModal('invite-modal'); openModal('login-restriction-modal');"
                 type="button"
                 class="ylw-solid-btn square-btn btn-lg"
               >
@@ -294,7 +294,7 @@
                 ><span class="txt">회원가입</span></a
               >
               <button
-                onclick="openModal('login-error-modal');"
+                onclick="openModal('login-error-modal'); openModal('invite-modal'); openModal('login-restriction-modal');"
                 type="button"
                 class="gray-bd-btn square-btn btn-lg"
               >
@@ -361,6 +361,32 @@
           </div>
         </div>
         <!-- END 회원 정보 오류 모달 -->
+
+        <!-- 아이디(이메일) 오류 모달 -->
+        <div id="id-email-error-modal" class="modal-wrapper">
+          <div
+            class="modal-overlay"
+            onclick="closeModal('id-email-error-modal');"
+          ></div>
+          <div class="custom-modal system-modal">
+            <div class="custom-modal-content">
+              <p class="txt">
+                아이디(이메일)와 비밀번호를<br />
+                확인해 주세요.
+              </p>
+            </div>
+            <div class="custom-modal-btn-wrap">
+              <button
+                type="button"
+                class="ylw-solid-btn square-btn btn-md"
+                onclick="closeModal('id-email-error-modal');"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- END 아이디(이메일) 오류 모달 -->
 
         <!-- 로그인 제한 모달 -->
         <div id="login-restriction-modal" class="modal-wrapper">
