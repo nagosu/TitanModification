@@ -206,41 +206,41 @@
         </p>
       </div>
       <script>
-        $(".header-gnb-grp .gnb.active").each(function (index) {
-          $(".header-gnb-to-snb").eq($(this).index()).addClass("active");
+        $('.header-gnb-grp .gnb.active').each(function (index) {
+          $('.header-gnb-to-snb').eq($(this).index()).addClass('active');
         });
-        $(".header-gnb-grp .gnb").on("mouseover", function () {
-          $(".header-gnb-to-snb").removeClass("active");
-          $(".header-gnb-to-snb").eq($(this).index()).addClass("active");
+        $('.header-gnb-grp .gnb').on('mouseover', function () {
+          $('.header-gnb-to-snb').removeClass('active');
+          $('.header-gnb-to-snb').eq($(this).index()).addClass('active');
         });
-        $(".header-gnb-to-snb").each(function (index) {
+        $('.header-gnb-to-snb').each(function (index) {
           $(this).css(
-            "left",
-            $(".header-gnb-grp .gnb").eq(index).offset().left
+            'left',
+            $('.header-gnb-grp .gnb').eq(index).offset().left
           );
         });
-        $(".header").on("mouseleave", function () {
-          $(".header-gnb-to-snb").removeClass("active");
-          $(".header-gnb-to-snb")
-            .eq($(".header-gnb-grp .gnb.active").index())
-            .addClass("active");
+        $('.header').on('mouseleave', function () {
+          $('.header-gnb-to-snb').removeClass('active');
+          $('.header-gnb-to-snb')
+            .eq($('.header-gnb-grp .gnb.active').index())
+            .addClass('active');
         });
         // 알람 버튼 눌렀을 때
-        $("#hd-alarm-btn").on("click", function () {
-          $(".alarm-btn-modal-wrapper").addClass("active");
+        $('#hd-alarm-btn').on('click', function () {
+          $('.alarm-btn-modal-wrapper').addClass('active');
         });
-        $(".alarm-btn-modal.type-01 .alarm-list").on("click", function () {
-          $(".alarm-btn-modal.type-02").addClass("active");
+        $('.alarm-btn-modal.type-01 .alarm-list').on('click', function () {
+          $('.alarm-btn-modal.type-02').addClass('active');
         });
-        $(".alarm-btn-modal.type-02 .back-btn").on("click", function () {
-          $(".alarm-btn-modal.type-02").removeClass("active");
+        $('.alarm-btn-modal.type-02 .back-btn').on('click', function () {
+          $('.alarm-btn-modal.type-02').removeClass('active');
         });
         // 알람창 외 눌렀을 때
         $(document).mouseup(function (e) {
-          var layerPopup = $(".alarm-btn-modal-wrapper");
+          var layerPopup = $('.alarm-btn-modal-wrapper');
           if (layerPopup.has(e.target).length === 0) {
-            $(".alarm-btn-modal-wrapper").removeClass("active");
-            $(".alarm-btn-modal.type-02").removeClass("active");
+            $('.alarm-btn-modal-wrapper').removeClass('active');
+            $('.alarm-btn-modal.type-02').removeClass('active');
           }
         });
       </script>
@@ -401,272 +401,10 @@
                       올바르게 표기되어 있는지를 생성 후 꼭 확인해주세요.
                     </p>
                   </div>
-                  <div class="inner-qsts-card">
-                    <!-- 정답지 문제 1. 객관식일 경우 -->
-                    <div class="qst-unit">
-                      <div class="qst-unit-ttl">
-                        <span class="ttl">문제 1.</span>
-                        <select class="form-inp">
-                          <option value="객관식">객관식</option>
-                          <option value="주관식 빈칸 (1곳)">
-                            주관식 빈칸 (1곳)
-                          </option>
-                          <option value="주관식 빈칸 (3곳)">
-                            주관식 빈칸 (3곳)
-                          </option>
-                          <option value="어법 단어">어법 단어</option>
-                        </select>
-                        <img
-                          src="./gpt-tutor/assets/images/Remove_light.svg"
-                          alt="삭제"
-                          class="delete-btn"
-                          onclick="openModal('confirm-del-modal')"
-                        />
-                      </div>
-                      <div class="qst-unit-gray-box">
-                        <label for="q-01-01" class="multiple-qst">
-                          <input
-                            id="q-01-01"
-                            type="radio"
-                            name="q-01"
-                            class="none"
-                          />
-                          <label for="q-01-01" class="circle-txt">1</label>
-                        </label>
-                        <label for="q-01-02" class="multiple-qst">
-                          <input
-                            id="q-01-02"
-                            type="radio"
-                            name="q-01"
-                            class="none"
-                          />
-                          <label for="q-01-02" class="circle-txt">2</label>
-                        </label>
-                        <label for="q-01-03" class="multiple-qst">
-                          <input
-                            id="q-01-03"
-                            type="radio"
-                            name="q-01"
-                            class="none"
-                          />
-                          <label for="q-01-03" class="circle-txt">3</label>
-                        </label>
-                        <label for="q-01-04" class="multiple-qst">
-                          <input
-                            id="q-01-04"
-                            type="radio"
-                            name="q-01"
-                            class="none"
-                          />
-                          <label for="q-01-04" class="circle-txt">4</label>
-                        </label>
-                        <label for="q-01-05" class="multiple-qst">
-                          <input
-                            id="q-01-05"
-                            type="radio"
-                            name="q-01"
-                            class="none"
-                          />
-                          <label for="q-01-05" class="circle-txt">5</label>
-                        </label>
-                      </div>
-                    </div>
+                  <div class="inner-qsts-card" id="problemContainer">
+                    <!-- 정답지 문제 -->
 
-                    <!-- END 정답지 문제 1. 객관식일 경우 -->
-
-                    <!-- 정답지 문제 2. 주관식 1칸일 경우 -->
-                    <div class="qst-unit">
-                      <div class="qst-unit-ttl">
-                        <span class="ttl">문제 2.</span>
-                        <select class="form-inp">
-                          <option value="주관식 빈칸 (1개)">
-                            주관식 빈칸 (1개)
-                          </option>
-                          <option value="객관식">객관식</option>
-                          <option value="주관식 빈칸 (2개)">
-                            주관식 빈칸 (2개)
-                          </option>
-                          <option value="어법 단어">어법 단어</option>
-                          <option value="주관식 빈칸 (3개)">
-                            주관식 빈칸 (3개)
-                          </option>
-                        </select>
-                        <img
-                          src="./gpt-tutor/assets/images/Remove_light.svg"
-                          alt="삭제"
-                          class="delete-btn"
-                          onclick="openModal('confirm-del-modal')"
-                        />
-                      </div>
-                      <div class="qst-unit-gray-box" style="position: relative">
-                        <textarea
-                          class="form-inp"
-                          rows="1"
-                          data-resizable
-                          style="padding-right: 40px"
-                        ></textarea>
-                        <span
-                          style="
-                            font-size: 18px;
-                            position: absolute;
-                            top: 48%;
-                            right: 25px;
-                            transform: translate(-50%, -50%);
-                          "
-                          >(s)</span
-                        >
-                      </div>
-                    </div>
-
-                    <!-- END 정답지 문제 2. 주관식 1칸일 경우 -->
-
-                    <!-- 정답지 문제 3. 주관식 2칸일 경우 -->
-                    <div class="qst-unit">
-                      <div class="qst-unit-ttl">
-                        <span class="ttl">문제 3.</span>
-                        <select class="form-inp">
-                          <option value="주관식 빈칸 (2개)">
-                            주관식 빈칸 (2개)
-                          </option>
-                          <option value="객관식">객관식</option>
-                          <option value="주관식 빈칸 (1개)">
-                            주관식 빈칸 (1개)
-                          </option>
-                          <option value="어법 단어">어법 단어</option>
-                          <option value="주관식 빈칸 (3개)">
-                            주관식 빈칸 (3개)
-                          </option>
-                        </select>
-                        <img
-                          src="./gpt-tutor/assets/images/Remove_light.svg"
-                          alt="삭제"
-                          class="delete-btn"
-                          onclick="openModal('confirm-del-modal')"
-                        />
-                      </div>
-                      <div class="qst-unit-gray-box">
-                        <div class="qst-form-inp-list">
-                          <span class="list-ttl">(A)</span>
-                          <textarea
-                            class="form-inp"
-                            rows="1"
-                            data-resizable
-                          ></textarea>
-                        </div>
-                        <div class="qst-form-inp-list">
-                          <span class="list-ttl">(B)</span>
-                          <textarea
-                            class="form-inp"
-                            rows="1"
-                            data-resizable
-                          ></textarea>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 정답지 문제 3. 주관식 2칸일 경우 -->
-
-                    <!-- 정답지 문제 4. 주관식 3칸일 경우 -->
-                    <div class="qst-unit">
-                      <div class="qst-unit-ttl">
-                        <span class="ttl">문제 4.</span>
-                        <select class="form-inp">
-                          <option value="주관식 빈칸 (3개)">
-                            주관식 빈칸 (3개)
-                          </option>
-                          <option value="객관식">객관식</option>
-                          <option value="주관식 빈칸 (2개)">
-                            주관식 빈칸 (2개)
-                          </option>
-                          <option value="어법 단어">어법 단어</option>
-                          <option value="주관식 빈칸 (1개)">
-                            주관식 빈칸 (1개)
-                          </option>
-                        </select>
-                        <img
-                          src="./gpt-tutor/assets/images/Remove_light.svg"
-                          alt="삭제"
-                          class="delete-btn"
-                          onclick="openModal('confirm-del-modal')"
-                        />
-                      </div>
-                      <div class="qst-unit-gray-box">
-                        <div class="qst-form-inp-list">
-                          <span class="list-ttl">(A)</span>
-                          <textarea
-                            class="form-inp"
-                            rows="1"
-                            data-resizable
-                          ></textarea>
-                        </div>
-                        <div class="qst-form-inp-list">
-                          <span class="list-ttl">(B)</span>
-                          <textarea
-                            class="form-inp"
-                            rows="1"
-                            data-resizable
-                          ></textarea>
-                        </div>
-                        <div class="qst-form-inp-list">
-                          <span class="list-ttl">(C)</span>
-                          <textarea
-                            class="form-inp"
-                            rows="1"
-                            data-resizable
-                          ></textarea>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 정답지 문제 3. 주관식 3칸일 경우 -->
-
-                    <!-- 정답지 문제 5. 어법 단어일 경우 -->
-                    <div class="qst-unit">
-                      <div class="qst-unit-ttl">
-                        <span class="ttl">문제 5.</span>
-                        <select class="form-inp">
-                          <option value="틀린부분 고치기">
-                            틀린부분 고치기
-                          </option>
-                          <option value="객관식">객관식</option>
-                          <option value="주관식 빈칸 (1곳)">
-                            주관식 빈칸 (1곳)
-                          </option>
-                          <option value="주관식 빈칸 (3곳)">
-                            주관식 빈칸 (3곳)
-                          </option>
-                        </select>
-                        <img
-                          src="./gpt-tutor/assets/images/Remove_light.svg"
-                          alt="삭제"
-                          class="delete-btn"
-                          onclick="openModal('confirm-del-modal')"
-                        />
-                      </div>
-                      <div class="qst-unit-gray-box">
-                        <div class="tbl-arw-tbl">
-                          <div class="qst-word-tbl">
-                            <div class="tbl-row">
-                              <span class="txt">번호(기호)</span>
-                            </div>
-                            <div class="tbl-row">
-                              <span class="txt">(틀린 기호)</span>
-                              <textarea class="inp"></textarea>
-                            </div>
-                          </div>
-                          <i class="ico ico-left-to-right"></i>
-                          <div class="qst-word-tbl">
-                            <div class="tbl-row">
-                              <span class="txt">고친 부분</span>
-                            </div>
-                            <div class="tbl-row">
-                              <textarea class="inp"></textarea>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- END 정답지 문제 5. 어법 단어일 경우 -->
+                    <!-- END 정답지 문제 -->
 
                     <!-- 추가 버튼 -->
                     <div class="add-container">
@@ -710,7 +448,10 @@
               <p class="txt">해당 파일을 삭제하시겠습니까?</p>
             </div>
             <div class="custom-modal-btn-wrap">
-              <button type="button" class="ylw-solid-btn square-btn btn-md">
+              <button
+                type="button"
+                class="ylw-solid-btn square-btn btn-md confirm-del-btn"
+              >
                 확인
               </button>
               <button
@@ -992,19 +733,20 @@
       </div>
     </div>
     <script src="gpt-tutor/assets/js/ui.js"></script>
+    <script src="gpt-tutor/assets/js/problemType.js"></script>
     <script>
-      $("textarea[data-resizable]").each(function () {
+      $('textarea[data-resizable]').each(function () {
         var offset = this.offsetHeight + 3 - this.clientHeight;
         var resizeTextarea = function (el) {
           $(el)
-            .css("height", "auto")
-            .css("height", el.scrollHeight + offset);
+            .css('height', 'auto')
+            .css('height', el.scrollHeight + offset);
         };
         $(this)
-          .on("keyup input", function () {
+          .on('keyup input', function () {
             resizeTextarea(this);
           })
-          .removeAttr("data-resizable");
+          .removeAttr('data-resizable');
       });
     </script>
   </body>
